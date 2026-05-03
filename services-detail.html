@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AC Services Detail - Makainak</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/footer.css">
+  <link rel="stylesheet" href="assets/css/header.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Mobile Drawer Overlay -->
+  <div class="drawer-overlay"></div>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer">
+    <button class="drawer-close" id="closeDrawer"><i class="bi bi-x"></i></button>
+    <ul class="mobile-nav-links">
+      <li><a href="#" class="active">Home</a></li>
+      <li class="mobile-dropdown">
+        <a href="#" class="mobile-dropdown-toggle">Services <i class="bi bi-caret-down-fill ms-1"
+            style="font-size: 10px;"></i></a>
+        <ul class="mobile-dropdown-menu">
+          <li class="mobile-submenu">
+            <a href="#" class="mobile-submenu-toggle">Civil <i class="bi bi-caret-down-fill ms-1"
+                style="font-size: 10px;"></i></a>
+            <ul class="mobile-sub-menu">
+              <li><a href="#">Building Construction</a></li>
+              <li><a href="#">Renovation</a></li>
+              <li><a href="#">Architecture Design</a></li>
+            </ul>
+          </li>
+          <li class="mobile-submenu">
+            <a href="#" class="mobile-submenu-toggle">Electrical <i class="bi bi-caret-down-fill ms-1"
+                style="font-size: 10px;"></i></a>
+            <ul class="mobile-sub-menu">
+              <li><a href="#">Wiring & Installation</a></li>
+              <li><a href="#">Appliance Repair</a></li>
+              <li><a href="#">Solar Setup</a></li>
+            </ul>
+          </li>
+          <li class="mobile-submenu">
+            <a href="#" class="mobile-submenu-toggle">Mechanical <i class="bi bi-caret-down-fill ms-1"
+                style="font-size: 10px;"></i></a>
+            <ul class="mobile-sub-menu">
+              <li><a href="#">HVAC & AC Repair</a></li>
+              <li><a href="#">Plumbing</a></li>
+              <li><a href="#">Generator Repair</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Blogs</a></li>
+    </ul>
+    <div class="mobile-actions">
+      <a href="#" class="help-center-link">Help Center</a>
+      <a href="#" class="sign-in-link">Sign in</a>
+      <button class="btn booknow mt-3">Book Now <span class="book-icon ms-2"><i
+            class="bi bi-arrow-up-right"></i></span></button>
+    </div>
+  </div>
+
+  <!-- Header Section -->
+  <header class="header-wrapper">
+    <div class="container">
+      <div class="navbar-pill">
+        <!-- Logo -->
+        <a href="index.html" class="logo">
+          <img src="assets/images/logo.png" alt="makainak" class="logo-img">
+        </a>
+
+        <!-- Desktop Center Navigation -->
+        <ul class="nav-links">
+          <li><a href="#" class="active">Home</a></li>
+          <li class="services-dropdown">
+            <a href="#">Services <i class="bi bi-caret-down-fill ms-1" style="font-size: 10px;"></i></a>
+            <ul class="desktop-dropdown-menu">
+              <li class="desktop-dropdown-submenu">
+                <a href="#">Civil <i class="bi bi-chevron-right ms-auto"
+                    style="font-size: 10px; float: right; margin-top: 5px;"></i></a>
+                <ul class="desktop-sub-menu">
+                  <li><a href="#">Building Construction</a></li>
+                  <li><a href="#">Renovation</a></li>
+                  <li><a href="#">Architecture Design</a></li>
+                </ul>
+              </li>
+              <li class="desktop-dropdown-submenu">
+                <a href="#">Electrical <i class="bi bi-chevron-right ms-auto"
+                    style="font-size: 10px; float: right; margin-top: 5px;"></i></a>
+                <ul class="desktop-sub-menu">
+                  <li><a href="#">Wiring & Installation</a></li>
+                  <li><a href="#">Appliance Repair</a></li>
+                  <li><a href="#">Solar Setup</a></li>
+                </ul>
+              </li>
+              <li class="desktop-dropdown-submenu">
+                <a href="#">Mechanical <i class="bi bi-chevron-right ms-auto"
+                    style="font-size: 10px; float: right; margin-top: 5px;"></i></a>
+                <ul class="desktop-sub-menu">
+                  <li><a href="#">HVAC & AC Repair</a></li>
+                  <li><a href="#">Plumbing</a></li>
+                  <li><a href="#">Generator Repair</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Blogs</a></li>
+        </ul>
+
+        <!-- Desktop Right Actions -->
+        <div class="nav-actions">
+          <a href="#" class="help-center-link">Help Center</a>
+          <a href="#" class="sign-in-link">Sign in</a>
+          <button class="btn booknow">Book Now <span class="book-icon ms-2"><i
+                class="bi bi-arrow-up-right"></i></span></button>
+        </div>
+
+        <!-- Mobile Hamburger Button -->
+        <button class="hamburger-btn" id="hamburgerBtn">
+          <i class="bi bi-list"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Details Content Container -->
+  <div class="container-fluid py-5 bg-light-blue service-detail-wrapper">
+    <div class="container py-4">
+      <div class="bg-white rounded-5 p-4 p-md-5 border shadow-sm mx-auto service-detail-card">
+        <div class="row align-items-center">
+          <!-- Left Image -->
+          <div class="col-lg-5 mb-4 mb-lg-0">
+            <img src="assets/images/feature_ac_repair.png" alt="AC Service" class="img-fluid rounded-4 w-100 object-fit-cover shadow-sm service-detail-img">
+          </div>
+          
+          <!-- Right Details -->
+          <div class="col-lg-7 ps-lg-5">
+            <span class="badge rounded-pill text-primary px-3 py-2 mb-3 badge-soft-primary">AC Services</span>
+            
+            <h2 class="fw-bold mb-2 service-detail-heading">AC General Service</h2>
+            <p class="text-muted mb-4">Per AC (1 to 2.5 tons)</p>
+            
+            <div class="d-flex align-items-center mb-4 flex-wrap gap-3">
+              <div class="d-flex align-items-center">
+                <span class="text-muted text-decoration-line-through me-3 price-old">Rs:3300</span>
+                <span class="text-primary fw-bold price-current">Rs:2500</span>
+              </div>
+              
+              <button class="btn btn-primary rounded-pill px-4 py-2 ms-sm-auto d-flex align-items-center shadow-sm btn-gradient">
+                Book Now 
+                <span class="bg-white text-primary rounded ms-2 d-flex justify-content-center align-items-center btn-icon-box">
+                  <i class="bi bi-arrow-up-right"></i>
+                </span>
+              </button>
+            </div>
+            
+            <h6 class="fw-bold mb-3 text-small-head">This service includes</h6>
+            
+            <div class="rounded-4 p-4 bg-light-blue">
+              <ul class="list-unstyled mb-0 service-includes-list">
+                <li class="d-flex align-items-start mb-3">
+                  <i class="bi bi-check-circle-fill text-primary me-3 mt-1"></i>
+                  <span class="text-muted" style="font-size: 0.95rem;">Dismounting of indoor unit</span>
+                </li>
+                <li class="d-flex align-items-start mb-3">
+                  <i class="bi bi-check-circle-fill text-primary me-3 mt-1"></i>
+                  <span class="text-muted" style="font-size: 0.95rem;">Cleaning of indoor and outdoor unit with pressure washer</span>
+                </li>
+                <li class="d-flex align-items-start">
+                  <i class="bi bi-check-circle-fill text-primary me-3 mt-1"></i>
+                  <span class="text-muted" style="font-size: 0.95rem;">Mounting of indoor unit after cleaning</span>
+                </li>
+              </ul>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <!-- Service Info Section -->
+  <section class="service-info-section pb-5 bg-light-blue">
+    <div class="container pb-4">
+      <div class="mx-auto" style="max-width: 1100px; padding: 0 15px;">
+        
+        <div class="mb-5">
+          <h4 class="fw-bold mb-3 service-info-heading">Zertifizierte Asbestsanierung und Rückbau im Kanton Aargau</h4>
+          <p class="text-muted service-info-text">AsbestFuchs ist Ihr erfahrener Ansprechpartner für sichere Asbestsanierung und professionellen Rückbau im gesamten Kanton Aargau. Ob Wohnhaus, Bürogebäude oder Industrieanlage – wir führen jede Sanierung nach SUVA- und EKAS-Richtlinien durch. Unser Team entfernt Asbest fachgerecht, entsorgt belastete Materialien gesetzeskonform und sorgt für reibungslose Abläufe. Vertrauen Sie auf AsbestFuchs Aargau, wenn Sie höchste Sicherheit, Nachhaltigkeit und Schweizer Präzision bei der Schadstoffsanierung erwarten.</p>
+        </div>
+
+        <div class="mb-5">
+          <h4 class="fw-bold mb-3 service-info-heading">Fachgerechte Sanierung und Entkernung in Aargauer Gebäuden</h4>
+          <p class="text-muted service-info-text">Im Kanton Aargau steht AsbestFuchs für präzise Sanierung, kontrollierten Rückbau und nachhaltige Entkernung. Unsere Experten analysieren jedes Projekt gründlich, planen jeden Arbeitsschritt exakt und setzen modernste Technik ein, um Asbest und Schadstoffe vollständig zu entfernen. Von der ersten Beurteilung bis zur abschliessenden Freigabe garantieren wir Transparenz, Sicherheit und termintreue Ausführung. So schaffen wir im Aargau saubere Voraussetzungen für den Werterhalt und die Modernisierung Ihrer Immobilie.</p>
+        </div>
+
+        <div>
+          <h4 class="fw-bold mb-3 service-info-heading">Asbestsanierung für Industrie, Gewerbe und Privatkunden im Aargau</h4>
+          <p class="text-muted mb-0 service-info-text">Ob Produktionshalle, Verwaltungsgebäude oder Einfamilienhaus – AsbestFuchs Aargau bietet umfassende Lösungen für Asbestsanierung, Schadstoffbeseitigung und Rückbau. Wir übernehmen die gesamte Projektkoordination, inklusive Analyse, Durchführung und Entsorgung. Unser geschultes Fachpersonal arbeitet nach Schweizer Normen, effizient und mit höchstem Verantwortungsbewusstsein. Profitieren Sie von unserer regionalen Erfahrung im Kanton Aargau und von zertifizierter Qualität bei jeder Sanierung.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section pb-5 bg-light-blue">
+    <div class="container pb-5">
+      <div class="cta-card rounded-5 p-4 p-md-5 position-relative overflow-hidden shadow-lg cta-card-gradient">
+        <div class="row align-items-center position-relative z-1">
+
+          <div class="col-lg-6 text-white mb-4 mb-lg-0 pe-lg-5">
+            <h2 class="cta-heading fw-bold mb-4 cta-heading-large">Ready to Simplify<br>Your Home<br>Maintenance?</h2>
+            <p class="cta-desc mb-5 cta-description">Join 10,000+ homeowners who
+              trust Makainak for plumbing, electrical, cleaning, solar & more. Book now and get 10% off your first
+              service!</p>
+            <button
+              class="btn btn-light rounded-pill px-4 py-3 text-primary fw-bold shadow-sm d-inline-flex align-items-center">
+              Sign Up & Save 10%
+              <span class="ms-2 bg-primary text-white rounded d-inline-flex justify-content-center align-items-center btn-icon-box">
+                <i class="bi bi-arrow-up-right"></i>
+              </span>
+            </button>
+          </div>
+
+          <div class="col-lg-6">
+            <img src="assets/images/feature_professional.png" alt="Makainak Professional"
+              class="img-fluid rounded-4 shadow w-100 object-fit-cover shadow-sm service-detail-img">
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer-section">
+    <div class="container">
+      <div class="row">
+
+        <!-- Left Content -->
+        <div class="col-lg-6 col-md-12 mb-4 pe-lg-5">
+          <div class="footer-logo mb-4">
+            <img src="assets/images/logo.png" alt="makainak" class="logo-img" style="height: 50px;">
+          </div>
+          <h2 class="main-heading">Your Trusted Home Services <br> Partner on your tips</h2>
+          <p class="main-text mt-3 mb-4">
+            From plumbing to solar, connect with verified professionals in your city.
+            Book instantly, pay securely, 100% satisfaction guaranteed
+          </p>
+
+          <div class="d-flex flex-wrap gap-3 mt-4 align-items-center">
+            <button class="btn booknow">Book Now <span class="book-icon ms-2"><i
+                  class="bi bi-arrow-up-right"></i></span></button>
+            <a href="#" class="gplay-badge">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                alt="Get it on Google Play">
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Services -->
+        <div class="col-lg-2 col-md-4 col-12 mb-4 footer-col">
+          <h5 class="footer-heading d-flex justify-content-between align-items-center">Services <span
+              class="toggle-icon d-md-none">+</span></h5>
+          <ul class="list-unstyled footer-list">
+            <li>Plumbing</li>
+            <li>Electrical</li>
+            <li>Solar Installation</li>
+            <li>AC Repair</li>
+            <li>Courier Services</li>
+          </ul>
+        </div>
+
+        <!-- Location -->
+        <div class="col-lg-2 col-md-4 col-12 mb-4 footer-col">
+          <h5 class="footer-heading d-flex justify-content-between align-items-center">Location <span
+              class="toggle-icon d-md-none">+</span></h5>
+          <ul class="list-unstyled footer-list">
+            <li>Faisalabad</li>
+            <li>Lahore</li>
+            <li>Islamabad</li>
+            <li>Rawalpindi</li>
+            <li>Multan</li>
+          </ul>
+        </div>
+
+        <!-- Company -->
+        <div class="col-lg-2 col-md-4 col-12 mb-4 footer-col">
+          <h5 class="footer-heading d-flex justify-content-between align-items-center">Company <span
+              class="toggle-icon d-md-none">+</span></h5>
+          <ul class="list-unstyled footer-list">
+            <li><a href="about.html" class="text-decoration-none text-reset">About Us</a></li>
+            <li><a href="#" class="text-decoration-none text-reset">Careers</a></li>
+            <li><a href="blog.html" class="text-decoration-none text-reset">Blog</a></li>
+            <li><a href="contact.html" class="text-decoration-none text-reset">Contact</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <hr>
+
+      <!-- Bottom Bar -->
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
+
+        <p class="mb-2 mb-md-0">© 2026 Makainak. All rights reserved.</p>
+
+        <div class="social-icons">
+          <a href="#"><i class="bi bi-twitter"></i></a>
+          <a href="#"><i class="bi bi-instagram"></i></a>
+          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href="#"><i class="bi bi-tiktok"></i></a>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+  <!-- jQuery, Bootstrap JS and Custom JS -->
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/footer.js"></script>
+  <script src="assets/js/header.js"></script>
+  <script>
+    $(document).ready(function () {
+      // Toggle Domestic/Corporate functionality
+      $('.toggle-option').on('click', function (e) {
+        e.preventDefault();
+        $('.toggle-option').removeClass('active').addClass('text-muted');
+        $(this).addClass('active').removeClass('text-muted');
+      });
+    });
+  </script>
+
+</body>
+
+</html>

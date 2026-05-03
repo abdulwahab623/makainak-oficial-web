@@ -1,0 +1,345 @@
+/* main.css */
+body {
+  background-color: #f4f9ff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Hero Section */
+.hero-section {
+  padding: 20px 0 20px;
+}
+
+.hero-heading {
+  font-family: 'Karla', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 70px;
+  line-height: 110%;
+  letter-spacing: -0.06em;
+  text-align: center;
+  color: rgba(0, 0, 0, 1);
+  margin-bottom: 5px;
+}
+
+.hero-subheading {
+  font-family: 'Karla', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 70px;
+  line-height: 110%;
+  letter-spacing: -0.06em;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #2181E7;
+  /* Solid blue to match screenshot */
+}
+
+/* Search Bar */
+.search-bar-wrapper {
+  max-width: 600px;
+}
+
+.search-bar {
+  background: white;
+  border-radius: 50px;
+  padding: 5px 5px 5px 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e88c30;
+  /* Orange type border */
+}
+
+.search-bar .input-group-text {
+  border-radius: 50px 0 0 50px;
+  color: #6c757d;
+  background: transparent;
+  padding-left: 0;
+}
+
+.search-bar input {
+  background: transparent;
+  font-size: 15px;
+}
+
+.search-bar input:focus {
+  box-shadow: none;
+}
+
+/* Toggles */
+.toggle-wrapper {
+  margin-top: 20px;
+}
+
+.toggle-group {
+  border: 1px solid #e6f0ff;
+  display: flex;
+  p: 1;
+  border-radius: 50px;
+  background-color: #fff;
+  shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+.btn-toggle {
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.btn-toggle.active {
+  background-color: #e6f0ff;
+  color: #1f73e8;
+  font-weight: 600;
+}
+
+/* Services */
+.services-section {
+  padding: 20px 0 40px;
+}
+
+.service-card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 1px solid #eaeaea;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.service-image-wrapper {
+  height: 200px;
+  overflow: hidden;
+}
+
+.service-image-wrapper img {
+  object-fit: cover;
+  height: 100%;
+}
+
+.service-content h5 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Benefits */
+.benefits-section {
+  padding: 80px 0;
+  background-color: #fff;
+}
+
+.benefits-heading {
+  font-size: 42px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.benefits-subheading {
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.video-placeholder {
+  background-color: #000;
+  min-height: 350px;
+  position: relative;
+}
+
+.play-btn {
+  border: none;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.app-card {
+  background-color: #2181E7;
+}
+
+.phone-mockup h4 {
+  font-size: 18px;
+  letter-spacing: -0.5px;
+}
+
+.feature-pill {
+  background-color: #f8faff;
+  border: 1px solid #eee;
+  border-radius: 50px;
+}
+
+/* How It Works */
+.how-it-works-section {
+  padding: 80px 0;
+  background-color: #f4f9ff;
+}
+
+.how-it-works-heading {
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.step-card {
+  text-align: center;
+}
+
+.step-number {
+  width: 40px;
+  height: 40px;
+  background-color: #2181E7;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  font-weight: 700;
+}
+
+/* Testimonials */
+.testimonials-section {
+  padding: 80px 0;
+}
+
+.testimonial-card {
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991px) {
+  .video-placeholder {
+    min-height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 40px 0 20px;
+  }
+
+  .hero-heading {
+    font-size: 40px;
+  }
+
+  .hero-subheading {
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+
+  .search-bar {
+    padding: 10px 15px;
+    border-radius: 20px;
+    /* flex-direction: column; */
+    gap: 10px;
+  }
+
+  .search-bar .input-group-text {
+    display: none;
+  }
+
+  .search-bar input {
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .search-bar .btn-primary {
+    width: 100% !important;
+    border-radius: 50px !important;
+    padding: 12px 0;
+    height: auto !important;
+  }
+
+  .toggle-group {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .btn-toggle {
+    flex: 1;
+    font-size: 13px;
+    padding: 10px 10px !important;
+  }
+
+  .benefits-section {
+    padding: 40px 0;
+  }
+
+  .benefits-heading {
+    font-size: 1.8rem;
+  }
+
+  .benefits-subheading {
+    font-size: 1.5rem;
+  }
+
+  .video-placeholder {
+    min-height: 250px;
+  }
+
+  .how-it-works-heading {
+    font-size: 2rem;
+  }
+
+  .cta-heading {
+    font-size: 2rem !important;
+  }
+}
+
+/* Global Button Gradients */
+.btn-primary,
+.booknow,
+.badge.bg-primary {
+  background: linear-gradient(85.26deg, #1A39B3 33.96%, #1A3CB5 35.54%, #1D61D0 57.61%, #2078E0 75.47%, #2181E7 86.51%) !important;
+  border: none !important;
+  color: white !important;
+}
+
+.search-bar .btn-primary {
+  width: 200px;
+  height: 54px;
+  border-radius: 30px !important;
+  padding: 14px 32px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Services Detail Page Styles */
+.bg-light-blue {
+  background-color: #f4f9fd !important;
+}
+
+.service-detail-wrapper {
+  min-height: 70vh;
+}
+
+.service-detail-card {
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  height: 100%;
+}
+
+.cta-heading-large {
+  font-family: 'Karla', sans-serif;
+  font-size: 3rem;
+  line-height: 1.2;
+}
+
+.btn-icon-box {
+  width: 24px;
+  height: 24px;
+  font-size: 12px;
+}
+
+@media (max-width: 991px) {
+  .cta-heading-large {
+    font-size: 2.2rem;
+  }
+}

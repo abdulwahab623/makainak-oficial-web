@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Responsive Footer</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/footer.css">
+  <link rel="stylesheet" href="assets/css/header.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Mobile Drawer Overlay -->
+  <div class="drawer-overlay"></div>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer">
+    <button class="drawer-close" id="closeDrawer"><i class="bi bi-x"></i></button>
+    <ul class="mobile-nav-links">
+      <li><a href="#" class="active">Home</a></li>
+      <li class="mobile-dropdown">
+        <a href="#" class="mobile-dropdown-toggle">Services <i class="bi bi-caret-down-fill ms-1"
+            style="font-size: 10px;"></i></a>
+        <ul class="mobile-dropdown-menu">
+          <li class="mobile-submenu">
+            <a href="#" class="mobile-submenu-toggle">Civil <i class="bi bi-caret-down-fill ms-1"
+                style="font-size: 10px;"></i></a>
+            <ul class="mobile-sub-menu">
+              <li><a href="#">Building Construction</a></li>
+              <li><a href="#">Renovation</a></li>
+              <li><a href="#">Architecture Design</a></li>
+            </ul>
+          </li>
+          <li class="mobile-submenu">
+            <a href="#" class="mobile-submenu-toggle">Electrical <i class="bi bi-caret-down-fill ms-1"
+                style="font-size: 10px;"></i></a>
+            <ul class="mobile-sub-menu">
+              <li><a href="#">Wiring & Installation</a></li>
+              <li><a href="#">Appliance Repair</a></li>
+              <li><a href="#">Solar Setup</a></li>
+            </ul>
+          </li>
+          <li class="mobile-submenu">
+            <a href="#" class="mobile-submenu-toggle">Mechanical <i class="bi bi-caret-down-fill ms-1"
+                style="font-size: 10px;"></i></a>
+            <ul class="mobile-sub-menu">
+              <li><a href="#">HVAC & AC Repair</a></li>
+              <li><a href="#">Plumbing</a></li>
+              <li><a href="#">Generator Repair</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Blogs</a></li>
+    </ul>
+    <div class="mobile-actions">
+      <a href="#" class="help-center-link">Help Center</a>
+      <a href="#" class="sign-in-link">Sign in</a>
+      <button class="btn booknow mt-3">Book Now <span class="book-icon ms-2"><i
+            class="bi bi-arrow-up-right"></i></span></button>
+    </div>
+  </div>
+
+  <!-- Header Section -->
+  <header class="header-wrapper">
+    <div class="container">
+      <div class="navbar-pill">
+        <!-- Logo -->
+        <a href="index.html" class="logo">
+          <img src="assets/images/logo.png" alt="makainak" class="logo-img">
+        </a>
+
+        <!-- Desktop Center Navigation -->
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li class="services-dropdown">
+            <a href="#">Services <i class="bi bi-caret-down-fill ms-1" style="font-size: 10px;"></i></a>
+            <ul class="desktop-dropdown-menu">
+              <li class="desktop-dropdown-submenu">
+                <a href="services-detail.html">Civil <i class="bi bi-chevron-right ms-auto"
+                    style="font-size: 10px; float: right; margin-top: 5px;"></i></a>
+                <ul class="desktop-sub-menu">
+                  <li><a href="services-detail.html">Building Construction</a></li>
+                  <li><a href="services-detail.html">Renovation</a></li>
+                  <li><a href="services-detail.html">Architecture Design</a></li>
+                </ul>
+              </li>
+              <li class="desktop-dropdown-submenu">
+                <a href="services-detail.html">Electrical <i class="bi bi-chevron-right ms-auto"
+                    style="font-size: 10px; float: right; margin-top: 5px;"></i></a>
+                <ul class="desktop-sub-menu">
+                  <li><a href="services-detail.html">Wiring & Installation</a></li>
+                  <li><a href="services-detail.html">Appliance Repair</a></li>
+                  <li><a href="services-detail.html">Solar Setup</a></li>
+                </ul>
+              </li>
+              <li class="desktop-dropdown-submenu">
+                <a href="services-detail.html">Mechanical <i class="bi bi-chevron-right ms-auto"
+                    style="font-size: 10px; float: right; margin-top: 5px;"></i></a>
+                <ul class="desktop-sub-menu">
+                  <li><a href="services-detail.html">HVAC & AC Repair</a></li>
+                  <li><a href="services-detail.html">Plumbing</a></li>
+                  <li><a href="services-detail.html">Generator Repair</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="blog.html">Blogs</a></li>
+        </ul>
+
+        <!-- Desktop Right Actions -->
+        <div class="nav-actions">
+          <a href="#" class="help-center-link">Help Center</a>
+          <a href="#" class="sign-in-link">Sign in</a>
+          <button class="btn booknow">Book Now <span class="book-icon ms-2"><i
+                class="bi bi-arrow-up-right"></i></span></button>
+        </div>
+
+        <!-- Mobile Hamburger Button -->
+        <button class="hamburger-btn" id="hamburgerBtn">
+          <i class="bi bi-list"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Container -->
+  <div class="container mt-4 mb-5">
+    <div class="bg-white rounded-5 p-4 p-md-5 border" style="box-shadow: 0 4px 20px rgba(0,0,0,0.02);">
+
+      <!-- Hero Section -->
+      <section class="hero-section text-center">
+        <h1 class="hero-heading">Book Trusted Professionals</h1>
+        <h2 class="hero-subheading text-primary">Any Service, Anytime</h2>
+
+        <!-- Search Bar -->
+        <div class="search-bar-wrapper mx-auto mt-4">
+          <div class="input-group search-bar">
+            <span class="input-group-text bg-white border-0"><i class="bi bi-search"></i></span>
+            <input type="text" class="form-control border-0 shadow-none" placeholder="What service do you want!">
+            <button class="btn btn-primary rounded-pill px-4" type="button">Find Service <i
+                class="bi bi-arrow-right ms-2"></i></button>
+          </div>
+        </div>
+
+        <!-- Toggle Buttons -->
+        <div class="toggle-wrapper mt-4 d-flex justify-content-center">
+          <div class="toggle-group d-flex p-1 rounded-pill bg-white shadow-sm">
+            <button class="btn btn-toggle toggle-option active rounded-pill px-4 py-2" data-target="domestic">Domestic
+              <i class="bi bi-house-door-fill ms-1"></i></button>
+            <button class="btn btn-toggle toggle-option rounded-pill px-4 py-2 text-muted"
+              data-target="corporate">Corporate <i class="bi bi-building ms-1"></i></button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Section -->
+      <section class="services-section">
+        <div class="row g-4 justify-content-center">
+          <!-- Card 1 -->
+          <div class="col-lg-4 col-md-6 col-12">
+            <div class="service-card active-card">
+              <div class="service-image-wrapper">
+                <img src="assets/images/electrical_engineering.png" alt="Electrical Engineering"
+                  class="img-fluid w-100">
+              </div>
+              <div class="service-content d-flex justify-content-between align-items-center p-3">
+                <h5 class="mb-0">Electrical Engineering</h5>
+                <a href="#" class="btn btn-sm btn-primary rounded-circle"><i class="bi bi-arrow-up-right"></i></a>
+              </div>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="col-lg-4 col-md-6 col-12">
+            <div class="service-card">
+              <div class="service-image-wrapper">
+                <img src="assets/images/mechanical_engineering.png" alt="Mechanical Engineering"
+                  class="img-fluid w-100">
+              </div>
+              <div class="service-content d-flex justify-content-between align-items-center p-3">
+                <h5 class="mb-0">Mechanical Engineering</h5>
+                <a href="#" class="btn btn-sm btn-primary rounded-circle"><i class="bi bi-arrow-up-right"></i></a>
+              </div>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="col-lg-4 col-md-6 col-12">
+            <div class="service-card">
+              <div class="service-image-wrapper">
+                <img src="assets/images/civil_engineering.png" alt="Civil Engineering" class="img-fluid w-100">
+              </div>
+              <div class="service-content d-flex justify-content-between align-items-center p-3">
+                <h5 class="mb-0">Civil Engineering</h5>
+                <a href="#" class="btn btn-sm btn-primary rounded-circle"><i class="bi bi-arrow-up-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <!-- Benefits Section -->
+  <section class="benefits-section pb-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <span class="badge bg-primary rounded-pill px-3 py-2 mb-3"><i class="bi bi-star-fill me-1"></i> Key
+          Benefit</span>
+        <h2 class="benefits-heading">The Smarter Way to Book</h2>
+        <h3 class="benefits-subheading text-primary">Home Services</h3>
+      </div>
+
+      <div class="row g-4 align-items-stretch">
+        <!-- Video Placeholder -->
+        <div class="col-lg-6 col-12">
+          <div class="video-placeholder rounded-4 h-100 d-flex justify-content-center align-items-center bg-black">
+            <button class="btn btn-light rounded-circle play-btn" style="width: 60px; height: 60px;">
+              <i class="bi bi-play-fill fs-3"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- App & Features -->
+        <div class="col-lg-6 col-12">
+          <div class="row g-4 h-100">
+            <!-- App Download Card -->
+            <div class="col-md-5 col-12">
+              <div
+                class="app-card rounded-4 p-4 text-center h-100 d-flex flex-column justify-content-center position-relative overflow-hidden bg-primary text-white">
+                <div
+                  class="phone-mockup bg-white rounded-4 p-3 mx-auto mt-2 d-flex flex-column align-items-center justify-content-center"
+                  style="width: 140px; height: 220px; border: 4px solid #fff; border-radius: 20px;">
+                  <h4 class="text-dark fw-bold mb-0">makainak</h4>
+                  <p class="text-muted" style="font-size: 8px;">Repair & Services</p>
+                  <div class="mt-auto w-100">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                      alt="Google Play" class="img-fluid bg-dark p-1 rounded">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Features List -->
+            <div class="col-md-7 col-12">
+              <div class="features-list d-flex flex-column gap-3 h-100 justify-content-between">
+                <!-- Feature Item 1 -->
+                <div class="feature-item p-3 bg-white rounded-3 shadow-sm border">
+                  <div class="d-flex justify-content-between align-items-start mb-2">
+                    <h6 class="fw-bold text-primary mb-0">24/7 Availability</h6>
+                    <i class="bi bi-lightning-charge-fill text-primary"></i>
+                  </div>
+                  <p class="text-muted mb-0 small">Emergency or routine - we're here whenever you need us.</p>
+                </div>
+                <!-- Feature Item 2 -->
+                <div class="feature-item p-3 bg-white rounded-3 shadow-sm border">
+                  <div class="d-flex justify-content-between align-items-start mb-2">
+                    <h6 class="fw-bold text-primary mb-0">Transparent Pricing</h6>
+                    <i class="bi bi-tag-fill text-primary"></i>
+                  </div>
+                  <p class="text-muted mb-0 small">No hidden fees. Get upfront quotes before you book.</p>
+                </div>
+                <!-- Feature Item 3 -->
+                <div class="feature-item p-3 bg-white rounded-3 shadow-sm border">
+                  <div class="d-flex justify-content-between align-items-start mb-2">
+                    <h6 class="fw-bold text-primary mb-0">Track in Real-Time</h6>
+                    <i class="bi bi-geo-alt-fill text-primary"></i>
+                  </div>
+                  <p class="text-muted mb-0 small">Know exactly when your professional will arrive.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Platform Features Section -->
+  <section class="platform-features-section pb-5">
+    <div class="container">
+      <div class="bg-white rounded-5 p-4 p-md-5 border" style="box-shadow: 0 4px 20px rgba(0,0,0,0.02);">
+
+        <!-- Section Header -->
+        <div class="row mb-5 align-items-end">
+          <div class="col-lg-7">
+            <span class="badge bg-primary rounded-pill px-3 py-2 mb-3"><i class="bi bi-star-fill me-1"></i> Platform
+              Features</span>
+            <h2 class="platform-heading">The Future of Home<br>Maintenance</h2>
+          </div>
+          <div class="col-lg-5 text-lg-end mt-3 mt-lg-0">
+            <p class="text-muted small mb-0 ms-lg-auto text-lg-end text-start" style="max-width: 350px;">Makainak brings
+              all the essential services your home needs — from plumbing to solar — with instant booking, verified
+              professionals, and secure payments</p>
+          </div>
+        </div>
+
+        <hr class="mb-5 text-muted" style="opacity: 0.1;">
+
+        <!-- Feature Block 1 -->
+        <div class="row align-items-center mb-5 feature-block">
+          <div class="col-lg-7 mb-4 mb-lg-0 pe-lg-5">
+            <div class="d-flex align-items-center mb-3">
+              <i class="bi bi-star-fill text-primary me-2"></i>
+              <span class="fw-bold small">Features 1</span>
+            </div>
+            <h3 class="feature-title mb-3">Every Home<br>Service, One Place</h3>
+            <p class="text-muted small mb-4">Plumbing, electrical, cleaning, solar, carpentry & courier — book it all
+              without juggling multiple apps or phone calls</p>
+            <span class="badge bg-info text-primary rounded-pill px-3 py-2"
+              style="background-color: #d0e6ff !important;">50+ Service Categories</span>
+          </div>
+          <div class="col-lg-5">
+            <img src="assets/images/feature_ac_repair.png" alt="AC Repair"
+              class="img-fluid rounded-4 w-100 object-fit-cover shadow-sm" style="height: 280px;">
+          </div>
+        </div>
+
+        <hr class="mb-5 text-muted" style="opacity: 0.1;">
+
+        <!-- Feature Block 2 -->
+        <div class="row align-items-center mb-5 feature-block">
+          <div class="col-lg-7 mb-4 mb-lg-0 pe-lg-5">
+            <div class="d-flex align-items-center mb-3">
+              <i class="bi bi-star-fill text-primary me-2"></i>
+              <span class="fw-bold small">Features 1</span>
+            </div>
+            <h3 class="feature-title mb-3">Verified & Local<br>Professionals</h3>
+            <p class="text-muted small mb-4">Every pro is licensed, insured, and background-checked. Real ratings from
+              real homeowners mean you book with confidence</p>
+            <span class="badge bg-info text-primary rounded-pill px-3 py-2"
+              style="background-color: #d0e6ff !important;">100+ Professionals</span>
+          </div>
+          <div class="col-lg-5">
+            <img src="assets/images/feature_professional.png" alt="Local Professionals"
+              class="img-fluid rounded-4 w-100 object-fit-cover shadow-sm" style="height: 280px;">
+          </div>
+        </div>
+
+        <hr class="mb-5 text-muted" style="opacity: 0.1;">
+
+        <!-- Feature Block 3 -->
+        <div class="row align-items-center feature-block">
+          <div class="col-lg-7 mb-4 mb-lg-0 pe-lg-5">
+            <div class="d-flex align-items-center mb-3">
+              <i class="bi bi-star-fill text-primary me-2"></i>
+              <span class="fw-bold small">Features 1</span>
+            </div>
+            <h3 class="feature-title mb-3">Transparent Pricing &<br>Guarantee</h3>
+            <p class="text-muted small mb-4">Get upfront pricing before you book. Pay securely after the job, backed by
+              our 100% satisfaction guarantee.</p>
+            <span class="badge bg-info text-primary rounded-pill px-3 py-2"
+              style="background-color: #d0e6ff !important;">5-Star Ratings</span>
+          </div>
+          <div class="col-lg-5">
+            <img src="assets/images/feature_tablet.png" alt="Transparent Pricing"
+              class="img-fluid rounded-4 w-100 object-fit-cover shadow-sm" style="height: 280px;">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section class="how-it-works-section text-white py-5 mt-5">
+    <div class="container py-5">
+
+      <!-- Section Header -->
+      <div class="text-center mb-5 pb-4">
+        <span class="badge bg-white text-primary rounded-pill px-3 py-2 mb-3 shadow-sm"><i
+            class="bi bi-hand-index-thumb-fill me-1"></i> How It Works</span>
+        <h2 class="how-it-works-heading">Choose Your Service &<br>Get Set Done!</h2>
+      </div>
+
+      <div class="timeline-container position-relative">
+
+        <!-- Step 1 -->
+        <div class="row align-items-center mb-5 step-row position-relative">
+          <div class="col-md-5 text-md-start text-center mb-4 mb-md-0">
+            <div
+              class="step-icon mb-3 bg-white rounded-3 p-2 d-inline-flex align-items-center justify-content-center text-primary fs-3 shadow-sm"
+              style="width: 50px; height: 50px;">
+              <i class="bi bi-gear-wide-connected"></i>
+            </div>
+            <h3 class="step-title fw-bold mb-3">Choose Your Service</h3>
+            <p class="step-desc mb-0" style="opacity: 0.9;">Browse our full range of home services — plumbing,
+              electrical, cleaning, solar & more. Select what you need.</p>
+          </div>
+          <!-- Timeline point (desktop only) -->
+          <div class="col-md-2 d-none d-md-flex justify-content-center align-items-center position-relative">
+            <div
+              class="timeline-circle bg-white rounded-circle position-relative z-1 d-flex justify-content-center align-items-center">
+              <div class="timeline-dot rounded-circle bg-primary w-100 h-100"></div>
+            </div>
+          </div>
+          <div class="col-md-5">
+            <img src="assets/images/feature_tablet.png" alt="Choose Service" class="img-fluid rounded-4 w-100 shadow"
+              style="object-fit: cover; height: 280px;">
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="row align-items-center mb-5 step-row position-relative flex-column-reverse flex-md-row">
+          <div class="col-md-5 mt-4 mt-md-0">
+            <img src="assets/images/feature_professional.png" alt="Book and Schedule"
+              class="img-fluid rounded-4 w-100 shadow" style="object-fit: cover; height: 280px;">
+          </div>
+          <!-- Timeline point (desktop only) -->
+          <div class="col-md-2 d-none d-md-flex justify-content-center align-items-center position-relative">
+            <div
+              class="timeline-circle bg-white rounded-circle position-relative z-1 d-flex justify-content-center align-items-center">
+              <div class="timeline-dot rounded-circle bg-primary w-100 h-100"></div>
+            </div>
+          </div>
+          <div class="col-md-5 text-md-start text-center">
+            <div
+              class="step-icon mb-3 bg-white rounded-3 p-2 d-inline-flex align-items-center justify-content-center text-primary fs-3 shadow-sm"
+              style="width: 50px; height: 50px;">
+              <i class="bi bi-calendar-check"></i>
+            </div>
+            <h3 class="step-title fw-bold mb-3">Book & Schedule</h3>
+            <p class="step-desc mb-0" style="opacity: 0.9;">Pick a time that works for you. Get instant pricing and
+              confirm your booking in under 60 seconds.</p>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="row align-items-center step-row position-relative">
+          <div class="col-md-5 text-md-start text-center mb-4 mb-md-0">
+            <div
+              class="step-icon mb-3 bg-white rounded-3 p-2 d-inline-flex align-items-center justify-content-center text-primary fs-3 shadow-sm"
+              style="width: 50px; height: 50px;">
+              <i class="bi bi-check2-square"></i>
+            </div>
+            <h3 class="step-title fw-bold mb-3">Relax, It's Done</h3>
+            <p class="step-desc mb-0" style="opacity: 0.9;">Watch your pro arrive in real-time. Pay only when the job is
+              done right. Sit back and relax.</p>
+          </div>
+          <!-- Timeline point (desktop only) -->
+          <div class="col-md-2 d-none d-md-flex justify-content-center align-items-center position-relative">
+            <div
+              class="timeline-circle bg-white rounded-circle position-relative z-1 d-flex justify-content-center align-items-center">
+              <div class="timeline-dot rounded-circle bg-primary w-100 h-100"></div>
+            </div>
+          </div>
+          <div class="col-md-5">
+            <img src="assets/images/feature_ac_repair.png" alt="Relax" class="img-fluid rounded-4 w-100 shadow"
+              style="object-fit: cover; height: 280px;">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials-section py-5" style="background-color: #f4f9fd;">
+    <div class="container py-5">
+
+      <!-- Section Header -->
+      <div class="row mb-5 align-items-end">
+        <div class="col-lg-7">
+          <span class="badge bg-primary rounded-pill px-3 py-2 mb-3 shadow-sm"><i class="bi bi-star-fill me-1"></i>
+            Reviews</span>
+          <h2 class="platform-heading">Real Stories from Real<br>Homeowners</h2>
+        </div>
+        <div class="col-lg-5 text-lg-end mt-3 mt-lg-0">
+          <p class="text-muted small mb-0 ms-lg-auto text-lg-end text-start" style="max-width: 350px;">Join 10,000+
+            satisfied customers who've made home maintenance simple, fast, and stress-free.</p>
+        </div>
+      </div>
+
+      <!-- Carousel -->
+      <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+
+          <!-- Testimonial 1 -->
+          <div class="carousel-item active">
+            <div class="row align-items-center">
+              <div class="col-md-4 mb-4 mb-md-0">
+                <img src="assets/images/feature_ac_repair.png"
+                  class="img-fluid rounded-4 w-100 object-fit-cover shadow-sm" style="height: 380px;" alt="Testimonial">
+              </div>
+              <div class="col-md-8 ps-md-5">
+                <i class="bi bi-quote text-primary" style="font-size: 3rem; line-height: 1;"></i>
+                <h4 class="fw-bold my-4 lh-base">"The solar installation team was professional and efficient. Makainak
+                  handled everything from consultation to installation. Three months in and I'm already seeing massive
+                  savings. Highly recommend!"</h4>
+                <div class="d-flex justify-content-between align-items-end mt-5">
+                  <div class="d-flex align-items-center">
+                    <div
+                      class="avatar-circle rounded-circle text-white d-flex align-items-center justify-content-center me-3 shadow-sm"
+                      style="width: 50px; height: 50px; font-weight: bold; font-size: 1.2rem; background-color: #1A39B3;">
+                      FH</div>
+                    <div>
+                      <h6 class="mb-0 fw-bold">Fatima Hassan</h6>
+                      <small class="text-muted">Homeowner, Faisalabad</small>
+                    </div>
+                  </div>
+                  <div class="text-primary fw-bold" style="font-size: 0.9rem;">1/4</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="carousel-item">
+            <div class="row align-items-center">
+              <div class="col-md-4 mb-4 mb-md-0">
+                <img src="assets/images/feature_professional.png"
+                  class="img-fluid rounded-4 w-100 object-fit-cover shadow-sm" style="height: 380px;" alt="Testimonial">
+              </div>
+              <div class="col-md-8 ps-md-5">
+                <i class="bi bi-quote text-primary" style="font-size: 3rem; line-height: 1;"></i>
+                <h4 class="fw-bold my-4 lh-base">"I had a plumbing emergency late at night, and I booked a professional
+                  through Makainak in under a minute. The plumber arrived quickly and fixed the issue without any hidden
+                  fees. Fantastic service!"</h4>
+                <div class="d-flex justify-content-between align-items-end mt-5">
+                  <div class="d-flex align-items-center">
+                    <div
+                      class="avatar-circle rounded-circle text-white d-flex align-items-center justify-content-center me-3 shadow-sm"
+                      style="width: 50px; height: 50px; font-weight: bold; font-size: 1.2rem; background-color: #e88c30;">
+                      AA</div>
+                    <div>
+                      <h6 class="mb-0 fw-bold">Ali Ahmad</h6>
+                      <small class="text-muted">Homeowner, Lahore</small>
+                    </div>
+                  </div>
+                  <div class="text-primary fw-bold" style="font-size: 0.9rem;">2/4</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="carousel-item">
+            <div class="row align-items-center">
+              <div class="col-md-4 mb-4 mb-md-0">
+                <img src="assets/images/feature_tablet.png" class="img-fluid rounded-4 w-100 object-fit-cover shadow-sm"
+                  style="height: 380px;" alt="Testimonial">
+              </div>
+              <div class="col-md-8 ps-md-5">
+                <i class="bi bi-quote text-primary" style="font-size: 3rem; line-height: 1;"></i>
+                <h4 class="fw-bold my-4 lh-base">"The app is incredibly easy to use. I can track the professional in
+                  real-time, which gives me great peace of mind. The transparent pricing is also a huge plus. Definitely
+                  my go-to for home maintenance."</h4>
+                <div class="d-flex justify-content-between align-items-end mt-5">
+                  <div class="d-flex align-items-center">
+                    <div
+                      class="avatar-circle rounded-circle text-white d-flex align-items-center justify-content-center me-3 shadow-sm"
+                      style="width: 50px; height: 50px; font-weight: bold; font-size: 1.2rem; background-color: #28a745;">
+                      SK</div>
+                    <div>
+                      <h6 class="mb-0 fw-bold">Sara Khan</h6>
+                      <small class="text-muted">Homeowner, Islamabad</small>
+                    </div>
+                  </div>
+                  <div class="text-primary fw-bold" style="font-size: 0.9rem;">3/4</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 4 -->
+          <div class="carousel-item">
+            <div class="row align-items-center">
+              <div class="col-md-4 mb-4 mb-md-0">
+                <img src="assets/images/civil_engineering.png"
+                  class="img-fluid rounded-4 w-100 object-fit-cover shadow-sm" style="height: 380px;" alt="Testimonial">
+              </div>
+              <div class="col-md-8 ps-md-5">
+                <i class="bi bi-quote text-primary" style="font-size: 3rem; line-height: 1;"></i>
+                <h4 class="fw-bold my-4 lh-base">"We used Makainak for a complete home renovation project. The civil
+                  engineers and workers were top-notch. The project was completed on time and exactly to our
+                  specifications. A flawless experience."</h4>
+                <div class="d-flex justify-content-between align-items-end mt-5">
+                  <div class="d-flex align-items-center">
+                    <div
+                      class="avatar-circle rounded-circle text-white d-flex align-items-center justify-content-center me-3 shadow-sm"
+                      style="width: 50px; height: 50px; font-weight: bold; font-size: 1.2rem; background-color: #dc3545;">
+                      MR</div>
+                    <div>
+                      <h6 class="mb-0 fw-bold">Muhammad Rizwan</h6>
+                      <small class="text-muted">Homeowner, Rawalpindi</small>
+                    </div>
+                  </div>
+                  <div class="text-primary fw-bold" style="font-size: 0.9rem;">4/4</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Carousel Controls -->
+        <div class="d-flex justify-content-center mt-5 gap-3">
+          <button class="btn custom-carousel-btn shadow-sm" type="button" data-bs-target="#testimonialCarousel"
+            data-bs-slide="prev">
+            <i class="bi bi-chevron-left"></i>
+          </button>
+          <button class="btn custom-carousel-btn shadow-sm" type="button" data-bs-target="#testimonialCarousel"
+            data-bs-slide="next">
+            <i class="bi bi-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Video Action Section -->
+  <section class="action-video-section pb-5" style="background-color: #f4f9fd;">
+    <div class="container pb-5">
+
+      <!-- Section Header -->
+      <div class="d-flex flex-wrap justify-content-between align-items-end mb-5">
+        <div>
+          <span class="badge bg-primary rounded-pill px-3 py-2 mb-3 shadow-sm"
+            style="background: linear-gradient(85.26deg, #1A39B3 33.96%, #1A3CB5 35.54%, #1D61D0 57.61%, #2078E0 75.47%, #2181E7 86.51%) !important;"><i
+              class="bi bi-hash me-1"></i> Makainak</span>
+          <h2 class="platform-heading mb-0">See Makainak in Action</h2>
+        </div>
+        <div class="mt-3 mt-md-0">
+          <a href="#" class="btn rounded-pill px-4 fw-bold shadow-sm d-flex align-items-center"
+            style="background-color: #d0e6ff; border: none; color: #1A39B3;">
+            <i class="bi bi-instagram me-2"
+              style="background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"></i>
+            Follow Us
+          </a>
+        </div>
+      </div>
+
+      <!-- Video Grid -->
+      <div class="row g-4">
+        <!-- Video 1 -->
+        <div class="col-lg-3 col-md-6 col-12">
+          <div
+            class="video-card bg-black rounded-4 position-relative d-flex justify-content-center align-items-center shadow-sm"
+            style="height: 450px; cursor: pointer;">
+            <button class="btn border-0 rounded-4 play-btn-overlay d-flex justify-content-center align-items-center"
+              style="width: 70px; height: 50px;">
+              <i class="bi bi-play-fill text-white fs-2"></i>
+            </button>
+          </div>
+        </div>
+        <!-- Video 2 -->
+        <div class="col-lg-3 col-md-6 col-12">
+          <div
+            class="video-card bg-black rounded-4 position-relative d-flex justify-content-center align-items-center shadow-sm"
+            style="height: 450px; cursor: pointer;">
+            <button class="btn border-0 rounded-4 play-btn-overlay d-flex justify-content-center align-items-center"
+              style="width: 70px; height: 50px;">
+              <i class="bi bi-play-fill text-white fs-2"></i>
+            </button>
+          </div>
+        </div>
+        <!-- Video 3 -->
+        <div class="col-lg-3 col-md-6 col-12">
+          <div
+            class="video-card bg-black rounded-4 position-relative d-flex justify-content-center align-items-center shadow-sm"
+            style="height: 450px; cursor: pointer;">
+            <button class="btn border-0 rounded-4 play-btn-overlay d-flex justify-content-center align-items-center"
+              style="width: 70px; height: 50px;">
+              <i class="bi bi-play-fill text-white fs-2"></i>
+            </button>
+          </div>
+        </div>
+        <!-- Video 4 -->
+        <div class="col-lg-3 col-md-6 col-12">
+          <div
+            class="video-card bg-black rounded-4 position-relative d-flex justify-content-center align-items-center shadow-sm"
+            style="height: 450px; cursor: pointer;">
+            <button class="btn border-0 rounded-4 play-btn-overlay d-flex justify-content-center align-items-center"
+              style="width: 70px; height: 50px;">
+              <i class="bi bi-play-fill text-white fs-2"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section pb-5" style="background-color: #f4f9fd;">
+    <div class="container pb-5">
+      <div class="cta-card rounded-5 p-4 p-md-5 position-relative overflow-hidden shadow-lg"
+        style="background: linear-gradient(85.26deg, #1A39B3 33.96%, #1A3CB5 35.54%, #1D61D0 57.61%, #2078E0 75.47%, #2181E7 86.51%);">
+        <div class="row align-items-center position-relative z-1">
+
+          <div class="col-lg-6 text-white mb-4 mb-lg-0 pe-lg-5">
+            <h2 class="cta-heading fw-bold mb-4"
+              style="font-family: 'Karla', sans-serif; font-size: 3rem; line-height: 1.2; letter-spacing: -1px;">Ready
+              to Simplify<br>Your Home<br>Maintenance?</h2>
+            <p class="cta-desc mb-5" style="font-size: 1rem; opacity: 0.9; max-width: 90%;">Join 10,000+ homeowners who
+              trust Makainak for plumbing, electrical, cleaning, solar & more. Book now and get 10% off your first
+              service!</p>
+            <button
+              class="btn btn-light rounded-pill px-4 py-3 text-primary fw-bold shadow-sm d-inline-flex align-items-center">
+              Sign Up & Save 10%
+              <span class="ms-2 bg-primary text-white rounded d-inline-flex justify-content-center align-items-center"
+                style="width: 20px; height: 20px; font-size: 10px;">
+                <i class="bi bi-arrow-up-right"></i>
+              </span>
+            </button>
+          </div>
+
+          <div class="col-lg-6">
+            <img src="assets/images/feature_professional.png" alt="Makainak Professional"
+              class="img-fluid rounded-4 shadow w-100 object-fit-cover" style="height: 400px;">
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer-section">
+    <div class="container">
+      <div class="row">
+
+        <!-- Left Content -->
+        <div class="col-lg-6 col-md-12 mb-4 pe-lg-5">
+          <div class="footer-logo mb-4">
+            <img src="assets/images/logo.png" alt="makainak" class="logo-img" style="height: 50px;">
+          </div>
+          <h2 class="main-heading">Your Trusted Home Services <br> Partner on your tips</h2>
+          <p class="main-text mt-3 mb-4">
+            From plumbing to solar, connect with verified professionals in your city.
+            Book instantly, pay securely, 100% satisfaction guaranteed
+          </p>
+
+          <div class="d-flex flex-wrap gap-3 mt-4 align-items-center">
+            <button class="btn booknow">Book Now <span class="book-icon ms-2"><i
+                  class="bi bi-arrow-up-right"></i></span></button>
+            <a href="#" class="gplay-badge">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                alt="Get it on Google Play">
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Services -->
+        <div class="col-lg-2 col-md-4 col-12 mb-4 footer-col">
+          <h5 class="footer-heading d-flex justify-content-between align-items-center">Services <span
+              class="toggle-icon d-md-none">+</span></h5>
+          <ul class="list-unstyled footer-list">
+            <li>Plumbing</li>
+            <li>Electrical</li>
+            <li>Solar Installation</li>
+            <li>AC Repair</li>
+            <li>Courier Services</li>
+          </ul>
+        </div>
+
+        <!-- Location -->
+        <div class="col-lg-2 col-md-4 col-12 mb-4 footer-col">
+          <h5 class="footer-heading d-flex justify-content-between align-items-center">Location <span
+              class="toggle-icon d-md-none">+</span></h5>
+          <ul class="list-unstyled footer-list">
+            <li>Faisalabad</li>
+            <li>Lahore</li>
+            <li>Islamabad</li>
+            <li>Rawalpindi</li>
+            <li>Multan</li>
+          </ul>
+        </div>
+
+        <!-- Company -->
+        <div class="col-lg-2 col-md-4 col-12 mb-4 footer-col">
+          <h5 class="footer-heading d-flex justify-content-between align-items-center">Company <span
+              class="toggle-icon d-md-none">+</span></h5>
+          <ul class="list-unstyled footer-list">
+            <li><a href="about.html" class="text-decoration-none text-reset">About Us</a></li>
+            <li><a href="#" class="text-decoration-none text-reset">Careers</a></li>
+            <li><a href="blog.html" class="text-decoration-none text-reset">Blog</a></li>
+            <li><a href="contact.html" class="text-decoration-none text-reset">Contact</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <hr>
+
+      <!-- Bottom Bar -->
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
+
+        <p class="mb-2 mb-md-0">© 2026 Makainak. All rights reserved.</p>
+
+        <div class="social-icons">
+          <a href="#"><i class="bi bi-twitter"></i></a>
+          <a href="#"><i class="bi bi-instagram"></i></a>
+          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href="#"><i class="bi bi-tiktok"></i></a>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+  <!-- jQuery, Bootstrap JS and Custom JS -->
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/footer.js"></script>
+  <script src="assets/js/header.js"></script>
+  <script>
+    $(document).ready(function () {
+      // Toggle Domestic/Corporate functionality
+      $('.toggle-option').on('click', function (e) {
+        e.preventDefault();
+        $('.toggle-option').removeClass('active').addClass('text-muted');
+        $(this).addClass('active').removeClass('text-muted');
+      });
+    });
+  </script>
+
+</body>
+
+</html>
