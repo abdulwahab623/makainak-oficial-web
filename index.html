@@ -23,6 +23,86 @@
   <!-- Mobile Drawer Overlay -->
   <div class="drawer-overlay"></div>
 
+  <!-- Login Modal -->
+  <div class="modal-overlay" id="loginModal">
+    <div class="auth-modal">
+      <button class="modal-close"><i class="bi bi-x"></i></button>
+      <div class="text-center">
+        <h2 class="modal-title">Welcome back</h2>
+        <p class="modal-subtitle">Sign in to manage your bookings and saved pros.</p>
+        
+        <button class="google-btn">
+          <img src="https://www.google.com/favicon.ico" alt="Google">
+          Continue with Google
+        </button>
+
+        <div class="auth-divider">or</div>
+
+        <form>
+          <div class="input-group-custom">
+            <i class="bi bi-envelope"></i>
+            <input type="email" class="form-control rounded-pill" placeholder="Email address">
+          </div>
+          <div class="input-group-custom">
+            <i class="bi bi-lock"></i>
+            <input type="password" class="form-control rounded-pill" placeholder="Password">
+          </div>
+          
+          <a href="#" class="forgot-link">Forgot password?</a>
+
+          <button type="submit" class="btn-signin">
+            Sign in <i class="bi bi-arrow-right-circle-fill"></i>
+          </button>
+        </form>
+
+        <div class="auth-footer">
+          Don't have an account? <a href="#" class="switch-to-signup">Sign up</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Signup Modal -->
+  <div class="modal-overlay" id="signupModal">
+    <div class="auth-modal">
+      <button class="modal-close"><i class="bi bi-x"></i></button>
+      <div class="text-center">
+        <h2 class="modal-title">Create your account</h2>
+        <p class="modal-subtitle">Join Makainak and book trusted local pros in seconds.</p>
+        
+        <button class="google-btn">
+          <img src="https://www.google.com/favicon.ico" alt="Google">
+          Continue with Google
+        </button>
+
+        <div class="auth-divider">or</div>
+
+        <form>
+          <div class="input-group-custom">
+            <i class="bi bi-person"></i>
+            <input type="text" class="form-control rounded-pill" placeholder="Full name">
+          </div>
+          <div class="input-group-custom">
+            <i class="bi bi-envelope"></i>
+            <input type="email" class="form-control rounded-pill" placeholder="Email address">
+          </div>
+          <div class="input-group-custom">
+            <i class="bi bi-lock"></i>
+            <input type="password" class="form-control rounded-pill" placeholder="Password">
+          </div>
+
+          <button type="submit" class="btn-signin">
+            Create account <i class="bi bi-arrow-up-right-circle-fill"></i>
+          </button>
+        </form>
+
+        <div class="auth-footer">
+          Already have an account? <a href="#" class="switch-to-login">Sign in</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Mobile Drawer -->
   <div class="mobile-drawer">
     <button class="drawer-close" id="closeDrawer"><i class="bi bi-x"></i></button>
