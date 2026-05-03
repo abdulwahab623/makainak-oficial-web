@@ -436,6 +436,32 @@ body {
   color: #1f73e8;
 }
 
+.video-container-wrapper {
+  max-width: 800px;
+  width: 100%;
+}
+
+.play-btn-large {
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(5px);
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.play-btn-large:hover {
+  background: rgba(255, 255, 255, 0.4);
+  transform: scale(1.1);
+}
+
 .app-card {
   background: linear-gradient(85.26deg, #1A39B3 33.96%, #1A3CB5 35.54%, #1D61D0 57.61%, #2078E0 75.47%, #2181E7 86.51%);
   box-shadow: 0 10px 30px rgba(31, 115, 232, 0.2);
