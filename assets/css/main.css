@@ -909,3 +909,223 @@ body {
     font-size: 1.8rem;
   }
 }
+
+/* =========================================
+   SUCCESS POPUP STYLES
+   ========================================= */
+.success-popup-wrapper {
+  background-color: #f4f9ff;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.success-card {
+  background: white;
+  border-radius: 30px;
+  max-width: 650px;
+  width: 100%;
+  padding: 40px 30px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.service-tag {
+  background-color: #eef5ff;
+  color: #1a39b3;
+  padding: 6px 18px;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 500;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.success-title {
+  font-family: 'Karla', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 30px;
+}
+
+/* Progress Steps */
+.booking-steps {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.step-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #777;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.step-circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #1a39b3, #2181e7);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+.step-line {
+  width: 40px;
+  height: 2px;
+  background-color: #1d61d0;
+}
+
+/* Success Inner Box */
+.success-inner-box {
+  background-color: #f0f7ff;
+  border-radius: 25px;
+  padding: 30px 20px;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.success-icon-container {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #e88c30, #f7b733);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: -70px auto 20px;
+  border: 6px solid white;
+  box-shadow: 0 8px 15px rgba(232, 140, 48, 0.2);
+}
+
+.success-icon-container i {
+  font-size: 32px;
+  color: white;
+}
+
+.confirmation-msg-title {
+  color: #4a2b11;
+  font-weight: 700;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.confirmation-msg-text {
+  color: #777;
+  font-size: 0.9rem;
+  max-width: 500px;
+  margin: 0 auto 20px;
+  line-height: 1.5;
+}
+
+.divider-line {
+  height: 1px;
+  background-color: #1d61d0;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto 30px;
+  opacity: 0.3;
+}
+
+.support-links {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.support-links a {
+  text-decoration: none;
+  color: #2181e7;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.success-actions {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.btn-homepage {
+  border: 1px solid #1a39b3;
+  color: #1a39b3;
+  background: white;
+  border-radius: 50px;
+  padding: 12px 30px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-homepage:hover {
+  background-color: #f4f9ff;
+  transform: translateY(-2px);
+}
+
+.btn-track {
+  background: linear-gradient(85.26deg, #1A39B3 33.96%, #1D61D0 57.61%, #2181E7 86.51%);
+  color: white;
+  border-radius: 50px;
+  padding: 12px 30px;
+  font-weight: 600;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-track:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(26, 57, 179, 0.2);
+  color: white;
+}
+
+/* Responsive Popup */
+@media (max-width: 768px) {
+  .success-card {
+    padding: 60px 20px 40px;
+    border-radius: 30px;
+  }
+  
+  .success-title {
+    font-size: 1.8rem;
+  }
+  
+  .booking-steps {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .step-line {
+    width: 2px;
+    height: 20px;
+  }
+  
+  .success-inner-box {
+    padding: 30px 15px;
+  }
+  
+  .support-links {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .success-actions {
+    flex-direction: column;
+  }
+  
+  .btn-homepage, .btn-track {
+    width: 100%;
+  }
+}
