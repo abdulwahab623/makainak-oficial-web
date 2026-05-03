@@ -654,7 +654,8 @@ body {
    ========================================= */
 .btn-primary,
 .booknow,
-.badge.bg-primary {
+.badge.bg-primary,
+.btn-gradient {
   background: linear-gradient(85.26deg, #1A39B3 33.96%, #1A3CB5 35.54%, #1D61D0 57.61%, #2078E0 75.47%, #2181E7 86.51%) !important;
   border: none !important;
   color: white !important;
@@ -663,19 +664,26 @@ body {
   justify-content: center;
   border-radius: 30px !important;
   font-weight: 500;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
 }
 
-.booknow {
-  height: 48px;
-  padding: 0 16px 0 24px;
-  box-shadow: 0 4px 10px rgba(31, 115, 232, 0.2);
+.btn-primary:hover,
+.booknow:hover,
+.btn-gradient:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(26, 57, 179, 0.3) !important;
+  filter: brightness(1.1);
+  color: white !important;
 }
 
-.booknow:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 15px rgba(31, 115, 232, 0.3);
+.btn-primary:active,
+.booknow:active,
+.btn-gradient:active {
+  transform: translateY(-1px);
 }
+
 
 .search-bar .btn-primary {
   width: 200px;

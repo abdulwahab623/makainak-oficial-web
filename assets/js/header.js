@@ -26,4 +26,5 @@ $(document).ready(function() {
         $(this).next('.mobile-sub-menu').slideToggle(300);
         $(this).find('i').toggleClass('bi-caret-down-fill bi-caret-up-fill');
     });
+
 });

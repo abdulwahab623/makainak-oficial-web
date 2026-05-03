@@ -29,34 +29,36 @@
     <ul class="mobile-nav-links">
       <li><a href="#" class="active">Home</a></li>
       <li class="mobile-dropdown">
-        <a href="#" class="mobile-dropdown-toggle">Services <i class="bi bi-caret-down-fill ms-1"
-            style="font-size: 10px;"></i></a>
+        <a href="#" class="mobile-dropdown-toggle">Services <i class="bi bi-caret-down-fill ms-1" style="font-size: 10px;"></i></a>
         <ul class="mobile-dropdown-menu">
+          <!-- Civil -->
           <li class="mobile-submenu">
-            <a href="#" class="mobile-submenu-toggle">Civil <i class="bi bi-caret-down-fill ms-1"
-                style="font-size: 10px;"></i></a>
+            <a href="#" class="mobile-submenu-toggle">Civil <i class="bi bi-caret-down-fill ms-1" style="font-size: 10px;"></i></a>
             <ul class="mobile-sub-menu">
-              <li><a href="#">Building Construction</a></li>
-              <li><a href="#">Renovation</a></li>
-              <li><a href="#">Architecture Design</a></li>
+              <li class="mobile-submenu">
+                <a href="#" class="mobile-submenu-toggle">Domestic <i class="bi bi-caret-down-fill ms-1" style="font-size: 10px;"></i></a>
+                <ul class="mobile-sub-menu">
+                  <li><a href="services-detail.html">Home Construction</a></li>
+                </ul>
+              </li>
+              <li class="mobile-submenu">
+                <a href="#" class="mobile-submenu-toggle">Corporate <i class="bi bi-caret-down-fill ms-1" style="font-size: 10px;"></i></a>
+                <ul class="mobile-sub-menu">
+                  <li><a href="services-detail.html">Office Buildout</a></li>
+                </ul>
+              </li>
             </ul>
           </li>
+          <!-- Electrical -->
           <li class="mobile-submenu">
-            <a href="#" class="mobile-submenu-toggle">Electrical <i class="bi bi-caret-down-fill ms-1"
-                style="font-size: 10px;"></i></a>
+            <a href="#" class="mobile-submenu-toggle">Electrical <i class="bi bi-caret-down-fill ms-1" style="font-size: 10px;"></i></a>
             <ul class="mobile-sub-menu">
-              <li><a href="#">Wiring & Installation</a></li>
-              <li><a href="#">Appliance Repair</a></li>
-              <li><a href="#">Solar Setup</a></li>
-            </ul>
-          </li>
-          <li class="mobile-submenu">
-            <a href="#" class="mobile-submenu-toggle">Mechanical <i class="bi bi-caret-down-fill ms-1"
-                style="font-size: 10px;"></i></a>
-            <ul class="mobile-sub-menu">
-              <li><a href="#">HVAC & AC Repair</a></li>
-              <li><a href="#">Plumbing</a></li>
-              <li><a href="#">Generator Repair</a></li>
+              <li class="mobile-submenu">
+                <a href="#" class="mobile-submenu-toggle">Domestic <i class="bi bi-caret-down-fill ms-1" style="font-size: 10px;"></i></a>
+                <ul class="mobile-sub-menu">
+                  <li><a href="services-detail.html">Home Wiring</a></li>
+                </ul>
+              </li>
             </ul>
           </li>
         </ul>
@@ -87,31 +89,70 @@
           <li class="services-dropdown">
             <a href="#">Services <i class="bi bi-caret-down-fill ms-1" style="font-size: 10px;"></i></a>
             <ul class="desktop-dropdown-menu">
+              <!-- Level 2: Civil -->
               <li class="desktop-dropdown-submenu">
-                <a href="services-detail.html">Civil <i class="bi bi-chevron-right ms-auto"
-                    style="font-size: 10px; float: right; margin-top: 5px;"></i></a>
+                <a href="#">Civil <i class="bi bi-chevron-right ms-auto" style="font-size: 10px; float: right; margin-top: 5px;"></i></a>
                 <ul class="desktop-sub-menu">
-                  <li><a href="services-detail.html">Building Construction</a></li>
-                  <li><a href="services-detail.html">Renovation</a></li>
-                  <li><a href="services-detail.html">Architecture Design</a></li>
+                  <!-- Level 3: Domestic -->
+                  <li class="desktop-dropdown-submenu">
+                    <a href="#">Domestic <i class="bi bi-chevron-right ms-auto" style="font-size: 10px; float: right; margin-top: 5px;"></i></a>
+                    <ul class="desktop-sub-menu">
+                      <li><a href="services-detail.html">Home Construction</a></li>
+                      <li><a href="services-detail.html">Interior Renovation</a></li>
+                    </ul>
+                  </li>
+                  <!-- Level 3: Corporate -->
+                  <li class="desktop-dropdown-submenu">
+                    <a href="#">Corporate <i class="bi bi-chevron-right ms-auto" style="font-size: 10px; float: right; margin-top: 5px;"></i></a>
+                    <ul class="desktop-sub-menu">
+                      <li><a href="services-detail.html">Office Buildout</a></li>
+                      <li><a href="services-detail.html">Commercial Design</a></li>
+                    </ul>
+                  </li>
                 </ul>
               </li>
+              <!-- Level 2: Electrical -->
               <li class="desktop-dropdown-submenu">
-                <a href="services-detail.html">Electrical <i class="bi bi-chevron-right ms-auto"
-                    style="font-size: 10px; float: right; margin-top: 5px;"></i></a>
+                <a href="#">Electrical <i class="bi bi-chevron-right ms-auto" style="font-size: 10px; float: right; margin-top: 5px;"></i></a>
                 <ul class="desktop-sub-menu">
-                  <li><a href="services-detail.html">Wiring & Installation</a></li>
-                  <li><a href="services-detail.html">Appliance Repair</a></li>
-                  <li><a href="services-detail.html">Solar Setup</a></li>
+                  <!-- Level 3: Domestic -->
+                  <li class="desktop-dropdown-submenu">
+                    <a href="#">Domestic <i class="bi bi-chevron-right ms-auto" style="font-size: 10px; float: right; margin-top: 5px;"></i></a>
+                    <ul class="desktop-sub-menu">
+                      <li><a href="services-detail.html">Home Wiring</a></li>
+                      <li><a href="services-detail.html">Appliance Install</a></li>
+                    </ul>
+                  </li>
+                  <!-- Level 3: Corporate -->
+                  <li class="desktop-dropdown-submenu">
+                    <a href="#">Corporate <i class="bi bi-chevron-right ms-auto" style="font-size: 10px; float: right; margin-top: 5px;"></i></a>
+                    <ul class="desktop-sub-menu">
+                      <li><a href="services-detail.html">Industrial Wiring</a></li>
+                      <li><a href="services-detail.html">Server Room Power</a></li>
+                    </ul>
+                  </li>
                 </ul>
               </li>
+              <!-- Level 2: Mechanical -->
               <li class="desktop-dropdown-submenu">
-                <a href="services-detail.html">Mechanical <i class="bi bi-chevron-right ms-auto"
-                    style="font-size: 10px; float: right; margin-top: 5px;"></i></a>
+                <a href="#">Mechanical <i class="bi bi-chevron-right ms-auto" style="font-size: 10px; float: right; margin-top: 5px;"></i></a>
                 <ul class="desktop-sub-menu">
-                  <li><a href="services-detail.html">HVAC & AC Repair</a></li>
-                  <li><a href="services-detail.html">Plumbing</a></li>
-                  <li><a href="services-detail.html">Generator Repair</a></li>
+                  <!-- Level 3: Domestic -->
+                  <li class="desktop-dropdown-submenu">
+                    <a href="#">Domestic <i class="bi bi-chevron-right ms-auto" style="font-size: 10px; float: right; margin-top: 5px;"></i></a>
+                    <ul class="desktop-sub-menu">
+                      <li><a href="services-detail.html">AC Maintenance</a></li>
+                      <li><a href="services-detail.html">Home Plumbing</a></li>
+                    </ul>
+                  </li>
+                  <!-- Level 3: Corporate -->
+                  <li class="desktop-dropdown-submenu">
+                    <a href="#">Corporate <i class="bi bi-chevron-right ms-auto" style="font-size: 10px; float: right; margin-top: 5px;"></i></a>
+                    <ul class="desktop-sub-menu">
+                      <li><a href="services-detail.html">Central HVAC</a></li>
+                      <li><a href="services-detail.html">Industrial Plumbing</a></li>
+                    </ul>
+                  </li>
                 </ul>
               </li>
             </ul>
