@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Careers | Makainak</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/main.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Mobile Drawer Overlay -->
+  <div class="drawer-overlay"></div>
+
+  <!-- Login Modal -->
+  <div class="modal-overlay" id="loginModal">
+    <div class="auth-modal">
+      <button class="modal-close"><i class="bi bi-x"></i></button>
+      <div class="text-center">
+        <h2 class="modal-title">Welcome back</h2>
+        <p class="modal-subtitle">Sign in to manage your bookings and saved pros.</p>
+        
+        <button class="google-btn">
+          <img src="https://www.google.com/favicon.ico" alt="Google">
+          Continue with Google
+        </button>
+
+        <div class="auth-divider">or</div>
+
+        <form>
+          <div class="input-group-custom">
+            <i class="bi bi-envelope"></i>
+            <input type="email" class="form-control rounded-pill" placeholder="Email address">
+          </div>
+          <div class="input-group-custom">
+            <i class="bi bi-lock"></i>
+            <input type="password" class="form-control rounded-pill" placeholder="Password">
+          </div>
+          
+          <a href="#" class="forgot-link">Forgot password?</a>
+
+          <button type="submit" class="btn-signin">
+            Sign in <i class="bi bi-arrow-right-circle-fill"></i>
+          </button>
+        </form>
+
+        <div class="auth-footer">
+          Don't have an account? <a href="#" class="switch-to-signup">Sign up</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Signup Modal -->
+  <div class="modal-overlay" id="signupModal">
+    <div class="auth-modal">
+      <button class="modal-close"><i class="bi bi-x"></i></button>
+      <div class="text-center">
+        <h2 class="modal-title">Create account</h2>
+        <p class="modal-subtitle">Join Makainak to book services and track your pros.</p>
+        
+        <button class="google-btn">
+          <img src="https://www.google.com/favicon.ico" alt="Google">
+          Sign up with Google
+        </button>
+
+        <div class="auth-divider">or</div>
+
+        <form>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="input-group-custom">
+                <i class="bi bi-person"></i>
+                <input type="text" class="form-control rounded-pill" placeholder="First name">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="input-group-custom">
+                <i class="bi bi-person"></i>
+                <input type="text" class="form-control rounded-pill" placeholder="Last name">
+              </div>
+            </div>
+          </div>
+          <div class="input-group-custom">
+            <i class="bi bi-envelope"></i>
+            <input type="email" class="form-control rounded-pill" placeholder="Email address">
+          </div>
+          <div class="input-group-custom">
+            <i class="bi bi-lock"></i>
+            <input type="password" class="form-control rounded-pill" placeholder="Create password">
+          </div>
+          
+          <p class="text-muted small text-start px-2 mb-4">By signing up, you agree to our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.</p>
+
+          <button type="submit" class="btn-signin">
+            Create account <i class="bi bi-arrow-right-circle-fill"></i>
+          </button>
+        </form>
+
+        <div class="auth-footer">
+          Already have an account? <a href="#" class="switch-to-login">Sign in</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer">
+    <button class="drawer-close" id="closeDrawer"><i class="bi bi-x"></i></button>
+    <ul class="mobile-nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li class="mobile-dropdown">
+        <a href="#" class="mobile-dropdown-toggle">Services <i class="bi bi-caret-down-fill ms-1"
+            style="font-size: 10px;"></i></a>
+        <ul class="mobile-dropdown-menu">
+          <li class="mobile-submenu">
+            <a href="#" class="mobile-submenu-toggle">Civil <i class="bi bi-caret-down-fill ms-1"
+                style="font-size: 10px;"></i></a>
+            <ul class="mobile-sub-menu">
+              <li><a href="#">Building Construction</a></li>
+              <li><a href="#">Renovation</a></li>
+              <li><a href="#">Architecture Design</a></li>
+            </ul>
+          </li>
+          <li class="mobile-submenu">
+            <a href="#" class="mobile-submenu-toggle">Electrical <i class="bi bi-caret-down-fill ms-1"
+                style="font-size: 10px;"></i></a>
+            <ul class="mobile-sub-menu">
+              <li><a href="#">Wiring & Installation</a></li>
+              <li><a href="#">Appliance Repair</a></li>
+              <li><a href="#">Solar Setup</a></li>
+            </ul>
+          </li>
+          <li class="mobile-submenu">
+            <a href="#" class="mobile-submenu-toggle">Mechanical <i class="bi bi-caret-down-fill ms-1"
+                style="font-size: 10px;"></i></a>
+            <ul class="mobile-sub-menu">
+              <li><a href="#">HVAC & AC Repair</a></li>
+              <li><a href="#">Plumbing</a></li>
+              <li><a href="#">Generator Repair</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="blog.html">Blogs</a></li>
+    </ul>
+    <div class="mobile-actions">
+      <a href="contact.html" class="help-center-link">Help Center</a>
+      <a href="#" class="sign-in-link">Sign in</a>
+      <button class="btn booknow mt-3">Book Now <span class="book-icon ms-2"><i
+            class="bi bi-arrow-up-right"></i></span></button>
+    </div>
+  </div>
+
+  <!-- Header Section -->
+  <header class="header-wrapper">
+    <div class="container">
+      <div class="navbar-pill">
+        <!-- Logo -->
+        <a href="index.html" class="logo">
+          <img src="assets/images/logo.png" alt="makainak" class="logo-img">
+        </a>
+
+        <!-- Desktop Center Navigation -->
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li class="services-dropdown">
+            <a href="#">Services <i class="bi bi-caret-down-fill ms-1" style="font-size: 10px;"></i></a>
+            <ul class="desktop-dropdown-menu">
+              <li class="desktop-dropdown-submenu">
+                <a href="#">Civil <i class="bi bi-chevron-right ms-auto"
+                    style="font-size: 10px; float: right; margin-top: 5px;"></i></a>
+                <ul class="desktop-sub-menu">
+                  <li><a href="#">Building Construction</a></li>
+                  <li><a href="#">Renovation</a></li>
+                  <li><a href="#">Architecture Design</a></li>
+                </ul>
+              </li>
+              <li class="desktop-dropdown-submenu">
+                <a href="#">Electrical <i class="bi bi-chevron-right ms-auto"
+                    style="font-size: 10px; float: right; margin-top: 5px;"></i></a>
+                <ul class="desktop-sub-menu">
+                  <li><a href="#">Wiring & Installation</a></li>
+                  <li><a href="#">Appliance Repair</a></li>
+                  <li><a href="#">Solar Setup</a></li>
+                </ul>
+              </li>
+              <li class="desktop-dropdown-submenu">
+                <a href="#">Mechanical <i class="bi bi-chevron-right ms-auto"
+                    style="font-size: 10px; float: right; margin-top: 5px;"></i></a>
+                <ul class="desktop-sub-menu">
+                  <li><a href="#">HVAC & AC Repair</a></li>
+                  <li><a href="#">Plumbing</a></li>
+                  <li><a href="#">Generator Repair</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="blog.html">Blogs</a></li>
+        </ul>
+
+        <!-- Desktop Right Actions -->
+        <div class="nav-actions">
+          <a href="contact.html" class="help-center-link">Help Center</a>
+          <a href="#" class="sign-in-link">Sign in</a>
+          <button class="btn booknow">Book Now <span class="book-icon ms-2"><i
+                class="bi bi-arrow-up-right"></i></span></button>
+        </div>
+
+        <!-- Mobile Hamburger Button -->
+        <button class="hamburger-btn" id="hamburgerBtn">
+          <i class="bi bi-list"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Careers Hero Section -->
+  <section class="py-5 text-center" style="background-color: #f0f7ff;">
+    <div class="container py-lg-5">
+      <h1 class="display-3 fw-bold mb-0" style="font-family: 'Karla', sans-serif; color: #111;">Build the future of</h1>
+      <h2 class="display-4 fw-normal mb-5" style="color: #1f73e8;">local services</h2>
+      
+      <div class="career-hero-container rounded-5 overflow-hidden mx-auto mb-5">
+        <img src="assets/images/carrerpageimage.png" alt="Build the Future" class="img-fluid career-hero-img">
+      </div>
+    </div>
+  </section>
+
+  <!-- Perks Section -->
+  <section class="py-5" style="background-color: #f0f7ff;">
+    <div class="container py-lg-5 text-center">
+      <div class="mb-5">
+        <span class="open-roles-badge mb-3">Open Roles</span>
+        <h2 class="display-5 fw-bold mt-3">Perks that <span style="color: #1f73e8;">actually matter</span></h2>
+      </div>
+      
+      <div class="row g-4">
+        <!-- Perk 1 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="perk-card h-100 text-start shadow-sm p-4 rounded-4 bg-white">
+            <div class="perk-icon-wrapper mb-3">
+              <i class="bi bi-globe"></i>
+            </div>
+            <h5 class="fw-bold mb-2">Remote-first</h5>
+            <p class="text-muted small">Work from anywhere. We meet up twice a year for team offsites.</p>
+          </div>
+        </div>
+        <!-- Perk 2 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="perk-card h-100 text-start shadow-sm p-4 rounded-4 bg-white">
+            <div class="perk-icon-wrapper mb-3">
+              <i class="bi bi-globe"></i>
+            </div>
+            <h5 class="fw-bold mb-2">Remote-first</h5>
+            <p class="text-muted small">Work from anywhere. We meet up twice a year for team offsites.</p>
+          </div>
+        </div>
+        <!-- Perk 3 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="perk-card h-100 text-start shadow-sm p-4 rounded-4 bg-white">
+            <div class="perk-icon-wrapper mb-3">
+              <i class="bi bi-globe"></i>
+            </div>
+            <h5 class="fw-bold mb-2">Remote-first</h5>
+            <p class="text-muted small">Work from anywhere. We meet up twice a year for team offsites.</p>
+          </div>
+        </div>
+        <!-- Perk 4 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="perk-card h-100 text-start shadow-sm p-4 rounded-4 bg-white">
+            <div class="perk-icon-wrapper mb-3">
+              <i class="bi bi-globe"></i>
+            </div>
+            <h5 class="fw-bold mb-2">Remote-first</h5>
+            <p class="text-muted small">Work from anywhere. We meet up twice a year for team offsites.</p>
+          </div>
+        </div>
+        <!-- Perk 5 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="perk-card h-100 text-start shadow-sm p-4 rounded-4 bg-white">
+            <div class="perk-icon-wrapper mb-3">
+              <i class="bi bi-globe"></i>
+            </div>
+            <h5 class="fw-bold mb-2">Remote-first</h5>
+            <p class="text-muted small">Work from anywhere. We meet up twice a year for team offsites.</p>
+          </div>
+        </div>
+        <!-- Perk 6 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="perk-card h-100 text-start shadow-sm p-4 rounded-4 bg-white">
+            <div class="perk-icon-wrapper mb-3">
+              <i class="bi bi-globe"></i>
+            </div>
+            <h5 class="fw-bold mb-2">Remote-first</h5>
+            <p class="text-muted small">Work from anywhere. We meet up twice a year for team offsites.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Life at Makainak Section -->
+  <section class="py-5 bg-light-blue">
+    <div class="container py-lg-5">
+      <div class="row align-items-center">
+        <div class="col-lg-6 mb-4 mb-lg-0">
+          <div class="d-flex align-items-center mb-3">
+            <i class="bi bi-chat-right-text-fill text-primary me-2"></i>
+            <span class="fw-bold small text-uppercase" style="letter-spacing: 1px; color: #555;">Life at Makainak</span>
+          </div>
+          <h2 class="display-5 fw-bold mb-4" style="color: #111;">Real work, real people</h2>
+          <p class="text-muted lead mb-5">Join the platform that is transforming home services in Pakistan. Work with a passionate team that is dedicated to helping people live a better life through modern solutions.</p>
+          <a href="#" class="btn btn-primary rounded-pill px-4 py-3 fw-bold shadow">
+            Browse our culture <i class="bi bi-arrow-up-right ms-2"></i>
+          </a>
+        </div>
+        <div class="col-lg-6">
+          <div class="life-img-wrapper rounded-5 overflow-hidden shadow-lg">
+            <img src="assets/images/feature_tablet.png" alt="Life at Makainak" class="img-fluid w-100">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Job Openings Section -->
+  <section class="py-5" style="background-color: #f0f7ff;">
+    <div class="container py-lg-5 text-center">
+      <div class="mb-5">
+        <span class="open-roles-badge mb-3">Open Roles</span>
+        <h2 class="display-5 fw-bold mt-3">Find your <span style="color: #1f73e8;">next role</span></h2>
+      </div>
+
+      <!-- Filters -->
+      <div class="d-flex flex-wrap justify-content-center gap-2 mb-5">
+        <button class="job-filter-btn active">All</button>
+        <button class="job-filter-btn">Mechanical Engineering</button>
+        <button class="job-filter-btn">Civil Engineering</button>
+        <button class="job-filter-btn">HSE Engineering</button>
+      </div>
+
+      <!-- Job List -->
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="job-list-container bg-white rounded-5 shadow-sm p-2 p-md-4">
+            <!-- Job 1 -->
+            <div class="job-item d-flex flex-column flex-md-row justify-content-between align-items-md-center p-4 border-bottom">
+              <div class="text-start mb-3 mb-md-0">
+                <h5 class="fw-bold mb-1">AC Technician</h5>
+                <p class="text-muted small mb-0">Mechanical Engineering • Full-time • Faisalabad</p>
+              </div>
+              <button class="btn btn-primary rounded-pill px-4 fw-bold apply-btn">Apply <i class="bi bi-arrow-right-short"></i></button>
+            </div>
+            <!-- Job 2 -->
+            <div class="job-item d-flex flex-column flex-md-row justify-content-between align-items-md-center p-4 border-bottom">
+              <div class="text-start mb-3 mb-md-0">
+                <h5 class="fw-bold mb-1">Electrician</h5>
+                <p class="text-muted small mb-0">Electrical Engineering • Part-time • Islamabad</p>
+              </div>
+              <button class="btn btn-primary rounded-pill px-4 fw-bold apply-btn">Apply <i class="bi bi-arrow-right-short"></i></button>
+            </div>
+            <!-- Job 3 -->
+            <div class="job-item d-flex flex-column flex-md-row justify-content-between align-items-md-center p-4 border-bottom">
+              <div class="text-start mb-3 mb-md-0">
+                <h5 class="fw-bold mb-1">Solar Technician</h5>
+                <p class="text-muted small mb-0">Electrical Engineering • Full-time • Faisalabad</p>
+              </div>
+              <button class="btn btn-primary rounded-pill px-4 fw-bold apply-btn">Apply <i class="bi bi-arrow-right-short"></i></button>
+            </div>
+            <!-- Job 4 -->
+            <div class="job-item d-flex flex-column flex-md-row justify-content-between align-items-md-center p-4">
+              <div class="text-start mb-3 mb-md-0">
+                <h5 class="fw-bold mb-1">Electrical Engineer</h5>
+                <p class="text-muted small mb-0">Electrical Engineering • Full-time • Islamabad</p>
+              </div>
+              <button class="btn btn-primary rounded-pill px-4 fw-bold apply-btn">Apply <i class="bi bi-arrow-right-short"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer-section">
+    <div class="container">
+      <div class="row">
+
+        <!-- Left Content -->
+        <div class="col-lg-6 col-md-12 mb-4 pe-lg-5">
+          <div class="footer-logo mb-4">
+            <img src="assets/images/logo.png" alt="makainak" class="logo-img" style="height: 50px;">
+          </div>
+          <h2 class="main-heading">Your Trusted Home Services <br> Partner on your tips</h2>
+          <p class="main-text mt-3 mb-4">
+            From plumbing to solar, connect with verified professionals in your city.
+            Book instantly, pay securely, 100% satisfaction guaranteed
+          </p>
+
+          <div class="d-flex flex-wrap gap-3 mt-4 align-items-center">
+            <button class="btn booknow">Book Now <span class="book-icon ms-2"><i
+                  class="bi bi-arrow-up-right"></i></span></button>
+            <a href="#" class="gplay-badge">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                alt="Get it on Google Play">
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Services -->
+        <div class="col-lg-2 col-md-4 col-12 mb-4 footer-col">
+          <h5 class="footer-heading d-flex justify-content-between align-items-center">Services <span
+              class="toggle-icon d-md-none">+</span></h5>
+          <ul class="list-unstyled footer-list">
+            <li>Plumbing</li>
+            <li>Electrical</li>
+            <li>Solar Installation</li>
+            <li>AC Repair</li>
+            <li>Courier Services</li>
+          </ul>
+        </div>
+
+        <!-- Location -->
+        <div class="col-lg-2 col-md-4 col-12 mb-4 footer-col">
+          <h5 class="footer-heading d-flex justify-content-between align-items-center">Location <span
+              class="toggle-icon d-md-none">+</span></h5>
+          <ul class="list-unstyled footer-list">
+            <li>Faisalabad</li>
+            <li>Lahore</li>
+            <li>Islamabad</li>
+            <li>Rawalpindi</li>
+            <li>Multan</li>
+          </ul>
+        </div>
+
+        <!-- Company -->
+        <div class="col-lg-2 col-md-4 col-12 mb-4 footer-col">
+          <h5 class="footer-heading d-flex justify-content-between align-items-center">Company <span
+              class="toggle-icon d-md-none">+</span></h5>
+          <ul class="list-unstyled footer-list">
+            <li><a href="about.html" class="text-decoration-none text-reset">About Us</a></li>
+            <li><a href="careers.html" class="text-decoration-none text-reset fw-bold">Careers</a></li>
+            <li><a href="blog.html" class="text-decoration-none text-reset">Blog</a></li>
+            <li><a href="contact.html" class="text-decoration-none text-reset">Contact</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <hr>
+
+      <!-- Bottom Bar -->
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
+
+        <p class="mb-2 mb-md-0">© 2026 Makainak. All rights reserved.</p>
+
+        <div class="social-icons">
+          <a href="#"><i class="bi bi-twitter"></i></a>
+          <a href="#"><i class="bi bi-instagram"></i></a>
+          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href="#"><i class="bi bi-tiktok"></i></a>
+        </div>
+
+      </div>
+    </div>
+  </footer
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+  <!-- jQuery, Bootstrap JS and Custom JS -->
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/footer.js"></script>
+  <script src="assets/js/header.js"></script>
+
+</body>
+
+</html>

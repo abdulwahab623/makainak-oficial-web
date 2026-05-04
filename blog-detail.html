@@ -137,63 +137,154 @@
   </header>
 
   <!-- Blog Detail Content -->
-  <section class="py-5 bg-white service-detail-wrapper">
+  <section class="py-5 bg-white">
     <div class="container py-lg-4">
       <div class="row justify-content-center">
         <div class="col-lg-8">
           <!-- Article Header -->
           <nav aria-label="breadcrumb" class="mb-4">
             <ol class="breadcrumb small">
-              <li class="breadcrumb-item"><a href="blog.html" class="text-decoration-none">Blog</a></li>
+              <li class="breadcrumb-item"><a href="blog.html" class="text-decoration-none text-primary">Blog</a></li>
               <li class="breadcrumb-item active" aria-current="page">AC Maintenance</li>
             </ol>
           </nav>
           
-          <h1 class="fw-bold mb-3 display-5" style="font-family: 'Karla', sans-serif;">10 Tips to Keep Your AC Running Efficiently This Summer</h1>
+          <h1 class="fw-bold mb-4 display-5" style="font-family: 'Karla', sans-serif; color: #111;">10 Tips to Keep Your AC Running Efficiently This Summer</h1>
           
           <div class="d-flex align-items-center mb-5">
-            <div class="bg-light-blue rounded-circle me-3 d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
-              <i class="bi bi-person text-primary fs-4"></i>
+            <div class="bg-light-blue rounded-circle me-3 d-flex align-items-center justify-content-center overflow-hidden" style="width: 42px; height: 42px;">
+              <i class="bi bi-person-fill text-primary fs-5"></i>
             </div>
-            <div>
-              <p class="mb-0 fw-bold small">By Makainak Expert</p>
-              <p class="text-muted small mb-0">May 2, 2026 • 5 min read</p>
+            <div class="author-meta">
+              <span class="d-block fw-bold small text-uppercase" style="letter-spacing: 0.5px; color: #333;">By Makainak Expert</span>
+              <span class="text-muted small">May 2, 2026 • 5 min read</span>
             </div>
           </div>
 
-          <img src="assets/images/feature_ac_repair.png" alt="Blog Feature" class="img-fluid rounded-5 shadow-lg mb-5 w-100 object-fit-cover" style="height: 400px;">
+          <!-- Feature Image -->
+          <div class="blog-feature-img-wrapper rounded-5 overflow-hidden mb-5 shadow-sm">
+            <img src="assets/images/feature_ac_repair.png" alt="AC Repair" class="img-fluid w-100 object-fit-cover" style="max-height: 500px;">
+          </div>
 
-          <div class="blog-content" style="line-height: 1.8; color: #444;">
-            <p>As the temperatures soar, your Air Conditioning system becomes your best friend. However, without proper care, it can also become a source of high electricity bills and unexpected repairs. Here are 10 expert tips to keep your AC running at its peak performance throughout the summer season.</p>
+          <div class="blog-content-body">
+            <p class="lead mb-4">As the temperatures soar, your Air Conditioning system becomes your best friend. However, without proper care, it can also become a source of high electricity bills and unexpected repairs. Here are 10 expert tips to keep your AC running at its peak performance throughout the summer season.</p>
             
-            <h4 class="fw-bold mt-5 mb-3" style="font-family: 'Karla', sans-serif;">1. Clean or Replace Air Filters Regularly</h4>
+            <h3 class="fw-bold mt-5 mb-3">1. Clean or Replace Air Filters Regularly</h3>
             <p>A clogged filter restricts airflow and significantly reduces efficiency. During heavy usage months, check your filters every 30 days and clean or replace them as needed.</p>
 
-            <h4 class="fw-bold mt-5 mb-3" style="font-family: 'Karla', sans-serif;">2. Keep the Outdoor Unit Clear</h4>
+            <h3 class="fw-bold mt-5 mb-3">2. Keep the Outdoor Unit Clear</h3>
             <p>Your AC's outdoor condenser unit needs room to breathe. Ensure there's at least 2 feet of clearance around it, removing any leaves, debris, or overgrown plants.</p>
 
-            <h4 class="fw-bold mt-5 mb-3" style="font-family: 'Karla', sans-serif;">3. Schedule Professional Maintenance</h4>
+            <h3 class="fw-bold mt-5 mb-3">3. Schedule Professional Maintenance</h3>
             <p>An annual check-up by a certified professional can catch small issues before they become major disasters. Makainak offers comprehensive AC general services to ensure your system is summer-ready.</p>
 
-            <blockquote class="bg-light-blue p-4 rounded-4 border-start border-primary border-4 my-5">
-              <p class="mb-0 fs-5 font-italic fw-medium text-primary">"Prevention is always better—and cheaper—than repair. A well-maintained AC can last up to 15 years while saving you up to 20% on energy costs."</p>
-            </blockquote>
+            <div class="blog-quote-box my-5 p-4 p-md-5 rounded-4">
+              <p class="mb-0 fs-5 fw-medium">"Prevention is always better—and cheaper—than repair. A well-maintained AC can last up to 15 years while saving you up to 20% on energy costs."</p>
+            </div>
 
             <p>By following these simple steps, you can ensure a cool and comfortable home all summer long without breaking the bank. For professional assistance, don't hesitate to book a service with Makainak today!</p>
           </div>
 
-          <!-- Tags & Social Share -->
-          <div class="border-top border-bottom py-4 mt-5 d-flex flex-column flex-md-row justify-content-between align-items-md-center">
-            <div class="mb-3 mb-md-0">
-              <span class="small fw-bold me-2">Tags:</span>
-              <a href="#" class="badge rounded-pill bg-light-blue text-primary text-decoration-none px-3 py-2 me-2">AC Repair</a>
-              <a href="#" class="badge rounded-pill bg-light-blue text-primary text-decoration-none px-3 py-2">Home Tips</a>
+          <!-- Footer Meta -->
+          <div class="border-top mt-5 pt-4 d-flex flex-column flex-md-row justify-content-between align-items-md-center">
+            <div class="tags-wrapper mb-3 mb-md-0">
+              <span class="small fw-bold text-uppercase me-3" style="color: #999; letter-spacing: 1px; font-size: 11px;">Tags:</span>
+              <a href="#" class="blog-tag">AC Repair</a>
+              <a href="#" class="blog-tag">Home Tips</a>
             </div>
-            <div class="social-icons justify-content-start">
-              <span class="small fw-bold me-3 align-self-center d-none d-md-inline">Share:</span>
-              <a href="#"><i class="bi bi-twitter"></i></a>
-              <a href="#"><i class="bi bi-facebook"></i></a>
-              <a href="#"><i class="bi bi-linkedin"></i></a>
+            <div class="social-share-wrapper d-flex align-items-center">
+              <span class="small fw-bold text-uppercase me-3" style="color: #999; letter-spacing: 1px; font-size: 11px;">Share:</span>
+              <div class="d-flex gap-2">
+                <a href="#" class="social-share-btn"><i class="bi bi-twitter"></i></a>
+                <a href="#" class="social-share-btn"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="social-share-btn"><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Latest Blogs Section -->
+  <section class="py-5 bg-light-blue">
+    <div class="container py-lg-5">
+      <div class="mb-5">
+        <h2 class="fw-bold" style="font-family: 'Karla', sans-serif;">Latest Blogs</h2>
+      </div>
+
+      <div class="row g-4">
+        <!-- Blog Card 1 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="blog-card-new h-100 shadow-sm border-0">
+            <div class="blog-card-img rounded-top-4 overflow-hidden" style="height: 200px;">
+              <img src="assets/images/feature_ac_repair.png" alt="AC Maintenance" class="img-fluid w-100 h-100 object-fit-cover">
+            </div>
+            <div class="blog-card-body p-4 bg-white rounded-bottom-4">
+              <span class="blog-category-badge mb-3">Maintenance</span>
+              <h5 class="fw-bold mb-3">10 Tips to Keep Your AC Running Efficiently This Summer</h5>
+              <p class="text-muted small mb-4">Regular maintenance can save you from high electricity bills and unexpected breakdowns during peak summer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="text-muted small"><i class="bi bi-calendar3 me-1"></i> May 2, 2026</span>
+                <a href="blog-detail.html" class="read-more-link text-primary fw-bold text-decoration-none small">READ MORE <i class="bi bi-arrow-right ms-1"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Blog Card 2 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="blog-card-new h-100 shadow-sm border-0">
+            <div class="blog-card-img rounded-top-4 overflow-hidden" style="height: 200px;">
+              <img src="assets/images/feature_tablet.png" alt="Solar Energy" class="img-fluid w-100 h-100 object-fit-cover">
+            </div>
+            <div class="blog-card-body p-4 bg-white rounded-bottom-4">
+              <span class="blog-category-badge mb-3" style="background: #e6fffa; color: #38b2ac;">Solar Energy</span>
+              <h5 class="fw-bold mb-3">Why Switching to Solar is the Best Investment for Your Home</h5>
+              <p class="text-muted small mb-4">Regular maintenance can save you from high electricity bills and unexpected breakdowns during peak summer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="text-muted small"><i class="bi bi-calendar3 me-1"></i> May 2, 2026</span>
+                <a href="blog-detail.html" class="read-more-link text-primary fw-bold text-decoration-none small">READ MORE <i class="bi bi-arrow-right ms-1"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Blog Card 3 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="blog-card-new h-100 shadow-sm border-0">
+            <div class="blog-card-img rounded-top-4 overflow-hidden" style="height: 200px;">
+              <img src="assets/images/feature_professional.png" alt="Plumbing" class="img-fluid w-100 h-100 object-fit-cover">
+            </div>
+            <div class="blog-card-body p-4 bg-white rounded-bottom-4">
+              <span class="blog-category-badge mb-3" style="background: #ebf8ff; color: #3182ce;">Plumbing</span>
+              <h5 class="fw-bold mb-3">Common Plumbing Myths That Are Damaging Your Pipes</h5>
+              <p class="text-muted small mb-4">Regular maintenance can save you from high electricity bills and unexpected breakdowns during peak summer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="text-muted small"><i class="bi bi-calendar3 me-1"></i> May 2, 2026</span>
+                <a href="blog-detail.html" class="read-more-link text-primary fw-bold text-decoration-none small">READ MORE <i class="bi bi-arrow-right ms-1"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Professional CTA Section -->
+  <section class="py-5">
+    <div class="container">
+      <div class="cta-section-new rounded-5 overflow-hidden shadow-lg">
+        <div class="row align-items-center g-0">
+          <!-- Left Content -->
+          <div class="col-lg-6 p-4 p-md-5 text-white">
+            <h2 class="display-4 fw-bold mb-4" style="font-family: 'Karla', sans-serif;">Ready to Simplify Your Home Maintenance?</h2>
+            <p class="lead mb-5 opacity-90">Join 10,000+ homeowners who trust Makainak for plumbing, electrical, cleaning, solar & more. Book now and get 10% off your first service!</p>
+            <button class="cta-btn-white sign-up-link">
+              Sign Up & Save 10% <i class="bi bi-arrow-up-right-circle-fill ms-2"></i>
+            </button>
+          </div>
+          <!-- Right Image -->
+          <div class="col-lg-6">
+            <div class="cta-img-pro">
+              <img src="assets/images/feature_professional.png" alt="Makainak Professional" class="img-fluid w-100 h-100 object-fit-cover">
             </div>
           </div>
         </div>
@@ -259,7 +350,7 @@
               class="toggle-icon d-md-none">+</span></h5>
           <ul class="list-unstyled footer-list">
             <li>About Us</li>
-            <li>Careers</li>
+            <li><a href="careers.html" class="text-decoration-none text-reset">Careers</a></li>
             <li>Blog</li>
             <li>Contact</li>
           </ul>

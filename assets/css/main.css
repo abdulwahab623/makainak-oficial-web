@@ -1350,3 +1350,344 @@ body {
     padding: 30px 20px;
   }
 }
+
+/* =========================================
+   STATS SECTION STYLES
+   ========================================= */
+.stats-number {
+  font-family: 'Karla', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1a39b3;
+  line-height: 1.2;
+  margin-bottom: 5px;
+}
+
+.stats-label {
+  color: #111;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .stats-number {
+    font-size: 1.8rem;
+  }
+  .stats-label {
+    font-size: 0.85rem;
+  }
+}
+
+/* =========================================
+   VALUES SECTION STYLES
+   ========================================= */
+.values-badge {
+  background: linear-gradient(85.26deg, #1A39B3 33.96%, #2181E7 86.51%);
+  color: white;
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  box-shadow: 0 4px 15px rgba(26, 57, 179, 0.2);
+}
+
+.value-card {
+  background: white;
+  border-radius: 20px;
+  padding: 40px 30px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03);
+  transition: all 0.3s ease;
+  border: 1px solid #f8f9fa;
+}
+
+.value-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+}
+
+.value-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: white;
+  margin-bottom: 25px;
+}
+
+.icon-blue { background: #1a39b3; }
+.icon-blue-light { background: #2181e7; }
+.icon-gradient { background: linear-gradient(135deg, #1a39b3, #2181e7); }
+
+/* =========================================
+   STORY & VISION SECTION STYLES
+   ========================================= */
+.story-vision-card {
+  border: 1px solid #f0f7ff;
+}
+
+.story-image-box {
+  background: linear-gradient(135deg, #1a39b3, #2181e7);
+  box-shadow: 0 15px 45px rgba(26, 57, 179, 0.15);
+  min-height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.light-blue-badge {
+  background-color: #e0f0ff;
+  color: #1f73e8;
+  padding: 8px 20px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 500;
+  display: inline-block;
+}
+
+/* =========================================
+   TEAM SECTION STYLES
+   ========================================= */
+.team-card {
+  background: white;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: left;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03);
+  transition: all 0.3s ease;
+  border: 1px solid #f8f9fa;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+}
+
+.team-img-wrapper {
+  aspect-ratio: 1 / 1;
+  background-color: #f0f7ff;
+}
+
+.team-img-wrapper img {
+  height: 100%;
+  object-fit: cover;
+}
+
+/* =========================================
+   CTA SECTION NEW STYLES
+   ========================================= */
+.cta-section-new {
+  background: linear-gradient(135deg, #1a39b3, #2181e7);
+}
+
+.cta-btn-white {
+  background: white;
+  color: #1a39b3;
+  border: none;
+  padding: 14px 32px;
+  border-radius: 50px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.cta-btn-white:hover {
+  background: #f8f9fa;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.cta-img-pro {
+  height: 100%;
+  min-height: 400px;
+}
+
+/* =========================================
+   BLOG DETAIL STYLES
+   ========================================= */
+.blog-content-body p {
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 1.5rem;
+}
+
+.blog-quote-box {
+  background-color: #f0f7ff;
+  border-left: 4px solid #1f73e8;
+  color: #1a39b3;
+}
+
+.blog-tag {
+  background-color: #f0f7ff;
+  color: #1f73e8;
+  padding: 6px 16px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  margin-right: 8px;
+  transition: all 0.3s ease;
+}
+
+.blog-tag:hover {
+  background-color: #1f73e8;
+  color: white;
+}
+
+.social-share-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #f8f9fa;
+  color: #1a39b3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 1px solid #eee;
+}
+
+.social-share-btn:hover {
+  background-color: #1a39b3;
+  color: white;
+  transform: translateY(-3px);
+}
+
+/* =========================================
+   LATEST BLOGS SECTION STYLES
+   ========================================= */
+.blog-category-badge {
+  background-color: #f0f7ff;
+  color: #1f73e8;
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: inline-block;
+}
+
+.read-more-link {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.read-more-link::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #1f73e8;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.read-more-link:hover::after {
+  transform: scaleX(1);
+}
+
+/* =========================================
+   REFINED CAREER PAGE STYLES
+   ========================================= */
+.career-hero-container {
+  max-width: 1100px;
+  background: #1f73e8;
+  height: 380px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.career-hero-img {
+  max-height: 100%;
+  width: auto;
+  object-fit: contain;
+}
+
+.open-roles-badge {
+  background: linear-gradient(135deg, #1a39b3, #1f73e8);
+  color: white;
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.perk-icon-wrapper {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, #1f73e8, #1a39b3);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 20px;
+}
+
+.perk-card {
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.perk-card:hover {
+  transform: translateY(-5px);
+  border-color: #e0e0e0;
+}
+
+/* =========================================
+   LIFE AT MAKAINAK & JOBS STYLES
+   ========================================= */
+.life-img-wrapper {
+  transition: all 0.5s ease;
+}
+
+.life-img-wrapper:hover {
+  transform: scale(1.02);
+}
+
+.job-filter-btn {
+  background: white;
+  border: 1px solid #eee;
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #555;
+  transition: all 0.3s ease;
+}
+
+.job-filter-btn:hover, .job-filter-btn.active {
+  background: white;
+  border-color: #1f73e8;
+  color: #1f73e8;
+  box-shadow: 0 4px 10px rgba(31, 115, 232, 0.1);
+}
+
+.job-list-container {
+  border: 1px solid #f0f0f0;
+}
+
+.job-item {
+  transition: all 0.3s ease;
+}
+
+.job-item:hover {
+  background-color: #fafafa;
+}
+
+.apply-btn {
+  font-size: 14px;
+  padding: 10px 25px !important;
+}
