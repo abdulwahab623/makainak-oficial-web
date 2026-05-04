@@ -103,6 +103,73 @@
     </div>
   </div>
 
+  <!-- Booking Selection Modal -->
+  <div class="modal-overlay" id="bookingModal">
+    <div class="booking-modal-container">
+      <button class="modal-close"><i class="bi bi-x"></i></button>
+      
+      <!-- Dynamic Content Container -->
+      <div id="modalContent">
+        <!-- View 1: Category Selection -->
+        <div id="categoryView">
+          <!-- Category Tabs -->
+          <div class="booking-tabs-wrapper mb-4">
+            <div class="booking-tabs">
+              <button class="tab-btn active" data-category="electrical">Electrical Engineering</button>
+              <button class="tab-btn" data-category="mechanical">Mechanical Engineering</button>
+              <button class="tab-btn" data-category="civil">Civil Engineering</button>
+            </div>
+          </div>
+
+          <!-- Service Grid -->
+          <div class="row g-4 booking-service-grid">
+            <!-- Electrical Services (Default) -->
+            <div class="col-lg-4 col-md-6">
+              <div class="booking-service-card rounded-4 p-3 border show-details" data-service="ac-service">
+                <div class="row align-items-center">
+                  <div class="col-4">
+                    <img src="assets/images/feature_ac_repair.png" alt="Service" class="img-fluid rounded-3">
+                  </div>
+                  <div class="col-8">
+                    <h6 class="fw-bold mb-1">AC Service</h6>
+                    <p class="text-muted mb-2" style="font-size: 10px;">Full AC maintenance & repair</p>
+                    <span class="view-service-link">View Services <i class="bi bi-arrow-up-right-square-fill ms-1"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="booking-service-card rounded-4 p-3 border show-details" data-service="electrical-wiring">
+                <div class="row align-items-center">
+                  <div class="col-4">
+                    <img src="assets/images/feature_professional.png" alt="Service" class="img-fluid rounded-3">
+                  </div>
+                  <div class="col-8">
+                    <h6 class="fw-bold mb-1">Electrical Wiring</h6>
+                    <p class="text-muted mb-2" style="font-size: 10px;">Wiring & circuit solutions</p>
+                    <span class="view-service-link">View Services <i class="bi bi-arrow-up-right-square-fill ms-1"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- View 2: Detailed Services (Hidden by default) -->
+        <div id="servicesDetailView" class="d-none">
+          <button class="back-btn mb-4"><i class="bi bi-arrow-left me-2"></i> Back</button>
+          <div class="text-center mb-5">
+            <span class="badge bg-light text-primary rounded-pill px-3 py-2 mb-2 sub-cat-badge">AC Services</span>
+            <h2 class="fw-bold display-6 service-main-title">AC General Service</h2>
+          </div>
+          <div class="row g-4" id="detailedServiceGrid">
+            <!-- Populated by JS -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Mobile Drawer -->
   <div class="mobile-drawer">
     <button class="drawer-close" id="closeDrawer"><i class="bi bi-x"></i></button>
@@ -292,13 +359,14 @@
         </div>
 
         <!-- Toggle Buttons -->
-        <div class="toggle-wrapper mt-4 d-flex justify-content-center">
-          <div class="toggle-group d-flex p-1 rounded-pill bg-white shadow-sm">
-            <button class="btn btn-toggle toggle-option active rounded-pill px-4 py-2" data-target="domestic">Domestic
+        <div class="toggle-wrapper mt-4 d-flex flex-column align-items-center">
+          <div class="toggle-group d-flex p-1 rounded-pill bg-white shadow-sm" id="typeToggle">
+            <button class="btn btn-toggle toggle-option rounded-pill px-4 py-2 text-muted" data-target="domestic">Domestic
               <i class="bi bi-house-door-fill ms-1"></i></button>
             <button class="btn btn-toggle toggle-option rounded-pill px-4 py-2 text-muted"
               data-target="corporate">Corporate <i class="bi bi-building ms-1"></i></button>
           </div>
+          <p id="toggleError" class="text-danger fw-bold mt-2 d-none blink-animation">Please select either Domestic or Corporate to continue.</p>
         </div>
       </section>
 
@@ -307,39 +375,48 @@
         <div class="row g-4 justify-content-center">
           <!-- Card 1 -->
           <div class="col-lg-4 col-md-6 col-12">
-            <div class="service-card active-card">
+            <div class="service-card active-card open-booking" data-target="electrical">
               <div class="service-image-wrapper">
                 <img src="assets/images/electrical_engineering.png" alt="Electrical Engineering"
                   class="img-fluid w-100">
               </div>
-              <div class="service-content d-flex justify-content-between align-items-center p-3">
-                <h5 class="mb-0">Electrical Engineering</h5>
-                <a href="#" class="btn btn-sm btn-primary rounded-circle"><i class="bi bi-arrow-up-right"></i></a>
+              <div class="service-content p-4">
+                <h4 class="mb-3 fw-bold" style="font-size: 1.2rem;">Electrical Engineering</h4>
+                <div class="d-flex justify-content-between align-items-center">
+                   <span class="text-primary fw-bold" style="font-size: 0.9rem;">Select Services</span>
+                   <a href="#" class="btn-hero-arrow open-booking" data-target="electrical"><i class="bi bi-arrow-up-right"></i></a>
+                </div>
               </div>
             </div>
           </div>
           <!-- Card 2 -->
           <div class="col-lg-4 col-md-6 col-12">
-            <div class="service-card">
+            <div class="service-card open-booking" data-target="mechanical">
               <div class="service-image-wrapper">
                 <img src="assets/images/mechanical_engineering.png" alt="Mechanical Engineering"
                   class="img-fluid w-100">
               </div>
-              <div class="service-content d-flex justify-content-between align-items-center p-3">
-                <h5 class="mb-0">Mechanical Engineering</h5>
-                <a href="#" class="btn btn-sm btn-primary rounded-circle"><i class="bi bi-arrow-up-right"></i></a>
+              <div class="service-content p-4">
+                <h4 class="mb-3 fw-bold" style="font-size: 1.2rem;">Mechanical Engineering</h4>
+                <div class="d-flex justify-content-between align-items-center">
+                   <span class="text-primary fw-bold" style="font-size: 0.9rem;">Select Services</span>
+                   <a href="#" class="btn-hero-arrow open-booking" data-target="mechanical"><i class="bi bi-arrow-up-right"></i></a>
+                </div>
               </div>
             </div>
           </div>
           <!-- Card 3 -->
           <div class="col-lg-4 col-md-6 col-12">
-            <div class="service-card">
+            <div class="service-card open-booking" data-target="civil">
               <div class="service-image-wrapper">
                 <img src="assets/images/civil_engineering.png" alt="Civil Engineering" class="img-fluid w-100">
               </div>
-              <div class="service-content d-flex justify-content-between align-items-center p-3">
-                <h5 class="mb-0">Civil Engineering</h5>
-                <a href="#" class="btn btn-sm btn-primary rounded-circle"><i class="bi bi-arrow-up-right"></i></a>
+              <div class="service-content p-4">
+                <h4 class="mb-3 fw-bold" style="font-size: 1.2rem;">Civil Engineering</h4>
+                <div class="d-flex justify-content-between align-items-center">
+                   <span class="text-primary fw-bold" style="font-size: 0.9rem;">Select Services</span>
+                   <a href="#" class="btn-hero-arrow open-booking" data-target="civil"><i class="bi bi-arrow-up-right"></i></a>
+                </div>
               </div>
             </div>
           </div>
@@ -962,6 +1039,104 @@
         e.preventDefault();
         $('.toggle-option').removeClass('active').addClass('text-muted');
         $(this).addClass('active').removeClass('text-muted');
+        $('#typeToggle').removeClass('border border-danger');
+        $('#toggleError').addClass('d-none');
+      });
+
+      // Open Booking Modal
+      $('.booknow, .open-booking').on('click', function(e) {
+        e.preventDefault();
+        if (!$('.toggle-option').hasClass('active')) {
+          $('#typeToggle').addClass('border border-danger');
+          $('#toggleError').removeClass('d-none');
+          $('html, body').animate({ scrollTop: $(".toggle-wrapper").offset().top - 100 }, 500);
+          return;
+        }
+        $('#bookingModal').addClass('active');
+        $('body').css('overflow', 'hidden');
+        $('#categoryView').removeClass('d-none');
+        $('#servicesDetailView').addClass('d-none');
+        let target = $(this).data('target');
+        if(target) { $('.tab-btn[data-category="' + target + '"]').click(); }
+      });
+
+      // Service Data Object
+      const serviceData = {
+        'ac-service': {
+          title: 'AC General Service',
+          badge: 'AC Services',
+          items: [
+            { id: 1, name: 'AC General Service', oldPrice: 3300, newPrice: 2500 },
+            { id: 2, name: 'AC Installation', oldPrice: 3300, newPrice: 2500 },
+            { id: 3, name: 'AC Repairing', oldPrice: 3300, newPrice: 2500 },
+            { id: 4, name: 'AC Dismounting', oldPrice: 3300, newPrice: 2500 },
+            { id: 5, name: 'AC General Service Pro', oldPrice: 3300, newPrice: 2500 },
+            { id: 6, name: 'AC Mounting & Dismounting', oldPrice: 3300, newPrice: 2500 }
+          ]
+        },
+        'electrical-wiring': {
+          title: 'Electrical Wiring Solutions',
+          badge: 'Electrical',
+          items: [
+            { id: 7, name: 'Full Home Wiring', oldPrice: 5000, newPrice: 4200 },
+            { id: 8, name: 'Switchboard Repair', oldPrice: 1200, newPrice: 800 }
+          ]
+        }
+      };
+
+      // Show Detailed Services
+      $(document).on('click', '.show-details', function() {
+        const serviceKey = $(this).data('service');
+        const data = serviceData[serviceKey];
+        if(!data) return;
+
+        $('#categoryView').addClass('d-none');
+        $('#servicesDetailView').removeClass('d-none').addClass('fade-in-up');
+        $('.service-main-title').text(data.title);
+        $('.sub-cat-badge').text(data.badge);
+
+        let html = '';
+        data.items.forEach(item => {
+          html += `
+            <div class="col-lg-4 col-md-6">
+              <div class="booking-service-card rounded-4 p-3 border animate-card">
+                <h6 class="fw-bold mb-2">${item.name}</h6>
+                <a href="#" class="more-details-link">MORE DETAILS <i class="bi bi-arrow-right"></i></a>
+                <div class="d-flex justify-content-between align-items-center mt-3">
+                  <div>
+                    <span class="price-old">Rs. ${item.oldPrice}</span>
+                    <span class="price-new">Rs. ${item.newPrice}</span>
+                  </div>
+                  <div class="d-flex align-items-center gap-2">
+                    <span class="service-added-text d-none" style="font-size: 10px; font-weight: 600;">Service Added</span>
+                    <button class="cart-add-btn" data-id="${item.id}"><i class="bi bi-plus"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>`;
+        });
+        $('#detailedServiceGrid').html(html);
+      });
+
+      // Back Button
+      $('.back-btn').on('click', function() {
+        $('#servicesDetailView').addClass('d-none').removeClass('fade-in-up');
+        $('#categoryView').removeClass('d-none').addClass('fade-in-up');
+      });
+
+      // Add to Cart Toggle
+      $(document).on('click', '.cart-add-btn', function() {
+        $(this).toggleClass('added');
+        const isAdded = $(this).hasClass('added');
+        $(this).html(isAdded ? '<i class="bi bi-check-lg"></i>' : '<i class="bi bi-plus"></i>');
+        $(this).siblings('.service-added-text').toggleClass('d-none', !isAdded);
+        $(this).closest('.booking-service-card').toggleClass('active', isAdded);
+      });
+
+      // Tab Switching in Modal
+      $('.tab-btn').on('click', function() {
+        $('.tab-btn').removeClass('active');
+        $(this).addClass('active');
       });
     });
   </script>
