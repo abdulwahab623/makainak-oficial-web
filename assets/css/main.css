@@ -1090,7 +1090,7 @@ body {
     font-family: 'Karla', sans-serif;
     font-weight: 700;
     font-style: normal;
-    font-size: 25px ;
+    font-size: 25px;
     line-height: 1.1;
     letter-spacing: -0.04em;
     text-align: center;
@@ -2945,3 +2945,4 @@ body {
       padding: 6px 12px !important;
     }
   }
+}
