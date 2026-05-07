@@ -30,13 +30,7 @@
       <div class="text-center">
         <h2 class="modal-title">Welcome back</h2>
         <p class="modal-subtitle">Sign in to manage your bookings and saved pros.</p>
-        
-        <button class="google-btn">
-          <img src="https://www.google.com/favicon.ico" alt="Google">
-          Continue with Google
-        </button>
 
-        <div class="auth-divider">or</div>
 
         <form>
           <div class="input-group-custom">
@@ -47,7 +41,7 @@
             <i class="bi bi-lock"></i>
             <input type="password" class="form-control rounded-pill" placeholder="Password">
           </div>
-          
+
           <a href="#" class="forgot-link">Forgot password?</a>
 
           <button type="submit" class="btn-signin">
@@ -69,13 +63,7 @@
       <div class="text-center">
         <h2 class="modal-title">Create your account</h2>
         <p class="modal-subtitle">Join Makainak and book trusted local pros in seconds.</p>
-        
-        <button class="google-btn">
-          <img src="https://www.google.com/favicon.ico" alt="Google">
-          Continue with Google
-        </button>
 
-        <div class="auth-divider">or</div>
 
         <form>
           <div class="input-group-custom">
@@ -107,7 +95,7 @@
   <div class="modal-overlay" id="bookingModal">
     <div class="booking-modal-container">
       <button class="modal-close"><i class="bi bi-x"></i></button>
-      
+
       <!-- Dynamic Content Container -->
       <div id="modalContent">
         <!-- View 1: Category Selection -->
@@ -133,7 +121,8 @@
                   <div class="col-8">
                     <h6 class="fw-bold mb-1">AC Service</h6>
                     <p class="text-muted mb-2" style="font-size: 10px;">Full AC maintenance & repair</p>
-                    <span class="view-service-link">View Services <i class="bi bi-arrow-up-right-square-fill ms-1"></i></span>
+                    <span class="view-service-link">View Services <i
+                        class="bi bi-arrow-up-right-square-fill ms-1"></i></span>
                   </div>
                 </div>
               </div>
@@ -147,7 +136,8 @@
                   <div class="col-8">
                     <h6 class="fw-bold mb-1">Electrical Wiring</h6>
                     <p class="text-muted mb-2" style="font-size: 10px;">Wiring & circuit solutions</p>
-                    <span class="view-service-link">View Services <i class="bi bi-arrow-up-right-square-fill ms-1"></i></span>
+                    <span class="view-service-link">View Services <i
+                        class="bi bi-arrow-up-right-square-fill ms-1"></i></span>
                   </div>
                 </div>
               </div>
@@ -157,7 +147,7 @@
 
         <!-- View 2: Detailed Services (Hidden by default) -->
         <div id="servicesDetailView" class="d-none">
-          <button class="back-btn mb-4"><i class="bi bi-arrow-left me-2"></i> Back</button>
+          <button class="btn-back-selection back-btn mb-4"><i class="bi bi-arrow-left me-2"></i> Back</button>
           <div class="text-center mb-5">
             <span class="badge bg-light text-primary rounded-pill px-3 py-2 mb-2 sub-cat-badge">AC Services</span>
             <h2 class="fw-bold display-6 service-main-title">AC General Service</h2>
@@ -222,8 +212,10 @@
     <div class="mobile-actions">
       <a href="contact.html" class="help-center-link">Help Center</a>
       <a href="#" class="sign-in-link">Sign in</a>
-      <button class="btn booknow mt-3">Book Now <span class="book-icon ms-2"><i
-            class="bi bi-arrow-up-right"></i></span></button>
+      <a href="checkout.html" class="cart-btn mt-2">
+        <i class="bi bi-cart3"></i>
+        <span class="cart-badge">0</span>
+      </a>
     </div>
   </div>
 
@@ -327,8 +319,10 @@
         <div class="nav-actions">
           <a href="contact.html" class="help-center-link">Help Center</a>
           <a href="#" class="sign-in-link">Sign in</a>
-          <button class="btn booknow">Book Now <span class="book-icon ms-2"><i
-                class="bi bi-arrow-up-right"></i></span></button>
+          <a href="checkout.html" class="cart-btn">
+            <i class="bi bi-cart3"></i>
+            <span class="cart-badge">0</span>
+          </a>
         </div>
 
         <!-- Mobile Hamburger Button -->
@@ -361,12 +355,14 @@
         <!-- Toggle Buttons -->
         <div class="toggle-wrapper mt-4 d-flex flex-column align-items-center">
           <div class="toggle-group d-flex p-1 rounded-pill bg-white shadow-sm" id="typeToggle">
-            <button class="btn btn-toggle toggle-option rounded-pill px-4 py-2 text-muted" data-target="domestic">Domestic
+            <button class="btn btn-toggle toggle-option rounded-pill px-4 py-2 text-muted"
+              data-target="domestic">Domestic
               <i class="bi bi-house-door-fill ms-1"></i></button>
             <button class="btn btn-toggle toggle-option rounded-pill px-4 py-2 text-muted"
               data-target="corporate">Corporate <i class="bi bi-building ms-1"></i></button>
           </div>
-          <p id="toggleError" class="text-danger fw-bold mt-2 d-none blink-animation">Please select either Domestic or Corporate to continue.</p>
+          <p id="toggleError" class="text-danger fw-bold mt-2 d-none blink-animation">Please select either Domestic or
+            Corporate to continue.</p>
         </div>
       </section>
 
@@ -383,8 +379,9 @@
               <div class="service-content p-4">
                 <h4 class="mb-3 fw-bold" style="font-size: 1.2rem;">Electrical Engineering</h4>
                 <div class="d-flex justify-content-between align-items-center">
-                   <span class="text-primary fw-bold" style="font-size: 0.9rem;">Select Services</span>
-                   <a href="#" class="btn-hero-arrow open-booking" data-target="electrical"><i class="bi bi-arrow-up-right"></i></a>
+                  <span class="text-primary fw-bold" style="font-size: 0.9rem;">Select Services</span>
+                  <a href="#" class="btn-hero-arrow open-booking" data-target="electrical"><i
+                      class="bi bi-arrow-up-right"></i></a>
                 </div>
               </div>
             </div>
@@ -399,8 +396,9 @@
               <div class="service-content p-4">
                 <h4 class="mb-3 fw-bold" style="font-size: 1.2rem;">Mechanical Engineering</h4>
                 <div class="d-flex justify-content-between align-items-center">
-                   <span class="text-primary fw-bold" style="font-size: 0.9rem;">Select Services</span>
-                   <a href="#" class="btn-hero-arrow open-booking" data-target="mechanical"><i class="bi bi-arrow-up-right"></i></a>
+                  <span class="text-primary fw-bold" style="font-size: 0.9rem;">Select Services</span>
+                  <a href="#" class="btn-hero-arrow open-booking" data-target="mechanical"><i
+                      class="bi bi-arrow-up-right"></i></a>
                 </div>
               </div>
             </div>
@@ -414,8 +412,9 @@
               <div class="service-content p-4">
                 <h4 class="mb-3 fw-bold" style="font-size: 1.2rem;">Civil Engineering</h4>
                 <div class="d-flex justify-content-between align-items-center">
-                   <span class="text-primary fw-bold" style="font-size: 0.9rem;">Select Services</span>
-                   <a href="#" class="btn-hero-arrow open-booking" data-target="civil"><i class="bi bi-arrow-up-right"></i></a>
+                  <span class="text-primary fw-bold" style="font-size: 0.9rem;">Select Services</span>
+                  <a href="#" class="btn-hero-arrow open-booking" data-target="civil"><i
+                      class="bi bi-arrow-up-right"></i></a>
                 </div>
               </div>
             </div>
@@ -1044,7 +1043,7 @@
       });
 
       // Open Booking Modal
-      $('.booknow, .open-booking').on('click', function(e) {
+      $('.booknow, .open-booking').on('click', function (e) {
         e.preventDefault();
         if (!$('.toggle-option').hasClass('active')) {
           $('#typeToggle').addClass('border border-danger');
@@ -1057,7 +1056,7 @@
         $('#categoryView').removeClass('d-none');
         $('#servicesDetailView').addClass('d-none');
         let target = $(this).data('target');
-        if(target) { $('.tab-btn[data-category="' + target + '"]').click(); }
+        if (target) { $('.tab-btn[data-category="' + target + '"]').click(); }
       });
 
       // Service Data Object
@@ -1085,31 +1084,40 @@
       };
 
       // Show Detailed Services
-      $(document).on('click', '.show-details', function() {
+      $(document).on('click', '.show-details', function () {
         const serviceKey = $(this).data('service');
         const data = serviceData[serviceKey];
-        if(!data) return;
+        if (!data) return;
 
         $('#categoryView').addClass('d-none');
         $('#servicesDetailView').removeClass('d-none').addClass('fade-in-up');
-        $('.service-main-title').text(data.title);
+        $('.service-main-title').text('Select Services');
         $('.sub-cat-badge').text(data.badge);
 
         let html = '';
         data.items.forEach(item => {
           html += `
             <div class="col-lg-4 col-md-6">
-              <div class="booking-service-card rounded-4 p-3 border animate-card">
-                <h6 class="fw-bold mb-2">${item.name}</h6>
-                <a href="#" class="more-details-link">MORE DETAILS <i class="bi bi-arrow-right"></i></a>
+              <div class="service-selection-card animate-card">
+                <button class="add-service-btn cart-add-btn" data-id="${item.id}"><i class="bi bi-plus"></i></button>
+                <h6 class="fw-bold mb-1">${item.name}</h6>
+                <a href="#" class="more-details">MORE DETAILS <i class="bi bi-arrow-right"></i></a>
                 <div class="d-flex justify-content-between align-items-center mt-3">
-                  <div>
-                    <span class="price-old">Rs. ${item.oldPrice}</span>
-                    <span class="price-new">Rs. ${item.newPrice}</span>
+                  <div class="d-flex align-items-center gap-2">
+                    <select class="ton-select-dropdown-small">
+                      <option selected disabled>Ton</option>
+                      <option>1 Ton</option>
+                      <option>2 Ton</option>
+                      <option>3 Ton</option>
+                      <option>4 Ton</option>
+                    </select>
+                    <div>
+                      <span class="price-old">Rs. ${item.oldPrice}</span>
+                      <span class="price-current">Rs. ${item.newPrice}</span>
+                    </div>
                   </div>
                   <div class="d-flex align-items-center gap-2">
-                    <span class="service-added-text d-none" style="font-size: 10px; font-weight: 600;">Service Added</span>
-                    <button class="cart-add-btn" data-id="${item.id}"><i class="bi bi-plus"></i></button>
+                    <span class="service-added-text d-none text-primary" style="font-size: 10px; font-weight: 600;">Service Added</span>
                   </div>
                 </div>
               </div>
@@ -1119,22 +1127,22 @@
       });
 
       // Back Button
-      $('.back-btn').on('click', function() {
+      $('.back-btn').on('click', function () {
         $('#servicesDetailView').addClass('d-none').removeClass('fade-in-up');
         $('#categoryView').removeClass('d-none').addClass('fade-in-up');
       });
 
       // Add to Cart Toggle
-      $(document).on('click', '.cart-add-btn', function() {
+      $(document).on('click', '.cart-add-btn', function () {
         $(this).toggleClass('added');
         const isAdded = $(this).hasClass('added');
         $(this).html(isAdded ? '<i class="bi bi-check-lg"></i>' : '<i class="bi bi-plus"></i>');
         $(this).siblings('.service-added-text').toggleClass('d-none', !isAdded);
-        $(this).closest('.booking-service-card').toggleClass('active', isAdded);
+        $(this).closest('.service-selection-card').toggleClass('selected', isAdded);
       });
 
       // Tab Switching in Modal
-      $('.tab-btn').on('click', function() {
+      $('.tab-btn').on('click', function () {
         $('.tab-btn').removeClass('active');
         $(this).addClass('active');
       });
@@ -1144,3 +1152,5 @@
 </body>
 
 </html>
+
+

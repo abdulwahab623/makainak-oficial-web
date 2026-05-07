@@ -30,13 +30,7 @@
       <div class="text-center">
         <h2 class="modal-title">Welcome back</h2>
         <p class="modal-subtitle">Sign in to manage your bookings and saved pros.</p>
-        
-        <button class="google-btn">
-          <img src="https://www.google.com/favicon.ico" alt="Google">
-          Continue with Google
-        </button>
 
-        <div class="auth-divider">or</div>
 
         <form>
           <div class="input-group-custom">
@@ -47,7 +41,7 @@
             <i class="bi bi-lock"></i>
             <input type="password" class="form-control rounded-pill" placeholder="Password">
           </div>
-          
+
           <a href="#" class="forgot-link">Forgot password?</a>
 
           <button type="submit" class="btn-signin">
@@ -69,13 +63,7 @@
       <div class="text-center">
         <h2 class="modal-title">Create your account</h2>
         <p class="modal-subtitle">Join Makainak and book trusted local pros in seconds.</p>
-        
-        <button class="google-btn">
-          <img src="https://www.google.com/favicon.ico" alt="Google">
-          Continue with Google
-        </button>
 
-        <div class="auth-divider">or</div>
 
         <form>
           <div class="input-group-custom">
@@ -100,6 +88,62 @@
           Already have an account? <a href="#" class="switch-to-login">Sign in</a>
         </div>
       </div>
+    </div>
+  </div>
+  <!-- Success Modal -->
+  <div class="modal-overlay" id="successModal">
+    <div class="success-card">
+      <!-- Progress Steps -->
+      <div class="booking-steps">
+        <div class="step-item">
+          <div class="step-circle"><i class="bi bi-list-task"></i></div>
+          <span>Your Details</span>
+        </div>
+        <div class="step-line"></div>
+        <div class="step-item">
+          <div class="step-circle"><i class="bi bi-credit-card"></i></div>
+          <span>Billing & Payment</span>
+        </div>
+        <div class="step-line"></div>
+        <div class="step-item">
+          <div class="step-circle"><i class="bi bi-check-lg"></i></div>
+          <span>Confirmation</span>
+        </div>
+      </div>
+
+      <!-- Inner Content Box -->
+      <div class="success-inner-box">
+        <div class="success-icon-container">
+          <i class="bi bi-check-lg"></i>
+        </div>
+
+        <h3 class="confirmation-msg-title">Your Booking Has Been Confirmed</h3>
+        <p class="confirmation-msg-text">
+          Thank you for booking with Makainak. Your AC General Service request has been received successfully. Our team will review the details and assign a verified technician shortly.
+        </p>
+
+        <div class="divider-line"></div>
+
+        <p class="text-muted small mb-4">Vel morbi phasellus ullamcorper tincidunt et ac.</p>
+
+        <div class="support-links">
+          <a href="tel:+923001234567"><i class="bi bi-telephone-fill"></i> Makainak Support</a>
+          <a href="mailto:support@makainak.com"><i class="bi bi-envelope-fill"></i> support@makainak.com</a>
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="success-actions">
+        <a href="index.html" class="btn btn-homepage text-decoration-none d-flex align-items-center justify-content-center">
+          Homepage <i class="bi bi-arrow-up-right-circle-fill ms-2"></i>
+        </a>
+        <button class="btn btn-track d-flex align-items-center justify-content-center">
+          Track Your Request <i class="bi bi-arrow-right-circle-fill ms-2"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
     </div>
   </div>
 
@@ -155,8 +199,10 @@
     <div class="mobile-actions">
       <a href="contact.html" class="help-center-link">Help Center</a>
       <a href="#" class="sign-in-link">Sign in</a>
-      <button class="btn booknow mt-3">Book Now <span class="book-icon ms-2"><i
-            class="bi bi-arrow-up-right"></i></span></button>
+      <a href="checkout.html" class="cart-btn mt-2">
+        <i class="bi bi-cart3"></i>
+        <span class="cart-badge">0</span>
+      </a>
     </div>
   </div>
 
@@ -260,8 +306,10 @@
         <div class="nav-actions">
           <a href="contact.html" class="help-center-link">Help Center</a>
           <a href="#" class="sign-in-link">Sign in</a>
-          <button class="btn booknow">Book Now <span class="book-icon ms-2"><i
-                class="bi bi-arrow-up-right"></i></span></button>
+          <a href="checkout.html" class="cart-btn">
+            <i class="bi bi-cart3"></i>
+            <span class="cart-badge">0</span>
+          </a>
         </div>
 
         <!-- Mobile Hamburger Button -->
@@ -274,10 +322,295 @@
 
   <!-- Main Content Container -->
   <main class="container my-5">
-    <div class="bg-white rounded-5 p-4 p-md-5 border text-center" style="box-shadow: 0 4px 20px rgba(0,0,0,0.02); min-height: 400px; display: flex; flex-direction: column; justify-content: center; align-items: center;">
-      <h1 class="fw-bold mb-3">Checkout</h1>
-      <p class="text-muted">Your checkout content will appear here.</p>
-      <a href="index.html" class="btn btn-primary rounded-pill px-4 mt-3">Return to Home</a>
+    <div class="checkout-wrapper text-center">
+
+      <!-- Stepper -->
+      <div class="stepper-container px-lg-5">
+        <div class="step-item active">
+          <div class="step-icon">
+            <i class="bi bi-list"></i>
+          </div>
+          <span class="step-label">Your Details</span>
+        </div>
+        <div class="stepper-line active">
+          <div class="progress"></div>
+        </div>
+        <div class="step-item">
+          <div class="step-icon">
+            <i class="bi bi-credit-card"></i>
+          </div>
+          <span class="step-label">Billing & Payment</span>
+        </div>
+        <div class="stepper-line">
+          <div class="progress"></div>
+        </div>
+        <div class="step-item">
+          <div class="step-icon">
+            <i class="bi bi-check2"></i>
+          </div>
+          <span class="step-label">Confirmation</span>
+        </div>
+      </div>
+
+      <!-- Step 1: Your Details -->
+      <div id="step1" class="checkout-step">
+        <div class="checkout-card text-start">
+          <form id="detailsForm">
+            <div class="row g-4">
+              <!-- City Selection -->
+              <div class="col-md-6">
+                <label class="form-label">Select your City</label>
+                <select class="form-control-custom select-custom">
+                  <option selected disabled>Islamabad</option>
+                  <option>Lahore</option>
+                  <option>Faisalabad</option>
+                </select>
+              </div>
+              <!-- Area Selection -->
+              <div class="col-md-6">
+                <label class="form-label">Select your Area</label>
+                <select class="form-control-custom select-custom">
+                  <option selected disabled>Islamabad</option>
+                  <option>G-11</option>
+                  <option>F-10</option>
+                </select>
+              </div>
+              <!-- Address Input -->
+              <div class="col-12">
+                <label class="form-label">Type your address</label>
+                <input type="text" class="form-control-custom" placeholder="Enter Your Address">
+              </div>
+              <!-- Date & Time Picker -->
+              <div class="col-md-6">
+                <label class="form-label">Pick Date & Time</label>
+                <div class="position-relative">
+                  <input type="text" class="form-control-custom" placeholder="Choose Date & Time">
+                  <i class="bi bi-calendar3 position-absolute top-50 end-0 translate-middle-y me-3 text-muted"></i>
+                </div>
+              </div>
+              <!-- Upload Box -->
+              <div class="col-md-6">
+                <label class="form-label">Upload Problem image <span class="text-muted fw-normal">(Optional)</span></label>
+                <div class="upload-box">
+                  <i class="bi bi-upload"></i>
+                  <span>Upload Problem Image</span>
+                </div>
+              </div>
+            </div>
+            <!-- Footer Buttons -->
+            <div class="checkout-footer">
+              <button type="button" class="btn-back">
+                <i class="bi bi-arrow-left"></i>
+                Back
+              </button>
+              <button type="button" class="btn-next" onclick="goToStep(2)">
+                Next
+                <i class="bi bi-caret-right-fill"></i>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Step 2: Billing & Payment -->
+      <div id="step2" class="checkout-step mt-5">
+        <div class="row g-4 text-start">
+          <!-- Left: Billing Details -->
+          <div class="col-lg-7">
+            <div class="checkout-card">
+              <h5 class="fw-bold mb-4">Billing Details</h5>
+              <div class="row g-3">
+                <div class="col-12">
+                  <label class="form-label">Full Name</label>
+                  <input type="text" class="form-control-custom" value="Toqeer Hussain">
+                </div>
+                <div class="col-12">
+                  <label class="form-label">Email Address</label>
+                  <input type="email" class="form-control-custom" value="toqeer@example.com">
+                </div>
+                <div class="col-12">
+                  <label class="form-label">Phone Number</label>
+                  <input type="tel" class="form-control-custom" value="+92 300 1234 786">
+                </div>
+                <div class="col-12 mt-4">
+                  <label class="form-label">Billing Address</label>
+                  <div class="payment-toggle">
+                    <div class="toggle-option-card active">
+                      <span>Same as Address</span>
+                      <div class="toggle-check"><i class="bi bi-check"></i></div>
+                    </div>
+                    <div class="toggle-option-card">
+                      <span>Enter New Address</span>
+                      <div class="toggle-check"><i class="bi bi-check"></i></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 mt-4">
+                  <label class="form-label">Payment Method</label>
+                  <div class="payment-toggle">
+                    <div class="toggle-option-card">
+                      <span>Cash on Service</span>
+                      <div class="toggle-check"><i class="bi bi-check"></i></div>
+                    </div>
+                    <div class="toggle-option-card active">
+                      <span>Bank Transfer</span>
+                      <div class="toggle-check"><i class="bi bi-check"></i></div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Bank Details (Conditional) -->
+                <div class="col-12 mt-3">
+                  <div class="bank-info-alert">
+                    <i class="bi bi-info-circle-fill"></i>
+                    Pay your bill to this bank address and attach the invoice
+                  </div>
+                  <div class="bank-details-box border">
+                    <div class="bank-detail-item">
+                      <span class="bank-detail-label">Account Title</span>
+                      <span class="bank-detail-value">Makainak PVT LTD</span>
+                    </div>
+                    <div class="bank-detail-item">
+                      <span class="bank-detail-label">Bank</span>
+                      <span class="bank-detail-value">HBL (Habib Bank Limited)</span>
+                    </div>
+                    <div class="bank-detail-item">
+                      <span class="bank-detail-label">IBAN</span>
+                      <span class="bank-detail-value">PKN 123456789101112</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-12 mt-3">
+                  <div class="invoice-upload">
+                    <i class="bi bi-upload"></i>
+                    Upload Invoice
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Order Summary -->
+          <div class="col-lg-5">
+            <div class="summary-card">
+              <h5 class="fw-bold mb-3">Your Order</h5>
+              <div class="added-service-item">
+                <div>
+                  <h6 class="fw-bold mb-1">AC Installation</h6>
+                  <span class="text-muted small">Rs:3300 <span class="text-primary fw-bold">Rs:2500</span></span>
+                </div>
+                <div class="service-added-badge">
+                  <i class="bi bi-check"></i> Service Added
+                </div>
+              </div>
+              <div class="added-service-item active">
+                <div>
+                  <h6 class="fw-bold mb-1">AC General Service</h6>
+                  <span class="text-muted small">Rs:3300 <span class="text-primary fw-bold">Rs:2500</span></span>
+                </div>
+                <div class="service-added-badge">
+                  <i class="bi bi-check"></i> Service Added
+                </div>
+              </div>
+
+              <div class="mt-4">
+                <div class="summary-detail-row">
+                  <span class="summary-detail-label">Category:</span>
+                  <span class="summary-detail-value">Electrical Engineering</span>
+                </div>
+                <div class="summary-detail-row">
+                  <span class="summary-detail-label">Service Type:</span>
+                  <span class="summary-detail-value">Domestic Service</span>
+                </div>
+                <div class="summary-detail-row">
+                  <span class="summary-detail-label">Selected Package:</span>
+                  <span class="summary-detail-value">General AC Service</span>
+                </div>
+                <div class="mt-3">
+                  <span class="summary-detail-label d-block mb-2">Service Includes:</span>
+                  <p class="text-muted small mb-0">Indoor unit cleaning, Filter wash, Cooling performance check, Basic electrical inspection, Drain pipe inspection, Service report.</p>
+                </div>
+              </div>
+
+              <div class="promo-code-box">
+                <input type="text" class="promo-code-input" placeholder="PROMO CODE">
+                <button class="btn-apply">Apply <i class="bi bi-caret-right-fill"></i></button>
+              </div>
+
+              <div class="price-breakdown">
+                <div class="price-row">
+                  <span>Number of Services</span>
+                  <span class="fw-bold">01</span>
+                </div>
+                <div class="price-row">
+                  <span>Estimated Price</span>
+                  <span class="fw-bold">2500</span>
+                </div>
+                <div class="price-row">
+                  <span>Visit Charges</span>
+                  <span class="fw-bold">500</span>
+                </div>
+                <div class="price-row">
+                  <span>Discount</span>
+                  <span class="fw-bold">00</span>
+                </div>
+                <div class="price-row total">
+                  <span>Total</span>
+                  <span>3000</span>
+                </div>
+              </div>
+
+              <div class="disclaimer-box">
+                <i class="bi bi-exclamation-circle-fill"></i>
+                <p class="mb-0">Final price may vary after technician inspection if extra parts or repair work is required.</p>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Terms & Conditions Section -->
+          <div class="col-12 mt-5">
+            <div class="terms-section p-4 bg-light rounded-4 border">
+              <h6 class="fw-bold mb-3">Terms & Conditions</h6>
+              <p class="text-muted small mb-4">
+                By proceeding with this booking, you agree to Makainak's service protocols, cancellation policies, and data handling practices. Our technicians will provide an initial assessment, and any additional work beyond the selected package will be quoted separately.
+              </p>
+              <div class="d-flex flex-wrap gap-4">
+                <div class="form-check custom-checkbox">
+                  <input class="form-check-input terms-check" type="checkbox" id="agreeTerms" name="terms">
+                  <label class="form-check-label fw-bold" for="agreeTerms">
+                    Agree with terms and condition
+                  </label>
+                </div>
+                <div class="form-check custom-checkbox">
+                  <input class="form-check-input terms-check" type="checkbox" id="disagreeTerms" name="terms">
+                  <label class="form-check-label fw-bold" for="disagreeTerms">
+                    Not agree
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Footer Buttons -->
+          <div class="col-12 mt-4 text-center">
+            <div class="checkout-footer">
+              <button type="button" class="btn-back" onclick="goToStep(1)">
+                <i class="bi bi-arrow-left"></i>
+                Back
+              </button>
+              <button type="button" id="proceedBtn" class="btn-next" onclick="goToStep(3)" disabled>
+                Proceed
+                <i class="bi bi-caret-right-fill"></i>
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
     </div>
   </main>
 
@@ -374,6 +707,65 @@
   <script src="assets/js/footer.js"></script>
   <script src="assets/js/header.js"></script>
 
+  <script>
+    function goToStep(stepNumber) {
+      if (stepNumber === 3) {
+        // Show Success Modal
+        $('#successModal').addClass('active');
+      } else {
+        // Scroll to the target step
+        const targetStep = $('#step' + stepNumber);
+        if (targetStep.length) {
+          $('html, body').animate({
+            scrollTop: targetStep.offset().top - 100
+          }, 800);
+        }
+      }
+
+      // Update Stepper UI
+      $('.step-item').removeClass('active completed');
+      $('.stepper-line').removeClass('active');
+
+      if (stepNumber >= 1) {
+        $('.step-item').eq(0).addClass('active');
+      }
+      if (stepNumber >= 2) {
+        $('.step-item').eq(0).removeClass('active').addClass('completed');
+        $('.step-item').eq(1).addClass('active');
+        $('.stepper-line').eq(0).addClass('active');
+      }
+      if (stepNumber >= 3) {
+        $('.step-item').eq(1).removeClass('active').addClass('completed');
+        $('.step-item').eq(2).addClass('active');
+        $('.stepper-line').eq(1).addClass('active');
+      }
+    }
+
+    $(document).ready(function () {
+      // Toggle logic for option cards
+      $('.toggle-option-card').on('click', function () {
+        $(this).parent().find('.toggle-option-card').removeClass('active');
+        $(this).addClass('active');
+      });
+
+      // Terms and Conditions checkbox logic
+      $('.terms-check').on('change', function() {
+        // Make them act like radio buttons (one deselects the other)
+        if ($(this).is(':checked')) {
+          $('.terms-check').not(this).prop('checked', false);
+        }
+
+        // Enable Proceed button if any is checked
+        if ($('.terms-check:checked').length > 0) {
+          $('#proceedBtn').prop('disabled', false).css('opacity', '1').css('cursor', 'pointer');
+        } else {
+          $('#proceedBtn').prop('disabled', true).css('opacity', '0.6').css('cursor', 'not-allowed');
+        }
+      });
+    });
+  </script>
 </body>
 
 </html>
+
+
