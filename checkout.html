@@ -30,8 +30,6 @@
       <div class="text-center">
         <h2 class="modal-title">Welcome back</h2>
         <p class="modal-subtitle">Sign in to manage your bookings and saved pros.</p>
-
-
         <form>
           <div class="input-group-custom">
             <i class="bi bi-envelope"></i>
@@ -63,8 +61,6 @@
       <div class="text-center">
         <h2 class="modal-title">Create your account</h2>
         <p class="modal-subtitle">Join Makainak and book trusted local pros in seconds.</p>
-
-
         <form>
           <div class="input-group-custom">
             <i class="bi bi-person"></i>
@@ -90,60 +86,115 @@
       </div>
     </div>
   </div>
-  <!-- Success Modal -->
-  <div class="modal-overlay" id="successModal">
-    <div class="success-card">
-      <!-- Progress Steps -->
-      <div class="booking-steps">
-        <div class="step-item">
-          <div class="step-circle"><i class="bi bi-list-task"></i></div>
-          <span>Your Details</span>
-        </div>
-        <div class="step-line"></div>
-        <div class="step-item">
-          <div class="step-circle"><i class="bi bi-credit-card"></i></div>
-          <span>Billing & Payment</span>
-        </div>
-        <div class="step-line"></div>
-        <div class="step-item">
-          <div class="step-circle"><i class="bi bi-check-lg"></i></div>
-          <span>Confirmation</span>
-        </div>
-      </div>
 
-      <!-- Inner Content Box -->
-      <div class="success-inner-box">
-        <div class="success-icon-container">
-          <i class="bi bi-check-lg"></i>
-        </div>
+  <!-- Booking Selection Modal -->
+  <div class="modal-overlay" id="bookingModal">
+    <div class="booking-modal-container">
+      <button class="modal-close"><i class="bi bi-x"></i></button>
 
-        <h3 class="confirmation-msg-title">Your Booking Has Been Confirmed</h3>
-        <p class="confirmation-msg-text">
-          Thank you for booking with Makainak. Your AC General Service request has been received successfully. Our team will review the details and assign a verified technician shortly.
-        </p>
-
-        <div class="divider-line"></div>
-
-        <p class="text-muted small mb-4">Vel morbi phasellus ullamcorper tincidunt et ac.</p>
-
-        <div class="support-links">
-          <a href="tel:+923001234567"><i class="bi bi-telephone-fill"></i> Makainak Support</a>
-          <a href="mailto:support@makainak.com"><i class="bi bi-envelope-fill"></i> support@makainak.com</a>
-        </div>
-      </div>
-
-      <!-- Action Buttons -->
-      <div class="success-actions">
-        <a href="index.html" class="btn btn-homepage text-decoration-none d-flex align-items-center justify-content-center">
-          Homepage <i class="bi bi-arrow-up-right-circle-fill ms-2"></i>
+      <!-- Modal Top Actions -->
+      <div class="modal-top-actions">
+        <a href="cart.html" class="modal-cart-btn-top">
+          <i class="bi bi-cart3"></i>
+          <span class="cart-badge">0</span>
         </a>
-        <button class="btn btn-track d-flex align-items-center justify-content-center">
-          Track Your Request <i class="bi bi-arrow-right-circle-fill ms-2"></i>
-        </button>
       </div>
-    </div>
-  </div>
 
+      <!-- Dynamic Content Container -->
+      <div id="modalContent">
+        <!-- View 1: Category Selection -->
+        <div id="categoryView">
+          <!-- Category Tabs -->
+          <div class="booking-tabs-wrapper">
+            <div class="booking-tabs">
+              <button class="tab-btn active" data-category="electrical">Electrical Engineering</button>
+              <button class="tab-btn" data-category="mechanical">Mechanical Engineering</button>
+              <button class="tab-btn" data-category="civil">Civil Engineering</button>
+            </div>
+          </div>
+
+          <h2 class="modal-main-heading" id="categoryHeading">Wide Range of Electrical Engineering Services</h2>
+
+          <!-- Service Grid -->
+          <div class="row g-4 booking-service-grid">
+            <!-- Electrical Services (Default) -->
+            <div class="col-lg-6">
+              <div class="booking-service-card show-details" data-service="ac-service">
+                <div class="row align-items-center">
+                  <div class="col-4">
+                    <img src="assets/images/feature_ac_repair.png" alt="Service">
+                  </div>
+                  <div class="col-8">
+                    <h6>AC Service</h6>
+                    <p>Installation, repair, gas refill, cleaning, and general AC maintenance</p>
+                    <span class="view-service-link">View Services <div class="icon-box-blue"><i
+                          class="bi bi-arrow-up-right"></i></div></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="booking-service-card show-details" data-service="electrical-wiring">
+                <div class="row align-items-center">
+                  <div class="col-4">
+                    <img src="assets/images/feature_professional.png" alt="Service">
+                  </div>
+                  <div class="col-8">
+                    <h6>Electrical Wiring</h6>
+                    <p>Installation, repair, gas refill, cleaning, and general AC maintenance</p>
+                    <span class="view-service-link">View Services <div class="icon-box-blue"><i
+                          class="bi bi-arrow-up-right"></i></div></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="booking-service-card show-details" data-service="solar-panel">
+                <div class="row align-items-center">
+                  <div class="col-4">
+                    <img src="assets/images/feature_tablet.png" alt="Service">
+                  </div>
+                  <div class="col-8">
+                    <h6>Solar Panel</h6>
+                    <p>Installation, repair, gas refill, cleaning, and general AC maintenance</p>
+                    <span class="view-service-link">View Services <div class="icon-box-blue"><i
+                          class="bi bi-arrow-up-right"></i></div></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="booking-service-card show-details" data-service="generator-ups">
+                <div class="row align-items-center">
+                  <div class="col-4">
+                    <img src="assets/images/mechanical_engineering.png" alt="Service">
+                  </div>
+                  <div class="col-8">
+                    <h6>Generator & UPS</h6>
+                    <p>Installation, repair, gas refill, cleaning, and general AC maintenance</p>
+                    <span class="view-service-link">View Services <div class="icon-box-blue"><i
+                          class="bi bi-arrow-up-right"></i></div></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-footer-text">User Details</div>
+        </div>
+
+        <!-- View 2: Detailed Services -->
+        <div id="servicesDetailView" class="d-none">
+          <button class="btn-back-selection back-btn"><i class="bi bi-arrow-left me-2"></i> Back</button>
+          <div class="text-center">
+            <span class="sub-cat-badge">AC Services</span>
+            <h2 class="modal-main-heading service-main-title">AC General Service</h2>
+          </div>
+          <div class="row g-4" id="detailedServiceGrid">
+            <!-- Populated by JS -->
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -151,7 +202,7 @@
   <div class="mobile-drawer">
     <button class="drawer-close" id="closeDrawer"><i class="bi bi-x"></i></button>
     <ul class="mobile-nav-links">
-      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html" class="active">Home</a></li>
       <li class="mobile-dropdown">
         <a href="#" class="mobile-dropdown-toggle">Services <i class="bi bi-caret-down-fill ms-1"
             style="font-size: 10px;"></i></a>
@@ -217,7 +268,7 @@
 
         <!-- Desktop Center Navigation -->
         <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html" class="active">Home</a></li>
           <li class="services-dropdown">
             <a href="#">Services <i class="bi bi-caret-down-fill ms-1" style="font-size: 10px;"></i></a>
             <ul class="desktop-dropdown-menu">
@@ -303,6 +354,8 @@
         </ul>
 
         <!-- Desktop Right Actions -->
+
+
         <div class="nav-actions">
           <a href="contact.html" class="help-center-link">Help Center</a>
           <a href="#" class="sign-in-link">Sign in</a>
@@ -310,19 +363,20 @@
             <i class="bi bi-cart3"></i>
             <span class="cart-badge">0</span>
           </a>
-        </div>
 
-        <!-- Mobile Hamburger Button -->
-        <button class="hamburger-btn" id="hamburgerBtn">
-          <i class="bi bi-list"></i>
-        </button>
+          <!-- Mobile Hamburger Button -->
+          <button class="hamburger-btn" id="hamburgerBtn">
+            <i class="bi bi-list"></i>
+          </button>
+        </div>
       </div>
     </div>
   </header>
 
   <!-- Main Content Container -->
-  <main class="container my-5">
-    <div class="checkout-wrapper text-center">
+  <main class="container mt-4 mb-5">
+    <div class="bg-white rounded-5 p-4 p-md-5 border" style="box-shadow: 0 4px 20px rgba(0,0,0,0.02);">
+      <div class="checkout-wrapper text-center">
 
       <!-- Stepper -->
       <div class="stepper-container px-lg-5">
@@ -611,6 +665,7 @@
         </div>
       </div>
 
+    </div>
     </div>
   </main>
 

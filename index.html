@@ -15,7 +15,9 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
@@ -30,8 +32,6 @@
       <div class="text-center">
         <h2 class="modal-title">Welcome back</h2>
         <p class="modal-subtitle">Sign in to manage your bookings and saved pros.</p>
-
-
         <form>
           <div class="input-group-custom">
             <i class="bi bi-envelope"></i>
@@ -63,8 +63,6 @@
       <div class="text-center">
         <h2 class="modal-title">Create your account</h2>
         <p class="modal-subtitle">Join Makainak and book trusted local pros in seconds.</p>
-
-
         <form>
           <div class="input-group-custom">
             <i class="bi bi-person"></i>
@@ -358,12 +356,11 @@
         </ul>
 
         <!-- Desktop Right Actions -->
+
+
         <div class="nav-actions">
           <a href="contact.html" class="help-center-link">Help Center</a>
           <a href="#" class="sign-in-link">Sign in</a>
-        </div>
-
-        <div class="header-right-icons">
           <a href="cart.html" class="cart-btn">
             <i class="bi bi-cart3"></i>
             <span class="cart-badge">0</span>
@@ -383,162 +380,160 @@
     <div class="bg-white rounded-5 p-4 p-md-5 border" style="box-shadow: 0 4px 20px rgba(0,0,0,0.02);">
 
       <!-- Hero Section -->
-      <section class="hero-section text-center">
-        <h1 class="hero-heading">Book Trusted Professionals <br> <span class="hero-subheading text-primary">Any Service, Anytime</span></h1>
+      <section class="hero-section">
+        <div class="hero-inner">
 
-        <!-- Search Bar -->
-        <div class="search-bar-wrapper mx-auto mt-4">
-          <div class="input-group search-bar">
-            <span class="input-group-text bg-white border-0"><i class="bi bi-search"></i></span>
-            <input type="text" class="form-control border-0 shadow-none" placeholder="What service do you want!">
-            <button class="btn btn-primary" type="button">Find Service <i
-                class="bi bi-arrow-right ms-2"></i></button>
+          <!-- Heading -->
+          <div class="text-center">
+            <h1 class="hero-heading">
+              Book Trusted Professionals
+              <span>Any Service, Anytime</span>
+            </h1>
           </div>
-        </div>
 
-        <!-- Toggle Buttons -->
-        <div class="toggle-wrapper mt-4 d-flex flex-column align-items-center">
-          <div class="toggle-group d-flex p-1 rounded-pill bg-white shadow-sm" id="typeToggle">
-            <button class="btn btn-toggle toggle-option rounded-pill px-4 py-2 text-muted"
-              data-target="domestic">Domestic
-              <i class="bi bi-house-door-fill ms-1"></i></button>
-            <button class="btn btn-toggle toggle-option rounded-pill px-4 py-2 text-muted"
-              data-target="corporate">Corporate <i class="bi bi-building ms-1"></i></button>
+          <!-- Search Bar -->
+          <div class="search-bar-container">
+            <div class="search-input-group">
+              <i class="bi bi-search"></i>
+              <input type="text" placeholder="What service do you want!">
+            </div>
+            <button class="btn-find-service">
+              Find Service <i class="bi bi-arrow-up-right"></i>
+            </button>
           </div>
-          <p id="toggleError" class="text-danger fw-bold mt-2 d-none blink-animation">Please select either Domestic or
-            Corporate to continue.</p>
-        </div>
-      </section>
 
-      <!-- Services Section -->
-      <section class="services-section">
-        <div class="row g-4 justify-content-center">
-          <!-- Card 1 -->
-          <div class="col-lg-4 col-md-6 col-12">
-            <div class="service-card active-card open-booking" data-target="electrical">
-              <div class="service-image-wrapper">
-                <img src="assets/images/electrical_engineering.png" alt="Electrical Engineering"
-                  class="img-fluid w-100">
+          <!-- Category Toggles -->
+          <div class="d-flex flex-column align-items-center gap-2">
+            <div class="category-toggle-pill" id="typeToggle">
+              <button class="toggle-btn toggle-option" data-target="domestic">Domestic <i class="bi bi-house-door-fill"></i></button>
+              <button class="toggle-btn toggle-option" data-target="corporate">Corporate <i class="bi bi-building"></i></button>
+            </div>
+            <p id="toggleError" class="text-danger fw-bold mt-1 d-none blink-animation text-center mb-0">Please select either Domestic or Corporate to continue.</p>
+          </div>
+
+          <!-- Service Grid -->
+          <div class="hero-service-grid">
+            <!-- Electrical -->
+            <div class="hero-service-card electrical open-booking" data-target="electrical">
+              <div class="card-img-wrapper electrical">
+                <img src="assets/images/electrical_engineering.png" alt="Electrical Engineering">
               </div>
-              <div class="service-content p-4">
-                <h4 class="mb-3 fw-bold" style="font-size: 1.2rem;">Electrical Engineering</h4>
-                <div class="d-flex justify-content-between align-items-center">
-                  <span class="text-primary fw-bold" style="font-size: 0.9rem;">Select Services</span>
-                  <a href="#" class="btn-hero-arrow open-booking" data-target="electrical"><i
-                      class="bi bi-arrow-up-right"></i></a>
+              <div class="card-footer">
+                <h4 class="card-title">Electrical Engineering</h4>
+                <div class="card-arrow-btn">
+                  <i class="bi bi-arrow-up-right"></i>
+                </div>
+              </div>
+            </div>
+
+            <!-- Mechanical -->
+            <div class="hero-service-card open-booking" data-target="mechanical">
+              <div class="card-img-wrapper mechanical">
+                <img src="assets/images/mechanical_engineering.png" alt="Mechanical Engineering">
+              </div>
+              <div class="card-footer">
+                <h4 class="card-title">Mechanical Engineering</h4>
+                <div class="card-arrow-btn">
+                  <i class="bi bi-arrow-up-right"></i>
+                </div>
+              </div>
+            </div>
+
+            <!-- Civil -->
+            <div class="hero-service-card open-booking" data-target="civil">
+              <div class="card-img-wrapper civil">
+                <img src="assets/images/civil_engineering.png" alt="Civil Engineering">
+              </div>
+              <div class="card-footer">
+                <h4 class="card-title">Civil Engineering</h4>
+                <div class="card-arrow-btn">
+                  <i class="bi bi-arrow-up-right"></i>
                 </div>
               </div>
             </div>
           </div>
-          <!-- Card 2 -->
-          <div class="col-lg-4 col-md-6 col-12">
-            <div class="service-card open-booking" data-target="mechanical">
-              <div class="service-image-wrapper">
-                <img src="assets/images/mechanical_engineering.png" alt="Mechanical Engineering"
-                  class="img-fluid w-100">
-              </div>
-              <div class="service-content p-4">
-                <h4 class="mb-3 fw-bold" style="font-size: 1.2rem;">Mechanical Engineering</h4>
-                <div class="d-flex justify-content-between align-items-center">
-                  <span class="text-primary fw-bold" style="font-size: 0.9rem;">Select Services</span>
-                  <a href="#" class="btn-hero-arrow open-booking" data-target="mechanical"><i
-                      class="bi bi-arrow-up-right"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Card 3 -->
-          <div class="col-lg-4 col-md-6 col-12">
-            <div class="service-card open-booking" data-target="civil">
-              <div class="service-image-wrapper">
-                <img src="assets/images/civil_engineering.png" alt="Civil Engineering" class="img-fluid w-100">
-              </div>
-              <div class="service-content p-4">
-                <h4 class="mb-3 fw-bold" style="font-size: 1.2rem;">Civil Engineering</h4>
-                <div class="d-flex justify-content-between align-items-center">
-                  <span class="text-primary fw-bold" style="font-size: 0.9rem;">Select Services</span>
-                  <a href="#" class="btn-hero-arrow open-booking" data-target="civil"><i
-                      class="bi bi-arrow-up-right"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
+
         </div>
       </section>
-
     </div>
   </div>
 
   <!-- Benefits Section -->
-  <section class="benefits-section pb-5">
+  <section class="benefits-section">
     <div class="container">
+
+      <!-- Header -->
       <div class="text-center mb-5">
-        <span class="badge bg-primary rounded-pill px-3 py-2 mb-3"><i class="bi bi-star-fill me-1"></i> Key
-          Benefit</span>
+        <span class="benefits-badge">
+          <i class="bi bi-star-fill me-1"></i> Key Benefit
+        </span>
         <h2 class="benefits-heading">The Smarter Way to Book</h2>
-        <h3 class="benefits-subheading text-primary">Home Services</h3>
+        <h3 class="benefits-subheading">Home Services</h3>
       </div>
 
+      <!-- Content Row -->
       <div class="row g-4 align-items-stretch">
-        <!-- Video Placeholder -->
-        <div class="col-lg-6 col-12">
-          <div class="video-placeholder rounded-4 h-100 d-flex justify-content-center align-items-center bg-black">
-            <button class="btn btn-light rounded-circle play-btn" style="width: 60px; height: 60px;">
-              <i class="bi bi-play-fill fs-3"></i>
+
+        <!-- Left: Video Placeholder -->
+        <div class="col-lg-6">
+          <div class="video-placeholder">
+            <button class="play-btn-figma">
+              <i class="bi bi-play-fill"></i>
             </button>
           </div>
         </div>
 
-        <!-- App & Features -->
-        <div class="col-lg-6 col-12">
-          <div class="row g-4 h-100">
-            <!-- App Download Card -->
-            <div class="col-md-5 col-12">
-              <div
-                class="app-card rounded-4 p-4 text-center h-100 d-flex flex-column justify-content-center position-relative overflow-hidden bg-primary text-white">
-                <div
-                  class="phone-mockup bg-white rounded-4 p-3 mx-auto mt-2 d-flex flex-column align-items-center justify-content-center"
-                  style="width: 140px; height: 220px; border: 4px solid #fff; border-radius: 20px;">
-                  <h4 class="text-dark fw-bold mb-0">makainak</h4>
-                  <p class="text-muted" style="font-size: 8px;">Repair & Services</p>
-                  <div class="mt-auto w-100">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
-                      alt="Google Play" class="img-fluid bg-dark p-1 rounded">
+        <!-- Right: App Card + Features -->
+        <div class="col-lg-6">
+          <div class="benefits-right-col">
+
+            <!-- App Card -->
+            <div class="app-card-figma">
+              <img src="assets/images/mookup.png" alt="App Mockup" class="mockup-img">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                alt="Google Play" class="play-store-badge">
+            </div>
+
+            <!-- Feature List -->
+            <div class="feature-container-figma">
+              <div class="feature-item-figma">
+                <div class="feature-row">
+                  <div>
+                    <h6>24/7 Availability</h6>
+                    <p>Emergency or routine — we're here whenever you need us</p>
+                  </div>
+                  <div class="feature-icon-wrap">
+                    <i class="bi bi-lightning-charge-fill"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="feature-item-figma">
+                <div class="feature-row">
+                  <div>
+                    <h6>Transparent Pricing</h6>
+                    <p>No hidden fees. Get upfront quotes before you book</p>
+                  </div>
+                  <div class="feature-icon-wrap">
+                    <i class="bi bi-tag-fill"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="feature-item-figma">
+                <div class="feature-row">
+                  <div>
+                    <h6>Track in Real-Time</h6>
+                    <p>Know exactly when your professional will arrive</p>
+                  </div>
+                  <div class="feature-icon-wrap">
+                    <i class="bi bi-geo-alt-fill"></i>
                   </div>
                 </div>
               </div>
             </div>
-            <!-- Features List -->
-            <div class="col-md-7 col-12">
-              <div class="features-list d-flex flex-column gap-3 h-100 justify-content-between">
-                <!-- Feature Item 1 -->
-                <div class="feature-item p-3 bg-white rounded-3 shadow-sm border">
-                  <div class="d-flex justify-content-between align-items-start mb-2">
-                    <h6 class="fw-bold text-primary mb-0">24/7 Availability</h6>
-                    <i class="bi bi-lightning-charge-fill text-primary"></i>
-                  </div>
-                  <p class="text-muted mb-0 small">Emergency or routine - we're here whenever you need us.</p>
-                </div>
-                <!-- Feature Item 2 -->
-                <div class="feature-item p-3 bg-white rounded-3 shadow-sm border">
-                  <div class="d-flex justify-content-between align-items-start mb-2">
-                    <h6 class="fw-bold text-primary mb-0">Transparent Pricing</h6>
-                    <i class="bi bi-tag-fill text-primary"></i>
-                  </div>
-                  <p class="text-muted mb-0 small">No hidden fees. Get upfront quotes before you book.</p>
-                </div>
-                <!-- Feature Item 3 -->
-                <div class="feature-item p-3 bg-white rounded-3 shadow-sm border">
-                  <div class="d-flex justify-content-between align-items-start mb-2">
-                    <h6 class="fw-bold text-primary mb-0">Track in Real-Time</h6>
-                    <i class="bi bi-geo-alt-fill text-primary"></i>
-                  </div>
-                  <p class="text-muted mb-0 small">Know exactly when your professional will arrive.</p>
-                </div>
-              </div>
-            </div>
+
           </div>
         </div>
+
       </div>
     </div>
   </section>
@@ -546,82 +541,69 @@
   <!-- Platform Features Section -->
   <section class="platform-features-section pb-5">
     <div class="container">
-      <div class="bg-white rounded-5 p-4 p-md-5 border" style="box-shadow: 0 4px 20px rgba(0,0,0,0.02);">
+      <div class="bg-white rounded-5 border" style="box-shadow: 0 4px 20px rgba(0,0,0,0.02); padding: 56px;">
 
         <!-- Section Header -->
-        <div class="row mb-5 align-items-end">
-          <div class="col-lg-7">
-            <span class="badge bg-primary rounded-pill px-3 py-2 mb-3"><i class="bi bi-star-fill me-1"></i> Platform
-              Features</span>
+        <div class="row mb-4 align-items-start">
+          <div class="col-lg-6">
+            <span class="platform-badge">
+              <i class="bi bi-star-fill"></i> Platform Features
+            </span>
             <h2 class="platform-heading">The Future of Home<br>Maintenance</h2>
           </div>
-          <div class="col-lg-5 text-lg-end mt-3 mt-lg-0">
-            <p class="text-muted small mb-0 ms-lg-auto text-lg-end text-start" style="max-width: 350px;">Makainak brings
-              all the essential services your home needs — from plumbing to solar — with instant booking, verified
-              professionals, and secure payments</p>
+          <div class="col-lg-6 d-flex align-items-center justify-content-end mt-3 mt-lg-0">
+            <p class="platform-desc mb-0">Makainak brings all the essential services your home needs — from plumbing to solar — with instant booking, verified professionals, and secure payments</p>
           </div>
         </div>
 
-        <hr class="mb-5 text-muted" style="opacity: 0.1;">
+        <hr class="feature-divider mb-0">
 
         <!-- Feature Block 1 -->
-        <div class="row align-items-center mb-5 feature-block">
+        <div class="row align-items-center feature-block">
           <div class="col-lg-7 mb-4 mb-lg-0 pe-lg-5">
-            <div class="d-flex align-items-center mb-3">
-              <i class="bi bi-star-fill text-primary me-2"></i>
-              <span class="fw-bold small">Features 1</span>
+            <div class="feature-label">
+              <i class="bi bi-star-fill"></i> Features 1
             </div>
-            <h3 class="feature-title mb-3">Every Home<br>Service, One Place</h3>
-            <p class="text-muted small mb-4">Plumbing, electrical, cleaning, solar, carpentry & courier — book it all
-              without juggling multiple apps or phone calls</p>
-            <span class="badge bg-info text-primary rounded-pill px-3 py-2"
-              style="background-color: #d0e6ff !important;">50+ Service Categories</span>
+            <h3 class="feature-title">Every Home<br>Service, One Place</h3>
+            <p class="feature-desc">Plumbing, electrical, cleaning, solar, carpentry & courier — book it all without juggling multiple apps or phone calls</p>
+            <span class="feature-badge">50+ Service Categories</span>
           </div>
           <div class="col-lg-5">
-            <img src="assets/images/feature_ac_repair.png" alt="AC Repair"
-              class="img-fluid rounded-4 w-100 object-fit-cover shadow-sm" style="height: 280px;">
+            <img src="assets/images/feature_ac_repair.png" alt="AC Repair" class="feature-img">
           </div>
         </div>
 
-        <hr class="mb-5 text-muted" style="opacity: 0.1;">
+        <hr class="feature-divider">
 
         <!-- Feature Block 2 -->
-        <div class="row align-items-center mb-5 feature-block">
+        <div class="row align-items-center feature-block">
           <div class="col-lg-7 mb-4 mb-lg-0 pe-lg-5">
-            <div class="d-flex align-items-center mb-3">
-              <i class="bi bi-star-fill text-primary me-2"></i>
-              <span class="fw-bold small">Features 1</span>
+            <div class="feature-label">
+              <i class="bi bi-star-fill"></i> Features 1
             </div>
-            <h3 class="feature-title mb-3">Verified & Local<br>Professionals</h3>
-            <p class="text-muted small mb-4">Every pro is licensed, insured, and background-checked. Real ratings from
-              real homeowners mean you book with confidence</p>
-            <span class="badge bg-info text-primary rounded-pill px-3 py-2"
-              style="background-color: #d0e6ff !important;">100+ Professionals</span>
+            <h3 class="feature-title">Verified & Local<br>Professionals</h3>
+            <p class="feature-desc">Every pro is licensed, insured, and background-checked. Real ratings from real homeowners mean you book with confidence</p>
+            <span class="feature-badge">100+ Professionals</span>
           </div>
           <div class="col-lg-5">
-            <img src="assets/images/feature_professional.png" alt="Local Professionals"
-              class="img-fluid rounded-4 w-100 object-fit-cover shadow-sm" style="height: 280px;">
+            <img src="assets/images/feature_professional.png" alt="Local Professionals" class="feature-img">
           </div>
         </div>
 
-        <hr class="mb-5 text-muted" style="opacity: 0.1;">
+        <hr class="feature-divider">
 
         <!-- Feature Block 3 -->
         <div class="row align-items-center feature-block">
           <div class="col-lg-7 mb-4 mb-lg-0 pe-lg-5">
-            <div class="d-flex align-items-center mb-3">
-              <i class="bi bi-star-fill text-primary me-2"></i>
-              <span class="fw-bold small">Features 1</span>
+            <div class="feature-label">
+              <i class="bi bi-star-fill"></i> Features 1
             </div>
-            <h3 class="feature-title mb-3">Transparent Pricing &<br>Guarantee</h3>
-            <p class="text-muted small mb-4">Get upfront pricing before you book. Pay securely after the job, backed by
-              our 100% satisfaction guarantee.</p>
-            <span class="badge bg-info text-primary rounded-pill px-3 py-2"
-              style="background-color: #d0e6ff !important;">5-Star Ratings</span>
+            <h3 class="feature-title">Transparent Pricing &<br>Guarantee</h3>
+            <p class="feature-desc">Get upfront pricing before you book. Pay securely after the job, backed by our 100% satisfaction guarantee.</p>
+            <span class="feature-badge">5-Star Ratings</span>
           </div>
           <div class="col-lg-5">
-            <img src="assets/images/feature_tablet.png" alt="Transparent Pricing"
-              class="img-fluid rounded-4 w-100 object-fit-cover shadow-sm" style="height: 280px;">
+            <img src="assets/images/feature_tablet.png" alt="Transparent Pricing" class="feature-img">
           </div>
         </div>
 
@@ -630,89 +612,90 @@
   </section>
 
   <!-- How It Works Section -->
-  <section class="how-it-works-section text-white py-5 mt-5">
-    <div class="container py-5">
+  <section class="how-it-works-section text-white">
+    <div class="container">
 
-      <!-- Section Header -->
-      <div class="text-center mb-5 pb-4">
-        <span class="badge bg-white text-primary rounded-pill px-4 py-2 mb-4 shadow-sm" style="font-weight: 600;">
-          <img src="assets/images/logo.png" alt="logo" style="height: 12px; margin-right: 8px;"> How It Works
+      <!-- Header -->
+      <div class="hiw-header text-center">
+        <span class="hiw-badge">
+          <i class="bi bi-star-fill"></i> How It Works
         </span>
         <h2 class="how-it-works-heading">Choose Your Service &<br>Get Set Done!</h2>
       </div>
 
-      <div class="timeline-container position-relative mt-5">
+      <!-- Steps -->
+      <div class="hiw-timeline-wrapper">
 
-        <!-- Step 1 -->
-        <div class="row align-items-center mb-5 step-row position-relative">
-          <div class="col-md-5 text-md-start text-center mb-5 mb-md-0">
+        <!-- Vertical line -->
+        <div class="hiw-vline"></div>
+
+        <!-- Step 1: Text LEFT, Image RIGHT -->
+        <div class="hiw-row">
+          <div class="hiw-cell hiw-cell-text">
             <div class="step-icon-box">
-              <i class="bi bi-gear-wide-connected"></i>
+              <i class="bi bi-grid-1x2-fill"></i>
             </div>
             <h3 class="step-title">Choose Your Service</h3>
-            <p class="step-desc">Browse our full range of home services — plumbing, electrical, cleaning, solar & more.
-              Select what you need.</p>
+            <p class="step-desc">Browse our full range of home services — plumbing, electrical, cleaning, solar & more. Select what you need.</p>
           </div>
 
-          <div class="col-md-2 d-none d-md-flex justify-content-center align-items-center position-relative">
+          <div class="hiw-cell hiw-cell-dot">
             <div class="timeline-circle">
               <div class="timeline-dot"></div>
             </div>
           </div>
 
-          <div class="col-md-5">
-            <img src="assets/images/feature_tablet.png" alt="Choose Service" class="img-fluid rounded-4 w-100 shadow-lg">
+          <div class="hiw-cell hiw-cell-image">
+            <img src="assets/images/feature_tablet.png" alt="Choose Your Service" class="hiw-img">
           </div>
         </div>
 
-        <!-- Step 2 -->
-        <div class="row align-items-center mb-5 step-row position-relative flex-column-reverse flex-md-row">
-          <div class="col-md-5 mt-5 mt-md-0">
-            <img src="assets/images/feature_professional.png" alt="Book and Schedule"
-              class="img-fluid rounded-4 w-100 shadow-lg">
+        <!-- Step 2: Image LEFT, Text RIGHT -->
+        <div class="hiw-row">
+          <div class="hiw-cell hiw-cell-image">
+            <img src="assets/images/feature_professional.png" alt="Book & Schedule" class="hiw-img">
           </div>
 
-          <div class="col-md-2 d-none d-md-flex justify-content-center align-items-center position-relative">
+          <div class="hiw-cell hiw-cell-dot">
             <div class="timeline-circle">
               <div class="timeline-dot"></div>
             </div>
           </div>
 
-          <div class="col-md-5 text-md-start text-center">
+          <div class="hiw-cell hiw-cell-text">
             <div class="step-icon-box">
-              <i class="bi bi-calendar-check"></i>
+              <i class="bi bi-calendar-check-fill"></i>
             </div>
             <h3 class="step-title">Book & Schedule</h3>
-            <p class="step-desc">Pick a time that works for you. Get instant pricing and confirm your booking in under
-              60 seconds.</p>
+            <p class="step-desc">Pick a time that works for you. Get instant pricing and confirm your booking in under 60 seconds.</p>
           </div>
         </div>
 
-        <!-- Step 3 -->
-        <div class="row align-items-center step-row position-relative">
-          <div class="col-md-5 text-md-start text-center">
+        <!-- Step 3: Text LEFT, Image RIGHT -->
+        <div class="hiw-row">
+          <div class="hiw-cell hiw-cell-text">
             <div class="step-icon-box">
-              <i class="bi bi-check2-square"></i>
+              <i class="bi bi-patch-check-fill"></i>
             </div>
             <h3 class="step-title">Relax, It's Done</h3>
-            <p class="step-desc">Watch your pro arrive in real-time. Pay only when the job is done right. Sit back and
-              relax.</p>
+            <p class="step-desc">Watch your pro arrive in real-time. Pay only when the job is done right. Sit back and relax.</p>
           </div>
 
-          <div class="col-md-2 d-none d-md-flex justify-content-center align-items-center position-relative">
+          <div class="hiw-cell hiw-cell-dot">
             <div class="timeline-circle">
               <div class="timeline-dot"></div>
             </div>
           </div>
 
-          <div class="col-md-5">
-            <img src="assets/images/feature_ac_repair.png" alt="Relax" class="img-fluid rounded-4 w-100 shadow-lg">
+          <div class="hiw-cell hiw-cell-image">
+            <img src="assets/images/feature_ac_repair.png" alt="Relax It's Done" class="hiw-img">
           </div>
         </div>
 
       </div>
     </div>
   </section>
+
 
   <!-- Testimonials Section -->
   <section class="testimonials-section py-5" style="background-color: #f4f9fd;">
@@ -1086,7 +1069,7 @@
         if (!$('.toggle-option').hasClass('active')) {
           $('#typeToggle').addClass('border border-danger');
           $('#toggleError').removeClass('d-none');
-          $('html, body').animate({ scrollTop: $(".toggle-wrapper").offset().top - 100 }, 500);
+          $('html, body').animate({ scrollTop: $("#typeToggle").offset().top - 100 }, 500);
           return;
         }
         $('#bookingModal').addClass('active');
@@ -1157,7 +1140,7 @@
               </div>
             </div>`;
         });
-        
+
         // Add a prominent View Cart button at the bottom of the grid
         html += `
           <div class="col-12 text-center mt-4">
@@ -1165,7 +1148,7 @@
               <i class="bi bi-cart3 me-2"></i> View Cart
             </a>
           </div>`;
-          
+
         $('#detailedServiceGrid').html(html);
       });
 
@@ -1186,6 +1169,3 @@
 </body>
 
 </html>
-
-
-

@@ -30,8 +30,6 @@
       <div class="text-center">
         <h2 class="modal-title">Welcome back</h2>
         <p class="modal-subtitle">Sign in to manage your bookings and saved pros.</p>
-
-
         <form>
           <div class="input-group-custom">
             <i class="bi bi-envelope"></i>
@@ -41,7 +39,7 @@
             <i class="bi bi-lock"></i>
             <input type="password" class="form-control rounded-pill" placeholder="Password">
           </div>
-          
+
           <a href="#" class="forgot-link">Forgot password?</a>
 
           <button type="submit" class="btn-signin">
@@ -50,7 +48,151 @@
         </form>
 
         <div class="auth-footer">
-          Don't have an account? <a href="#">Sign up</a>
+          Don't have an account? <a href="#" class="switch-to-signup">Sign up</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Signup Modal -->
+  <div class="modal-overlay" id="signupModal">
+    <div class="auth-modal">
+      <button class="modal-close"><i class="bi bi-x"></i></button>
+      <div class="text-center">
+        <h2 class="modal-title">Create your account</h2>
+        <p class="modal-subtitle">Join Makainak and book trusted local pros in seconds.</p>
+        <form>
+          <div class="input-group-custom">
+            <i class="bi bi-person"></i>
+            <input type="text" class="form-control rounded-pill" placeholder="Full name">
+          </div>
+          <div class="input-group-custom">
+            <i class="bi bi-envelope"></i>
+            <input type="email" class="form-control rounded-pill" placeholder="Email address">
+          </div>
+          <div class="input-group-custom">
+            <i class="bi bi-lock"></i>
+            <input type="password" class="form-control rounded-pill" placeholder="Password">
+          </div>
+
+          <button type="submit" class="btn-signin">
+            Create account <i class="bi bi-arrow-up-right-circle-fill"></i>
+          </button>
+        </form>
+
+        <div class="auth-footer">
+          Already have an account? <a href="#" class="switch-to-login">Sign in</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Booking Selection Modal -->
+  <div class="modal-overlay" id="bookingModal">
+    <div class="booking-modal-container">
+      <button class="modal-close"><i class="bi bi-x"></i></button>
+
+      <!-- Modal Top Actions -->
+      <div class="modal-top-actions">
+        <a href="cart.html" class="modal-cart-btn-top">
+          <i class="bi bi-cart3"></i>
+          <span class="cart-badge">0</span>
+        </a>
+      </div>
+
+      <!-- Dynamic Content Container -->
+      <div id="modalContent">
+        <!-- View 1: Category Selection -->
+        <div id="categoryView">
+          <!-- Category Tabs -->
+          <div class="booking-tabs-wrapper">
+            <div class="booking-tabs">
+              <button class="tab-btn active" data-category="electrical">Electrical Engineering</button>
+              <button class="tab-btn" data-category="mechanical">Mechanical Engineering</button>
+              <button class="tab-btn" data-category="civil">Civil Engineering</button>
+            </div>
+          </div>
+
+          <h2 class="modal-main-heading" id="categoryHeading">Wide Range of Electrical Engineering Services</h2>
+
+          <!-- Service Grid -->
+          <div class="row g-4 booking-service-grid">
+            <!-- Electrical Services (Default) -->
+            <div class="col-lg-6">
+              <div class="booking-service-card show-details" data-service="ac-service">
+                <div class="row align-items-center">
+                  <div class="col-4">
+                    <img src="assets/images/feature_ac_repair.png" alt="Service">
+                  </div>
+                  <div class="col-8">
+                    <h6>AC Service</h6>
+                    <p>Installation, repair, gas refill, cleaning, and general AC maintenance</p>
+                    <span class="view-service-link">View Services <div class="icon-box-blue"><i
+                          class="bi bi-arrow-up-right"></i></div></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="booking-service-card show-details" data-service="electrical-wiring">
+                <div class="row align-items-center">
+                  <div class="col-4">
+                    <img src="assets/images/feature_professional.png" alt="Service">
+                  </div>
+                  <div class="col-8">
+                    <h6>Electrical Wiring</h6>
+                    <p>Installation, repair, gas refill, cleaning, and general AC maintenance</p>
+                    <span class="view-service-link">View Services <div class="icon-box-blue"><i
+                          class="bi bi-arrow-up-right"></i></div></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="booking-service-card show-details" data-service="solar-panel">
+                <div class="row align-items-center">
+                  <div class="col-4">
+                    <img src="assets/images/feature_tablet.png" alt="Service">
+                  </div>
+                  <div class="col-8">
+                    <h6>Solar Panel</h6>
+                    <p>Installation, repair, gas refill, cleaning, and general AC maintenance</p>
+                    <span class="view-service-link">View Services <div class="icon-box-blue"><i
+                          class="bi bi-arrow-up-right"></i></div></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="booking-service-card show-details" data-service="generator-ups">
+                <div class="row align-items-center">
+                  <div class="col-4">
+                    <img src="assets/images/mechanical_engineering.png" alt="Service">
+                  </div>
+                  <div class="col-8">
+                    <h6>Generator & UPS</h6>
+                    <p>Installation, repair, gas refill, cleaning, and general AC maintenance</p>
+                    <span class="view-service-link">View Services <div class="icon-box-blue"><i
+                          class="bi bi-arrow-up-right"></i></div></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-footer-text">User Details</div>
+        </div>
+
+        <!-- View 2: Detailed Services -->
+        <div id="servicesDetailView" class="d-none">
+          <button class="btn-back-selection back-btn"><i class="bi bi-arrow-left me-2"></i> Back</button>
+          <div class="text-center">
+            <span class="sub-cat-badge">AC Services</span>
+            <h2 class="modal-main-heading service-main-title">AC General Service</h2>
+          </div>
+          <div class="row g-4" id="detailedServiceGrid">
+            <!-- Populated by JS -->
+          </div>
         </div>
       </div>
     </div>
@@ -60,36 +202,44 @@
   <div class="mobile-drawer">
     <button class="drawer-close" id="closeDrawer"><i class="bi bi-x"></i></button>
     <ul class="mobile-nav-links">
-      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html" class="active">Home</a></li>
       <li class="mobile-dropdown">
         <a href="#" class="mobile-dropdown-toggle">Services <i class="bi bi-caret-down-fill ms-1"
             style="font-size: 10px;"></i></a>
         <ul class="mobile-dropdown-menu">
+          <!-- Civil -->
           <li class="mobile-submenu">
             <a href="#" class="mobile-submenu-toggle">Civil <i class="bi bi-caret-down-fill ms-1"
                 style="font-size: 10px;"></i></a>
             <ul class="mobile-sub-menu">
-              <li><a href="#">Building Construction</a></li>
-              <li><a href="#">Renovation</a></li>
-              <li><a href="#">Architecture Design</a></li>
+              <li class="mobile-submenu">
+                <a href="#" class="mobile-submenu-toggle">Domestic <i class="bi bi-caret-down-fill ms-1"
+                    style="font-size: 10px;"></i></a>
+                <ul class="mobile-sub-menu">
+                  <li><a href="services-detail.html">Home Construction</a></li>
+                </ul>
+              </li>
+              <li class="mobile-submenu">
+                <a href="#" class="mobile-submenu-toggle">Corporate <i class="bi bi-caret-down-fill ms-1"
+                    style="font-size: 10px;"></i></a>
+                <ul class="mobile-sub-menu">
+                  <li><a href="services-detail.html">Office Buildout</a></li>
+                </ul>
+              </li>
             </ul>
           </li>
+          <!-- Electrical -->
           <li class="mobile-submenu">
             <a href="#" class="mobile-submenu-toggle">Electrical <i class="bi bi-caret-down-fill ms-1"
                 style="font-size: 10px;"></i></a>
             <ul class="mobile-sub-menu">
-              <li><a href="#">Wiring & Installation</a></li>
-              <li><a href="#">Appliance Repair</a></li>
-              <li><a href="#">Solar Setup</a></li>
-            </ul>
-          </li>
-          <li class="mobile-submenu">
-            <a href="#" class="mobile-submenu-toggle">Mechanical <i class="bi bi-caret-down-fill ms-1"
-                style="font-size: 10px;"></i></a>
-            <ul class="mobile-sub-menu">
-              <li><a href="#">HVAC & AC Repair</a></li>
-              <li><a href="#">Plumbing</a></li>
-              <li><a href="#">Generator Repair</a></li>
+              <li class="mobile-submenu">
+                <a href="#" class="mobile-submenu-toggle">Domestic <i class="bi bi-caret-down-fill ms-1"
+                    style="font-size: 10px;"></i></a>
+                <ul class="mobile-sub-menu">
+                  <li><a href="services-detail.html">Home Wiring</a></li>
+                </ul>
+              </li>
             </ul>
           </li>
         </ul>
@@ -98,7 +248,7 @@
       <li><a href="blog.html">Blogs</a></li>
     </ul>
     <div class="mobile-actions">
-      <a href="#" class="help-center-link">Help Center</a>
+      <a href="contact.html" class="help-center-link">Help Center</a>
       <a href="#" class="sign-in-link">Sign in</a>
       <a href="cart.html" class="cart-btn mt-2">
         <i class="bi bi-cart3"></i>
@@ -118,35 +268,83 @@
 
         <!-- Desktop Center Navigation -->
         <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html" class="active">Home</a></li>
           <li class="services-dropdown">
             <a href="#">Services <i class="bi bi-caret-down-fill ms-1" style="font-size: 10px;"></i></a>
             <ul class="desktop-dropdown-menu">
+              <!-- Level 2: Civil -->
               <li class="desktop-dropdown-submenu">
                 <a href="#">Civil <i class="bi bi-chevron-right ms-auto"
                     style="font-size: 10px; float: right; margin-top: 5px;"></i></a>
                 <ul class="desktop-sub-menu">
-                  <li><a href="#">Building Construction</a></li>
-                  <li><a href="#">Renovation</a></li>
-                  <li><a href="#">Architecture Design</a></li>
+                  <!-- Level 3: Domestic -->
+                  <li class="desktop-dropdown-submenu">
+                    <a href="#">Domestic <i class="bi bi-chevron-right ms-auto"
+                        style="font-size: 10px; float: right; margin-top: 5px;"></i></a>
+                    <ul class="desktop-sub-menu">
+                      <li><a href="services-detail.html">Home Construction</a></li>
+                      <li><a href="services-detail.html">Interior Renovation</a></li>
+                    </ul>
+                  </li>
+                  <!-- Level 3: Corporate -->
+                  <li class="desktop-dropdown-submenu">
+                    <a href="#">Corporate <i class="bi bi-chevron-right ms-auto"
+                        style="font-size: 10px; float: right; margin-top: 5px;"></i></a>
+                    <ul class="desktop-sub-menu">
+                      <li><a href="services-detail.html">Office Buildout</a></li>
+                      <li><a href="services-detail.html">Commercial Design</a></li>
+                    </ul>
+                  </li>
                 </ul>
               </li>
+              <!-- Level 2: Electrical -->
               <li class="desktop-dropdown-submenu">
                 <a href="#">Electrical <i class="bi bi-chevron-right ms-auto"
                     style="font-size: 10px; float: right; margin-top: 5px;"></i></a>
                 <ul class="desktop-sub-menu">
-                  <li><a href="#">Wiring & Installation</a></li>
-                  <li><a href="#">Appliance Repair</a></li>
-                  <li><a href="#">Solar Setup</a></li>
+                  <!-- Level 3: Domestic -->
+                  <li class="desktop-dropdown-submenu">
+                    <a href="#">Domestic <i class="bi bi-chevron-right ms-auto"
+                        style="font-size: 10px; float: right; margin-top: 5px;"></i></a>
+                    <ul class="desktop-sub-menu">
+                      <li><a href="services-detail.html">Home Wiring</a></li>
+                      <li><a href="services-detail.html">Appliance Install</a></li>
+                    </ul>
+                  </li>
+                  <!-- Level 3: Corporate -->
+                  <li class="desktop-dropdown-submenu">
+                    <a href="#">Corporate <i class="bi bi-chevron-right ms-auto"
+                        style="font-size: 10px; float: right; margin-top: 5px;"></i></a>
+                    <ul class="desktop-sub-menu">
+                      <li><a href="services-detail.html">Industrial Wiring</a></li>
+                      <li><a href="services-detail.html">Server Room Power</a></li>
+                    </ul>
+                  </li>
                 </ul>
               </li>
+              <!-- Level 2: Mechanical -->
               <li class="desktop-dropdown-submenu">
                 <a href="#">Mechanical <i class="bi bi-chevron-right ms-auto"
                     style="font-size: 10px; float: right; margin-top: 5px;"></i></a>
                 <ul class="desktop-sub-menu">
-                  <li><a href="#">HVAC & AC Repair</a></li>
-                  <li><a href="#">Plumbing</a></li>
-                  <li><a href="#">Generator Repair</a></li>
+                  <!-- Level 3: Domestic -->
+                  <li class="desktop-dropdown-submenu">
+                    <a href="#">Domestic <i class="bi bi-chevron-right ms-auto"
+                        style="font-size: 10px; float: right; margin-top: 5px;"></i></a>
+                    <ul class="desktop-sub-menu">
+                      <li><a href="services-detail.html">AC Maintenance</a></li>
+                      <li><a href="services-detail.html">Home Plumbing</a></li>
+                    </ul>
+                  </li>
+                  <!-- Level 3: Corporate -->
+                  <li class="desktop-dropdown-submenu">
+                    <a href="#">Corporate <i class="bi bi-chevron-right ms-auto"
+                        style="font-size: 10px; float: right; margin-top: 5px;"></i></a>
+                    <ul class="desktop-sub-menu">
+                      <li><a href="services-detail.html">Central HVAC</a></li>
+                      <li><a href="services-detail.html">Industrial Plumbing</a></li>
+                    </ul>
+                  </li>
                 </ul>
               </li>
             </ul>
@@ -156,19 +354,21 @@
         </ul>
 
         <!-- Desktop Right Actions -->
+
+
         <div class="nav-actions">
-          <a href="#" class="help-center-link">Help Center</a>
+          <a href="contact.html" class="help-center-link">Help Center</a>
           <a href="#" class="sign-in-link">Sign in</a>
           <a href="cart.html" class="cart-btn">
             <i class="bi bi-cart3"></i>
             <span class="cart-badge">0</span>
           </a>
-        </div>
 
-        <!-- Mobile Hamburger Button -->
-        <button class="hamburger-btn" id="hamburgerBtn">
-          <i class="bi bi-list"></i>
-        </button>
+          <!-- Mobile Hamburger Button -->
+          <button class="hamburger-btn" id="hamburgerBtn">
+            <i class="bi bi-list"></i>
+          </button>
+        </div>
       </div>
     </div>
   </header>

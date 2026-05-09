@@ -58,87 +58,414 @@
   <!-- Mobile Drawer Overlay -->
   <div class="drawer-overlay"></div>
 
+  <!-- Login Modal -->
+  <div class="modal-overlay" id="loginModal">
+    <div class="auth-modal">
+      <button class="modal-close"><i class="bi bi-x"></i></button>
+      <div class="text-center">
+        <h2 class="modal-title">Welcome back</h2>
+        <p class="modal-subtitle">Sign in to manage your bookings and saved pros.</p>
+        <form>
+          <div class="input-group-custom">
+            <i class="bi bi-envelope"></i>
+            <input type="email" class="form-control rounded-pill" placeholder="Email address">
+          </div>
+          <div class="input-group-custom">
+            <i class="bi bi-lock"></i>
+            <input type="password" class="form-control rounded-pill" placeholder="Password">
+          </div>
+
+          <a href="#" class="forgot-link">Forgot password?</a>
+
+          <button type="submit" class="btn-signin">
+            Sign in <i class="bi bi-arrow-right-circle-fill"></i>
+          </button>
+        </form>
+
+        <div class="auth-footer">
+          Don't have an account? <a href="#" class="switch-to-signup">Sign up</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Signup Modal -->
+  <div class="modal-overlay" id="signupModal">
+    <div class="auth-modal">
+      <button class="modal-close"><i class="bi bi-x"></i></button>
+      <div class="text-center">
+        <h2 class="modal-title">Create your account</h2>
+        <p class="modal-subtitle">Join Makainak and book trusted local pros in seconds.</p>
+        <form>
+          <div class="input-group-custom">
+            <i class="bi bi-person"></i>
+            <input type="text" class="form-control rounded-pill" placeholder="Full name">
+          </div>
+          <div class="input-group-custom">
+            <i class="bi bi-envelope"></i>
+            <input type="email" class="form-control rounded-pill" placeholder="Email address">
+          </div>
+          <div class="input-group-custom">
+            <i class="bi bi-lock"></i>
+            <input type="password" class="form-control rounded-pill" placeholder="Password">
+          </div>
+
+          <button type="submit" class="btn-signin">
+            Create account <i class="bi bi-arrow-up-right-circle-fill"></i>
+          </button>
+        </form>
+
+        <div class="auth-footer">
+          Already have an account? <a href="#" class="switch-to-login">Sign in</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Booking Selection Modal -->
+  <div class="modal-overlay" id="bookingModal">
+    <div class="booking-modal-container">
+      <button class="modal-close"><i class="bi bi-x"></i></button>
+
+      <!-- Modal Top Actions -->
+      <div class="modal-top-actions">
+        <a href="cart.html" class="modal-cart-btn-top">
+          <i class="bi bi-cart3"></i>
+          <span class="cart-badge">0</span>
+        </a>
+      </div>
+
+      <!-- Dynamic Content Container -->
+      <div id="modalContent">
+        <!-- View 1: Category Selection -->
+        <div id="categoryView">
+          <!-- Category Tabs -->
+          <div class="booking-tabs-wrapper">
+            <div class="booking-tabs">
+              <button class="tab-btn active" data-category="electrical">Electrical Engineering</button>
+              <button class="tab-btn" data-category="mechanical">Mechanical Engineering</button>
+              <button class="tab-btn" data-category="civil">Civil Engineering</button>
+            </div>
+          </div>
+
+          <h2 class="modal-main-heading" id="categoryHeading">Wide Range of Electrical Engineering Services</h2>
+
+          <!-- Service Grid -->
+          <div class="row g-4 booking-service-grid">
+            <!-- Electrical Services (Default) -->
+            <div class="col-lg-6">
+              <div class="booking-service-card show-details" data-service="ac-service">
+                <div class="row align-items-center">
+                  <div class="col-4">
+                    <img src="assets/images/feature_ac_repair.png" alt="Service">
+                  </div>
+                  <div class="col-8">
+                    <h6>AC Service</h6>
+                    <p>Installation, repair, gas refill, cleaning, and general AC maintenance</p>
+                    <span class="view-service-link">View Services <div class="icon-box-blue"><i
+                          class="bi bi-arrow-up-right"></i></div></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="booking-service-card show-details" data-service="electrical-wiring">
+                <div class="row align-items-center">
+                  <div class="col-4">
+                    <img src="assets/images/feature_professional.png" alt="Service">
+                  </div>
+                  <div class="col-8">
+                    <h6>Electrical Wiring</h6>
+                    <p>Installation, repair, gas refill, cleaning, and general AC maintenance</p>
+                    <span class="view-service-link">View Services <div class="icon-box-blue"><i
+                          class="bi bi-arrow-up-right"></i></div></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="booking-service-card show-details" data-service="solar-panel">
+                <div class="row align-items-center">
+                  <div class="col-4">
+                    <img src="assets/images/feature_tablet.png" alt="Service">
+                  </div>
+                  <div class="col-8">
+                    <h6>Solar Panel</h6>
+                    <p>Installation, repair, gas refill, cleaning, and general AC maintenance</p>
+                    <span class="view-service-link">View Services <div class="icon-box-blue"><i
+                          class="bi bi-arrow-up-right"></i></div></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="booking-service-card show-details" data-service="generator-ups">
+                <div class="row align-items-center">
+                  <div class="col-4">
+                    <img src="assets/images/mechanical_engineering.png" alt="Service">
+                  </div>
+                  <div class="col-8">
+                    <h6>Generator & UPS</h6>
+                    <p>Installation, repair, gas refill, cleaning, and general AC maintenance</p>
+                    <span class="view-service-link">View Services <div class="icon-box-blue"><i
+                          class="bi bi-arrow-up-right"></i></div></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-footer-text">User Details</div>
+        </div>
+
+        <!-- View 2: Detailed Services -->
+        <div id="servicesDetailView" class="d-none">
+          <button class="btn-back-selection back-btn"><i class="bi bi-arrow-left me-2"></i> Back</button>
+          <div class="text-center">
+            <span class="sub-cat-badge">AC Services</span>
+            <h2 class="modal-main-heading service-main-title">AC General Service</h2>
+          </div>
+          <div class="row g-4" id="detailedServiceGrid">
+            <!-- Populated by JS -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer">
+    <button class="drawer-close" id="closeDrawer"><i class="bi bi-x"></i></button>
+    <ul class="mobile-nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li class="mobile-dropdown">
+        <a href="#" class="mobile-dropdown-toggle">Services <i class="bi bi-caret-down-fill ms-1"
+            style="font-size: 10px;"></i></a>
+        <ul class="mobile-dropdown-menu">
+          <!-- Civil -->
+          <li class="mobile-submenu">
+            <a href="#" class="mobile-submenu-toggle">Civil <i class="bi bi-caret-down-fill ms-1"
+                style="font-size: 10px;"></i></a>
+            <ul class="mobile-sub-menu">
+              <li class="mobile-submenu">
+                <a href="#" class="mobile-submenu-toggle">Domestic <i class="bi bi-caret-down-fill ms-1"
+                    style="font-size: 10px;"></i></a>
+                <ul class="mobile-sub-menu">
+                  <li><a href="services-detail.html">Home Construction</a></li>
+                </ul>
+              </li>
+              <li class="mobile-submenu">
+                <a href="#" class="mobile-submenu-toggle">Corporate <i class="bi bi-caret-down-fill ms-1"
+                    style="font-size: 10px;"></i></a>
+                <ul class="mobile-sub-menu">
+                  <li><a href="services-detail.html">Office Buildout</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- Electrical -->
+          <li class="mobile-submenu">
+            <a href="#" class="mobile-submenu-toggle">Electrical <i class="bi bi-caret-down-fill ms-1"
+                style="font-size: 10px;"></i></a>
+            <ul class="mobile-sub-menu">
+              <li class="mobile-submenu">
+                <a href="#" class="mobile-submenu-toggle">Domestic <i class="bi bi-caret-down-fill ms-1"
+                    style="font-size: 10px;"></i></a>
+                <ul class="mobile-sub-menu">
+                  <li><a href="services-detail.html">Home Wiring</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="blog.html">Blogs</a></li>
+    </ul>
+    <div class="mobile-actions">
+      <a href="contact.html" class="help-center-link">Help Center</a>
+      <a href="#" class="sign-in-link">Sign in</a>
+      <a href="cart.html" class="cart-btn mt-2">
+        <i class="bi bi-cart3"></i>
+        <span class="cart-badge">0</span>
+      </a>
+    </div>
+  </div>
+
   <!-- Header Section -->
   <header class="header-wrapper">
     <div class="container">
       <div class="navbar-pill">
+        <!-- Logo -->
         <a href="index.html" class="logo">
           <img src="assets/images/logo.png" alt="makainak" class="logo-img">
         </a>
+
+        <!-- Desktop Center Navigation -->
         <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li class="services-dropdown">
+            <a href="#">Services <i class="bi bi-caret-down-fill ms-1" style="font-size: 10px;"></i></a>
+            <ul class="desktop-dropdown-menu">
+              <!-- Level 2: Civil -->
+              <li class="desktop-dropdown-submenu">
+                <a href="#">Civil <i class="bi bi-chevron-right ms-auto"
+                    style="font-size: 10px; float: right; margin-top: 5px;"></i></a>
+                <ul class="desktop-sub-menu">
+                  <!-- Level 3: Domestic -->
+                  <li class="desktop-dropdown-submenu">
+                    <a href="#">Domestic <i class="bi bi-chevron-right ms-auto"
+                        style="font-size: 10px; float: right; margin-top: 5px;"></i></a>
+                    <ul class="desktop-sub-menu">
+                      <li><a href="services-detail.html">Home Construction</a></li>
+                      <li><a href="services-detail.html">Interior Renovation</a></li>
+                    </ul>
+                  </li>
+                  <!-- Level 3: Corporate -->
+                  <li class="desktop-dropdown-submenu">
+                    <a href="#">Corporate <i class="bi bi-chevron-right ms-auto"
+                        style="font-size: 10px; float: right; margin-top: 5px;"></i></a>
+                    <ul class="desktop-sub-menu">
+                      <li><a href="services-detail.html">Office Buildout</a></li>
+                      <li><a href="services-detail.html">Commercial Design</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <!-- Level 2: Electrical -->
+              <li class="desktop-dropdown-submenu">
+                <a href="#">Electrical <i class="bi bi-chevron-right ms-auto"
+                    style="font-size: 10px; float: right; margin-top: 5px;"></i></a>
+                <ul class="desktop-sub-menu">
+                  <!-- Level 3: Domestic -->
+                  <li class="desktop-dropdown-submenu">
+                    <a href="#">Domestic <i class="bi bi-chevron-right ms-auto"
+                        style="font-size: 10px; float: right; margin-top: 5px;"></i></a>
+                    <ul class="desktop-sub-menu">
+                      <li><a href="services-detail.html">Home Wiring</a></li>
+                      <li><a href="services-detail.html">Appliance Install</a></li>
+                    </ul>
+                  </li>
+                  <!-- Level 3: Corporate -->
+                  <li class="desktop-dropdown-submenu">
+                    <a href="#">Corporate <i class="bi bi-chevron-right ms-auto"
+                        style="font-size: 10px; float: right; margin-top: 5px;"></i></a>
+                    <ul class="desktop-sub-menu">
+                      <li><a href="services-detail.html">Industrial Wiring</a></li>
+                      <li><a href="services-detail.html">Server Room Power</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <!-- Level 2: Mechanical -->
+              <li class="desktop-dropdown-submenu">
+                <a href="#">Mechanical <i class="bi bi-chevron-right ms-auto"
+                    style="font-size: 10px; float: right; margin-top: 5px;"></i></a>
+                <ul class="desktop-sub-menu">
+                  <!-- Level 3: Domestic -->
+                  <li class="desktop-dropdown-submenu">
+                    <a href="#">Domestic <i class="bi bi-chevron-right ms-auto"
+                        style="font-size: 10px; float: right; margin-top: 5px;"></i></a>
+                    <ul class="desktop-sub-menu">
+                      <li><a href="services-detail.html">AC Maintenance</a></li>
+                      <li><a href="services-detail.html">Home Plumbing</a></li>
+                    </ul>
+                  </li>
+                  <!-- Level 3: Corporate -->
+                  <li class="desktop-dropdown-submenu">
+                    <a href="#">Corporate <i class="bi bi-chevron-right ms-auto"
+                        style="font-size: 10px; float: right; margin-top: 5px;"></i></a>
+                    <ul class="desktop-sub-menu">
+                      <li><a href="services-detail.html">Central HVAC</a></li>
+                      <li><a href="services-detail.html">Industrial Plumbing</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
           <li><a href="about.html">About Us</a></li>
           <li><a href="blog.html">Blogs</a></li>
         </ul>
+
+        <!-- Desktop Right Actions -->
+
+
         <div class="nav-actions">
           <a href="contact.html" class="help-center-link">Help Center</a>
           <a href="#" class="sign-in-link">Sign in</a>
-          <a href="cart.html" class="cart-btn active">
+          <a href="cart.html" class="cart-btn">
             <i class="bi bi-cart3"></i>
             <span class="cart-badge">0</span>
           </a>
+
+          <!-- Mobile Hamburger Button -->
+          <button class="hamburger-btn" id="hamburgerBtn">
+            <i class="bi bi-list"></i>
+          </button>
         </div>
-        <button class="hamburger-btn" id="hamburgerBtn"><i class="bi bi-list"></i></button>
       </div>
     </div>
   </header>
 
-  <!-- Cart Page Content -->
-  <main class="cart-wrapper">
-    <div class="container">
-      <div class="mb-5">
-        <h1 class="fw-bold display-5">Shopping Cart</h1>
-        <p class="text-muted">Review your selected services before checkout.</p>
+  <!-- Main Content Container -->
+  <main class="container mt-4 mb-5 cart-wrapper-main">
+    <div class="bg-white rounded-5 p-4 p-md-5 border" style="box-shadow: 0 4px 20px rgba(0,0,0,0.02);">
+      
+      <!-- Page Header -->
+      <div class="mb-5 border-bottom pb-4">
+        <h1 class="platform-heading" style="font-size: clamp(32px, 4vw, 48px) !important;">Shopping Cart</h1>
+        <p class="text-muted mt-2 mb-0" style="font-family: 'Inter', sans-serif;">Review your selected services before checkout.</p>
       </div>
 
       <div class="row g-4">
         <!-- Cart Items List -->
         <div class="col-lg-8">
-          <div id="cartItemsList">
+          <div id="cartItemsList" class="d-flex flex-column gap-3">
             <!-- Populated by cart-manager.js -->
           </div>
           
-          <div class="mt-4">
-            <a href="index.html" class="text-primary text-decoration-none fw-bold">
+          <div class="mt-5 text-center text-lg-start">
+            <a href="index.html" class="btn btn-light rounded-pill px-4 py-2 text-primary fw-bold" style="font-family: 'Inter', sans-serif; border: 1px solid #d4eeff; background: #EFF9FF;">
               <i class="bi bi-arrow-left me-2"></i> Continue Selecting Services
             </a>
           </div>
         </div>
 
         <!-- Summary Section -->
-        <div class="col-lg-4">
-          <div class="summary-card shadow-sm" id="cartSummary">
-            <h4 class="fw-bold mb-4">Order Summary</h4>
+        <div class="col-lg-4 mb-4 mb-lg-0">
+          <div class="summary-card shadow-sm bg-white" id="cartSummary" style="border-radius: 24px; padding: 32px; border: 1px solid #eef3f9; position: sticky; top: 100px;">
+            <h4 class="fw-bold mb-4" style="font-family: 'Karla', sans-serif; font-size: 24px;">Order Summary</h4>
             
-            <div class="d-flex justify-content-between mb-3">
+            <div class="d-flex justify-content-between mb-3" style="font-family: 'Inter', sans-serif;">
               <span class="text-muted">Subtotal</span>
-              <span class="fw-bold" id="subtotal">Rs. 0</span>
+              <span class="fw-bold text-dark" id="subtotal">Rs. 0</span>
             </div>
-            <div class="d-flex justify-content-between mb-3">
+            <div class="d-flex justify-content-between mb-3" style="font-family: 'Inter', sans-serif;">
               <span class="text-muted">Service Tax (5%)</span>
-              <span class="fw-bold" id="tax">Rs. 0</span>
+              <span class="fw-bold text-dark" id="tax">Rs. 0</span>
             </div>
             
-            <div class="input-group mb-4 mt-4">
-              <input type="text" class="form-control border-end-0 rounded-start-pill py-2 ps-3" placeholder="Promo code">
-              <button class="btn btn-primary rounded-end-pill px-4">Apply</button>
+            <div class="input-group mb-4 mt-4" style="box-shadow: 0 2px 10px rgba(0,0,0,0.02); border-radius: 50px;">
+              <input type="text" class="form-control border-end-0 rounded-start-pill py-3 ps-4" placeholder="Promo code" style="border-color: #eef3f9;">
+              <button class="btn text-white rounded-end-pill px-4 fw-bold" style="background: linear-gradient(85.26deg, #1A39B3 33.96%, #2181E7 86.51%);">Apply</button>
             </div>
 
             <hr class="my-4" style="opacity: 0.1;">
             
-            <div class="d-flex justify-content-between mb-5">
-              <h5 class="fw-bold">Total</h5>
-              <h5 class="fw-bold text-primary" id="total">Rs. 0</h5>
+            <div class="d-flex justify-content-between mb-4 align-items-center">
+              <h5 class="fw-bold mb-0" style="font-family: 'Karla', sans-serif; font-size: 22px;">Total</h5>
+              <h5 class="fw-bold mb-0" id="total" style="color: #2181E7; font-size: 24px;">Rs. 0</h5>
             </div>
 
-            <a href="checkout.html" class="btn btn-primary w-100 rounded-pill py-3 fw-bold shadow">
+            <a href="checkout.html" class="btn text-white w-100 rounded-pill py-3 fw-bold shadow-sm d-flex align-items-center justify-content-center" style="background: linear-gradient(85.26deg, #1A39B3 33.96%, #2181E7 86.51%); font-family: 'Inter', sans-serif; font-size: 16px;">
               Proceed to Checkout <i class="bi bi-arrow-right ms-2"></i>
             </a>
             
             <div class="mt-4 text-center">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" height="15" class="me-2 opacity-50">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" height="20" class="me-2 opacity-50">
-              <p class="text-muted small mt-3 mb-0"><i class="bi bi-shield-check me-1"></i> Secure Checkout Guaranteed</p>
+              <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" height="16" class="me-3 opacity-50">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" height="22" class="me-3 opacity-50">
+              <p class="text-muted small mt-3 mb-0" style="font-family: 'Inter', sans-serif;"><i class="bi bi-shield-check me-1 text-primary"></i> Secure Checkout Guaranteed</p>
             </div>
           </div>
         </div>
