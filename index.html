@@ -96,12 +96,20 @@
     <div class="booking-modal-container">
       <button class="modal-close"><i class="bi bi-x"></i></button>
 
+      <!-- Modal Top Actions -->
+      <div class="modal-top-actions">
+        <a href="cart.html" class="modal-cart-btn-top">
+          <i class="bi bi-cart3"></i>
+          <span class="cart-badge">0</span>
+        </a>
+      </div>
+
       <!-- Dynamic Content Container -->
       <div id="modalContent">
         <!-- View 1: Category Selection -->
         <div id="categoryView">
           <!-- Category Tabs -->
-          <div class="booking-tabs-wrapper mb-4">
+          <div class="booking-tabs-wrapper">
             <div class="booking-tabs">
               <button class="tab-btn active" data-category="electrical">Electrical Engineering</button>
               <button class="tab-btn" data-category="mechanical">Mechanical Engineering</button>
@@ -109,48 +117,82 @@
             </div>
           </div>
 
+          <h2 class="modal-main-heading" id="categoryHeading">Wide Range of Electrical Engineering Services</h2>
+
           <!-- Service Grid -->
           <div class="row g-4 booking-service-grid">
             <!-- Electrical Services (Default) -->
-            <div class="col-lg-4 col-md-6">
-              <div class="booking-service-card rounded-4 p-3 border show-details" data-service="ac-service">
+            <div class="col-lg-6">
+              <div class="booking-service-card show-details" data-service="ac-service">
                 <div class="row align-items-center">
                   <div class="col-4">
-                    <img src="assets/images/feature_ac_repair.png" alt="Service" class="img-fluid rounded-3">
+                    <img src="assets/images/feature_ac_repair.png" alt="Service">
                   </div>
                   <div class="col-8">
-                    <h6 class="fw-bold mb-1">AC Service</h6>
-                    <p class="text-muted mb-2" style="font-size: 10px;">Full AC maintenance & repair</p>
-                    <span class="view-service-link">View Services <i
-                        class="bi bi-arrow-up-right-square-fill ms-1"></i></span>
+                    <h6>AC Service</h6>
+                    <p>Installation, repair, gas refill, cleaning, and general AC maintenance</p>
+                    <span class="view-service-link">View Services <div class="icon-box-blue"><i
+                          class="bi bi-arrow-up-right"></i></div></span>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="booking-service-card rounded-4 p-3 border show-details" data-service="electrical-wiring">
+            <div class="col-lg-6">
+              <div class="booking-service-card show-details" data-service="electrical-wiring">
                 <div class="row align-items-center">
                   <div class="col-4">
-                    <img src="assets/images/feature_professional.png" alt="Service" class="img-fluid rounded-3">
+                    <img src="assets/images/feature_professional.png" alt="Service">
                   </div>
                   <div class="col-8">
-                    <h6 class="fw-bold mb-1">Electrical Wiring</h6>
-                    <p class="text-muted mb-2" style="font-size: 10px;">Wiring & circuit solutions</p>
-                    <span class="view-service-link">View Services <i
-                        class="bi bi-arrow-up-right-square-fill ms-1"></i></span>
+                    <h6>Electrical Wiring</h6>
+                    <p>Installation, repair, gas refill, cleaning, and general AC maintenance</p>
+                    <span class="view-service-link">View Services <div class="icon-box-blue"><i
+                          class="bi bi-arrow-up-right"></i></div></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="booking-service-card show-details" data-service="solar-panel">
+                <div class="row align-items-center">
+                  <div class="col-4">
+                    <img src="assets/images/feature_tablet.png" alt="Service">
+                  </div>
+                  <div class="col-8">
+                    <h6>Solar Panel</h6>
+                    <p>Installation, repair, gas refill, cleaning, and general AC maintenance</p>
+                    <span class="view-service-link">View Services <div class="icon-box-blue"><i
+                          class="bi bi-arrow-up-right"></i></div></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="booking-service-card show-details" data-service="generator-ups">
+                <div class="row align-items-center">
+                  <div class="col-4">
+                    <img src="assets/images/mechanical_engineering.png" alt="Service">
+                  </div>
+                  <div class="col-8">
+                    <h6>Generator & UPS</h6>
+                    <p>Installation, repair, gas refill, cleaning, and general AC maintenance</p>
+                    <span class="view-service-link">View Services <div class="icon-box-blue"><i
+                          class="bi bi-arrow-up-right"></i></div></span>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+
+          <div class="modal-footer-text">User Details</div>
         </div>
 
-        <!-- View 2: Detailed Services (Hidden by default) -->
+        <!-- View 2: Detailed Services -->
         <div id="servicesDetailView" class="d-none">
-          <button class="btn-back-selection back-btn mb-4"><i class="bi bi-arrow-left me-2"></i> Back</button>
-          <div class="text-center mb-5">
-            <span class="badge bg-light text-primary rounded-pill px-3 py-2 mb-2 sub-cat-badge">AC Services</span>
-            <h2 class="fw-bold display-6 service-main-title">AC General Service</h2>
+          <button class="btn-back-selection back-btn"><i class="bi bi-arrow-left me-2"></i> Back</button>
+          <div class="text-center">
+            <span class="sub-cat-badge">AC Services</span>
+            <h2 class="modal-main-heading service-main-title">AC General Service</h2>
           </div>
           <div class="row g-4" id="detailedServiceGrid">
             <!-- Populated by JS -->
@@ -319,16 +361,19 @@
         <div class="nav-actions">
           <a href="contact.html" class="help-center-link">Help Center</a>
           <a href="#" class="sign-in-link">Sign in</a>
+        </div>
+
+        <div class="header-right-icons">
           <a href="cart.html" class="cart-btn">
             <i class="bi bi-cart3"></i>
             <span class="cart-badge">0</span>
           </a>
-        </div>
 
-        <!-- Mobile Hamburger Button -->
-        <button class="hamburger-btn" id="hamburgerBtn">
-          <i class="bi bi-list"></i>
-        </button>
+          <!-- Mobile Hamburger Button -->
+          <button class="hamburger-btn" id="hamburgerBtn">
+            <i class="bi bi-list"></i>
+          </button>
+        </div>
       </div>
     </div>
   </header>
@@ -339,15 +384,14 @@
 
       <!-- Hero Section -->
       <section class="hero-section text-center">
-        <h1 class="hero-heading">Book Trusted Professionals</h1>
-        <h2 class="hero-subheading text-primary">Any Service, Anytime</h2>
+        <h1 class="hero-heading">Book Trusted Professionals <br> <span class="hero-subheading text-primary">Any Service, Anytime</span></h1>
 
         <!-- Search Bar -->
         <div class="search-bar-wrapper mx-auto mt-4">
           <div class="input-group search-bar">
             <span class="input-group-text bg-white border-0"><i class="bi bi-search"></i></span>
             <input type="text" class="form-control border-0 shadow-none" placeholder="What service do you want!">
-            <button class="btn btn-primary rounded-pill px-4" type="button">Find Service <i
+            <button class="btn btn-primary" type="button">Find Service <i
                 class="bi bi-arrow-right ms-2"></i></button>
           </div>
         </div>
@@ -591,85 +635,78 @@
 
       <!-- Section Header -->
       <div class="text-center mb-5 pb-4">
-        <span class="badge bg-white text-primary rounded-pill px-3 py-2 mb-3 shadow-sm"><i
-            class="bi bi-hand-index-thumb-fill me-1"></i> How It Works</span>
+        <span class="badge bg-white text-primary rounded-pill px-4 py-2 mb-4 shadow-sm" style="font-weight: 600;">
+          <img src="assets/images/logo.png" alt="logo" style="height: 12px; margin-right: 8px;"> How It Works
+        </span>
         <h2 class="how-it-works-heading">Choose Your Service &<br>Get Set Done!</h2>
       </div>
 
-      <div class="timeline-container position-relative">
+      <div class="timeline-container position-relative mt-5">
 
         <!-- Step 1 -->
         <div class="row align-items-center mb-5 step-row position-relative">
-          <div class="col-md-5 text-md-start text-center mb-4 mb-md-0">
-            <div
-              class="step-icon mb-3 bg-white rounded-3 p-2 d-inline-flex align-items-center justify-content-center text-primary fs-3 shadow-sm"
-              style="width: 50px; height: 50px;">
+          <div class="col-md-5 text-md-start text-center mb-5 mb-md-0">
+            <div class="step-icon-box">
               <i class="bi bi-gear-wide-connected"></i>
             </div>
-            <h3 class="step-title fw-bold mb-3">Choose Your Service</h3>
-            <p class="step-desc mb-0" style="opacity: 0.9;">Browse our full range of home services — plumbing,
-              electrical, cleaning, solar & more. Select what you need.</p>
+            <h3 class="step-title">Choose Your Service</h3>
+            <p class="step-desc">Browse our full range of home services — plumbing, electrical, cleaning, solar & more.
+              Select what you need.</p>
           </div>
-          <!-- Timeline point (desktop only) -->
+
           <div class="col-md-2 d-none d-md-flex justify-content-center align-items-center position-relative">
-            <div
-              class="timeline-circle bg-white rounded-circle position-relative z-1 d-flex justify-content-center align-items-center">
-              <div class="timeline-dot rounded-circle bg-primary w-100 h-100"></div>
+            <div class="timeline-circle">
+              <div class="timeline-dot"></div>
             </div>
           </div>
+
           <div class="col-md-5">
-            <img src="assets/images/feature_tablet.png" alt="Choose Service" class="img-fluid rounded-4 w-100 shadow"
-              style="object-fit: cover; height: 280px;">
+            <img src="assets/images/feature_tablet.png" alt="Choose Service" class="img-fluid rounded-4 w-100 shadow-lg">
           </div>
         </div>
 
         <!-- Step 2 -->
         <div class="row align-items-center mb-5 step-row position-relative flex-column-reverse flex-md-row">
-          <div class="col-md-5 mt-4 mt-md-0">
+          <div class="col-md-5 mt-5 mt-md-0">
             <img src="assets/images/feature_professional.png" alt="Book and Schedule"
-              class="img-fluid rounded-4 w-100 shadow" style="object-fit: cover; height: 280px;">
+              class="img-fluid rounded-4 w-100 shadow-lg">
           </div>
-          <!-- Timeline point (desktop only) -->
+
           <div class="col-md-2 d-none d-md-flex justify-content-center align-items-center position-relative">
-            <div
-              class="timeline-circle bg-white rounded-circle position-relative z-1 d-flex justify-content-center align-items-center">
-              <div class="timeline-dot rounded-circle bg-primary w-100 h-100"></div>
+            <div class="timeline-circle">
+              <div class="timeline-dot"></div>
             </div>
           </div>
+
           <div class="col-md-5 text-md-start text-center">
-            <div
-              class="step-icon mb-3 bg-white rounded-3 p-2 d-inline-flex align-items-center justify-content-center text-primary fs-3 shadow-sm"
-              style="width: 50px; height: 50px;">
+            <div class="step-icon-box">
               <i class="bi bi-calendar-check"></i>
             </div>
-            <h3 class="step-title fw-bold mb-3">Book & Schedule</h3>
-            <p class="step-desc mb-0" style="opacity: 0.9;">Pick a time that works for you. Get instant pricing and
-              confirm your booking in under 60 seconds.</p>
+            <h3 class="step-title">Book & Schedule</h3>
+            <p class="step-desc">Pick a time that works for you. Get instant pricing and confirm your booking in under
+              60 seconds.</p>
           </div>
         </div>
 
         <!-- Step 3 -->
         <div class="row align-items-center step-row position-relative">
-          <div class="col-md-5 text-md-start text-center mb-4 mb-md-0">
-            <div
-              class="step-icon mb-3 bg-white rounded-3 p-2 d-inline-flex align-items-center justify-content-center text-primary fs-3 shadow-sm"
-              style="width: 50px; height: 50px;">
+          <div class="col-md-5 text-md-start text-center">
+            <div class="step-icon-box">
               <i class="bi bi-check2-square"></i>
             </div>
-            <h3 class="step-title fw-bold mb-3">Relax, It's Done</h3>
-            <p class="step-desc mb-0" style="opacity: 0.9;">Watch your pro arrive in real-time. Pay only when the job is
-              done right. Sit back and relax.</p>
+            <h3 class="step-title">Relax, It's Done</h3>
+            <p class="step-desc">Watch your pro arrive in real-time. Pay only when the job is done right. Sit back and
+              relax.</p>
           </div>
-          <!-- Timeline point (desktop only) -->
+
           <div class="col-md-2 d-none d-md-flex justify-content-center align-items-center position-relative">
-            <div
-              class="timeline-circle bg-white rounded-circle position-relative z-1 d-flex justify-content-center align-items-center">
-              <div class="timeline-dot rounded-circle bg-primary w-100 h-100"></div>
+            <div class="timeline-circle">
+              <div class="timeline-dot"></div>
             </div>
           </div>
+
           <div class="col-md-5">
-            <img src="assets/images/feature_ac_repair.png" alt="Relax" class="img-fluid rounded-4 w-100 shadow"
-              style="object-fit: cover; height: 280px;">
+            <img src="assets/images/feature_ac_repair.png" alt="Relax" class="img-fluid rounded-4 w-100 shadow-lg">
           </div>
         </div>
 
@@ -1056,6 +1093,7 @@
         $('body').css('overflow', 'hidden');
         $('#categoryView').removeClass('d-none');
         $('#servicesDetailView').addClass('d-none');
+        $('#modalCartBtn').removeClass('show'); // Hide cart button on first view
         let target = $(this).data('target');
         if (target) { $('.tab-btn[data-category="' + target + '"]').click(); }
       });
@@ -1092,6 +1130,7 @@
 
         $('#categoryView').addClass('d-none');
         $('#servicesDetailView').removeClass('d-none').addClass('fade-in-up');
+        $('#modalCartBtn').addClass('show'); // Show floating cart button
         $('.service-main-title').text('Select Services');
         $('.sub-cat-badge').text(data.badge);
 
@@ -1101,29 +1140,32 @@
             <div class="col-lg-4 col-md-6">
               <div class="service-selection-card animate-card">
                 <button class="add-service-btn cart-add-btn" data-id="${item.id}" data-name="${item.name}" data-price="${item.newPrice}"><i class="bi bi-plus"></i></button>
-                <h6 class="fw-bold mb-1">${item.name}</h6>
+                <h6 class="mb-1">${item.name}</h6>
                 <a href="#" class="more-details">MORE DETAILS <i class="bi bi-arrow-right"></i></a>
-                <div class="d-flex justify-content-between align-items-center mt-3">
-                  <div class="d-flex align-items-center gap-2">
-                    <select class="ton-select-dropdown-small">
-                      <option selected disabled>Ton</option>
-                      <option>1 Ton</option>
-                      <option>2 Ton</option>
-                      <option>3 Ton</option>
-                      <option>4 Ton</option>
-                    </select>
-                    <div>
-                      <span class="price-old">Rs. ${item.oldPrice}</span>
-                      <span class="price-current">Rs. ${item.newPrice}</span>
-                    </div>
-                  </div>
-                  <div class="d-flex align-items-center gap-2">
-                    <span class="service-added-text d-none text-primary" style="font-size: 10px; font-weight: 600;">Service Added</span>
+                <div class="d-flex align-items-center gap-2 mt-3">
+                  <select class="ton-select-dropdown-small">
+                    <option selected disabled>Ton</option>
+                    <option>1 Ton</option>
+                    <option>2 Ton</option>
+                    <option>3 Ton</option>
+                  </select>
+                  <div>
+                    <span class="price-old">Rs. ${item.oldPrice}</span>
+                    <span class="price-current">Rs. ${item.newPrice}</span>
                   </div>
                 </div>
               </div>
             </div>`;
         });
+        
+        // Add a prominent View Cart button at the bottom of the grid
+        html += `
+          <div class="col-12 text-center mt-4">
+            <a href="cart.html" class="btn btn-primary rounded-pill px-5 py-3 shadow-lg" style="font-weight: 600;">
+              <i class="bi bi-cart3 me-2"></i> View Cart
+            </a>
+          </div>`;
+          
         $('#detailedServiceGrid').html(html);
       });
 
