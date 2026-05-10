@@ -3477,24 +3477,51 @@ p,
   line-height: 1.6;
 }
 
-/* Button Sizing & Scaling */
+/* Global Button Styling */
 .btn-primary,
 .btn-hero-arrow,
 .btn-checkout-next,
-.btn-signin {
-  background: linear-gradient(85.26deg, #1A39B3 33.96%, #2181E7 86.51%);
-  color: white;
-  width: 100%;
-  padding: 16px;
+.btn-signin,
+.btn-apply,
+.btn-track,
+.btn-homepage,
+.btn-find-service,
+.btn-view-cart-modal,
+.cta-btn-white,
+.booknow,
+.btn-signin-nav {
+  background: linear-gradient(85.26deg, #1A39B3 33.96%, #2181E7 86.51%) !important;
+  color: white !important;
+  padding: 14px 28px;
   border-radius: 50px;
-  border: none;
+  border: none !important;
   font-weight: 700;
   font-size: var(--text-base);
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
-  transition: all 0.3s;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(26, 57, 179, 0.2);
+}
+
+.btn-primary:hover,
+.btn-hero-arrow:hover,
+.btn-checkout-next:hover,
+.btn-signin:hover,
+.btn-apply:hover,
+.btn-track:hover,
+.btn-homepage:hover,
+.btn-find-service:hover,
+.btn-view-cart-modal:hover,
+.cta-btn-white:hover,
+.booknow:hover,
+.btn-signin-nav:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(26, 57, 179, 0.35);
+  filter: brightness(1.1);
+  color: white !important;
 }
 
 @media (max-width: 1200px) {
