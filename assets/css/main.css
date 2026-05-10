@@ -205,12 +205,20 @@ body {
 
 .hamburger-btn {
   display: none;
-  background: none;
+  background: #EFF9FF;
   border: none;
-  font-size: 28px;
-  color: #333;
+  font-size: 24px;
+  color: #1A39B3;
   cursor: pointer;
-  padding: 0;
+  padding: 8px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  line-height: 1;
+}
+
+.hamburger-btn:hover {
+  background: #e0f0ff;
+  color: #2181E7;
 }
 
 .drawer-overlay {
@@ -3553,8 +3561,7 @@ p,
     display: block;
   }
 
-  .nav-links,
-  .nav-actions {
+  .nav-links {
     display: none;
   }
 
