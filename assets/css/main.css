@@ -362,7 +362,13 @@ body {
   align-items: center;
   padding: 14px 14px 14px 42px;
   margin: 0 auto;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  transition: all 0.3s ease;
+}
+
+.search-bar-container:hover {
+  border-color: #D4AF37;
+  box-shadow: 0 10px 40px rgba(212, 175, 55, 0.15);
 }
 
 .search-input-group {
@@ -469,11 +475,14 @@ body {
   transition: all 0.3s;
   cursor: pointer;
   background: #fff;
+  border: 1px solid transparent;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
 .hero-service-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  border-color: #D4AF37;
+  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.1);
 }
 
 .card-img-wrapper {
@@ -1395,17 +1404,25 @@ body {
 
 .form-control-custom {
   background-color: #f8f9fa;
-  border: none;
+  border: 1px solid transparent;
   border-radius: 12px;
   padding: 15px 20px;
   font-size: var(--text-base);
   color: #333;
   width: 100%;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+}
+
+.form-control-custom:hover {
+  border-color: #D4AF37;
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.1);
 }
 
 .form-control-custom:focus {
   background-color: #fff;
-  box-shadow: 0 0 0 2px rgba(26, 57, 179, 0.1);
+  border-color: #1a39b3;
+  box-shadow: 0 4px 15px rgba(26, 57, 179, 0.1);
   outline: none;
 }
 
@@ -2022,12 +2039,19 @@ body {
   border: 1px solid #f1f1f1;
   height: 54px;
   font-size: var(--text-base);
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+}
+
+.input-group-custom .form-control:hover {
+  border-color: #D4AF37;
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.1);
 }
 
 .input-group-custom .form-control:focus {
   background: white;
   border-color: #1a39b3;
-  box-shadow: none;
+  box-shadow: 0 4px 15px rgba(26, 57, 179, 0.1);
 }
 
 .forgot-link {
