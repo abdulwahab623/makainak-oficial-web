@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Blog Detail | Makainak</title>
+  <title>Privacy Policy | Makainak - On-Demand Home Services</title>
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -15,7 +15,296 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Custom styling for Privacy Page to fit web theme perfectly -->
+  <style>
+    :root {
+      --primary-color: #1A39B3;
+      --secondary-color: #e88c30;
+      --text-dark: #111111;
+      --text-muted: #6c757d;
+      --bg-light: #f8f9fa;
+      --border-color: #e9ecef;
+      --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+      --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-light);
+      color: var(--text-dark);
+      overflow-x: hidden;
+    }
+
+    .privacy-hero {
+      background: linear-gradient(135deg, #1A39B3 0%, #0c1c63 100%);
+      color: #ffffff;
+      padding: 80px 0 60px 0;
+      border-radius: 0 0 40px 40px;
+      margin-bottom: 50px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(26, 57, 179, 0.15);
+    }
+
+    .privacy-hero::before {
+      content: '';
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      background: rgba(232, 140, 48, 0.1);
+      border-radius: 50%;
+      top: -100px;
+      right: -50px;
+    }
+
+    .privacy-hero::after {
+      content: '';
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 50%;
+      bottom: -50px;
+      left: -50px;
+    }
+
+    .privacy-badge {
+      display: inline-flex;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+      color: #ffffff;
+      padding: 8px 16px;
+      border-radius: 100px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .privacy-badge i {
+      color: var(--secondary-color);
+      margin-right: 8px;
+    }
+
+    .privacy-title {
+      font-family: 'Karla', sans-serif;
+      font-weight: 700;
+      font-size: 3rem;
+      margin-bottom: 15px;
+    }
+
+    .privacy-subtitle {
+      font-size: 1.1rem;
+      opacity: 0.9;
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    .sidebar-sticky {
+      position: sticky;
+      top: 100px;
+      z-index: 10;
+    }
+
+    .privacy-nav-card {
+      background: #ffffff;
+      border: 1px solid var(--border-color);
+      border-radius: 24px;
+      padding: 24px;
+      box-shadow: var(--card-shadow);
+    }
+
+    .privacy-nav-title {
+      font-family: 'Karla', sans-serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--primary-color);
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--bg-light);
+    }
+
+    .privacy-nav-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .privacy-nav-links li {
+      margin-bottom: 8px;
+    }
+
+    .privacy-nav-links a {
+      display: flex;
+      align-items: center;
+      padding: 12px 16px;
+      border-radius: 12px;
+      color: var(--text-dark);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: var(--transition-smooth);
+    }
+
+    .privacy-nav-links a i {
+      margin-right: 12px;
+      font-size: 1.1rem;
+      transition: var(--transition-smooth);
+      color: var(--text-muted);
+    }
+
+    .privacy-nav-links a:hover {
+      background-color: rgba(26, 57, 179, 0.05);
+      color: var(--primary-color);
+    }
+
+    .privacy-nav-links a:hover i {
+      color: var(--primary-color);
+    }
+
+    .privacy-nav-links a.active {
+      background-color: var(--primary-color);
+      color: #ffffff;
+    }
+
+    .privacy-nav-links a.active i {
+      color: var(--secondary-color);
+    }
+
+    .privacy-content-card {
+      background: #ffffff;
+      border: 1px solid var(--border-color);
+      border-radius: 32px;
+      padding: 40px;
+      box-shadow: var(--card-shadow);
+      margin-bottom: 30px;
+    }
+
+    .privacy-section-anchor {
+      scroll-margin-top: 100px;
+    }
+
+    .privacy-section-header {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 25px;
+    }
+
+    .section-icon-box {
+      width: 48px;
+      height: 48px;
+      border-radius: 16px;
+      background-color: rgba(26, 57, 179, 0.08);
+      color: var(--primary-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+    }
+
+    .section-icon-box.secondary {
+      background-color: rgba(232, 140, 48, 0.08);
+      color: var(--secondary-color);
+    }
+
+    .privacy-section-title {
+      font-family: 'Karla', sans-serif;
+      font-weight: 700;
+      font-size: 1.6rem;
+      margin: 0;
+      color: var(--text-dark);
+    }
+
+    .privacy-text {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: #495057;
+      margin-bottom: 20px;
+    }
+
+    .bullet-list-custom {
+      list-style: none;
+      padding-left: 0;
+      margin-bottom: 20px;
+    }
+
+    .bullet-list-custom li {
+      position: relative;
+      padding-left: 28px;
+      margin-bottom: 12px;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: #495057;
+    }
+
+    .bullet-list-custom li::before {
+      content: '\F2E6';
+      font-family: 'bootstrap-icons';
+      position: absolute;
+      left: 0;
+      top: 2px;
+      color: var(--secondary-color);
+      font-weight: bold;
+    }
+
+    .trust-highlight-box {
+      background-color: rgba(26, 57, 179, 0.02);
+      border-left: 4px solid var(--primary-color);
+      padding: 24px;
+      border-radius: 0 16px 16px 0;
+      margin: 25px 0;
+    }
+
+    .trust-highlight-title {
+      font-weight: 600;
+      font-size: 1rem;
+      color: var(--primary-color);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .trust-highlight-text {
+      font-size: 0.9rem;
+      line-height: 1.6;
+      color: #495057;
+      margin: 0;
+    }
+
+    .updated-date {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.6);
+      margin-top: 15px;
+    }
+
+    /* Custom Responsive Adjustments */
+    @media (max-width: 991px) {
+      .privacy-hero {
+        padding: 60px 0 40px 0;
+      }
+      .privacy-title {
+        font-size: 2.2rem;
+      }
+      .privacy-content-card {
+        padding: 25px;
+      }
+      .sidebar-sticky {
+        position: static;
+        margin-bottom: 30px;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -23,7 +312,7 @@
   <!-- Mobile Drawer Overlay -->
   <div class="drawer-overlay"></div>
 
-              <!-- Login Modal -->
+  <!-- Login Modal -->
   <div class="modal-overlay" id="loginModal">
     <div class="auth-modal">
       <button class="modal-close"><i class="bi bi-x"></i></button>
@@ -103,8 +392,6 @@
             <div class="auth-footer">
               New to Makainak? <a href="#" class="switch-to-signup">Create secure account</a>
             </div>
-
-
 
             <!-- Trust / Legal terms and Support Links -->
             <div class="auth-terms-support">
@@ -201,8 +488,6 @@
               Already have an account? <a href="#" class="switch-to-login">Sign in securely</a>
             </div>
 
-
-
             <!-- Trust / Legal terms and Support Links -->
             <div class="auth-terms-support">
               <p class="terms-text">This is a secured 256-bit SSL encrypted connection. By signing in you agree to our <a href="privacy-policy.html">Privacy Policy</a> &amp; <a href="#">Terms of Service</a>.</p>
@@ -214,7 +499,7 @@
     </div>
   </div>
 
-<!-- Booking Selection Modal -->
+  <!-- Booking Selection Modal -->
   <div class="modal-overlay" id="bookingModal">
     <div class="booking-modal-container">
       <button class="modal-close"><i class="bi bi-x"></i></button>
@@ -329,7 +614,7 @@
   <div class="mobile-drawer">
     <button class="drawer-close" id="closeDrawer"><i class="bi bi-x"></i></button>
     <ul class="mobile-nav-links">
-      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="index.html">Home</a></li>
       <li class="mobile-dropdown">
         <a href="#" class="mobile-dropdown-toggle">Services <i class="bi bi-caret-down-fill ms-1"
             style="font-size: 10px;"></i></a>
@@ -395,7 +680,7 @@
 
         <!-- Desktop Center Navigation -->
         <ul class="nav-links">
-          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li class="services-dropdown">
             <a href="#">Services <i class="bi bi-caret-down-fill ms-1" style="font-size: 10px;"></i></a>
             <ul class="desktop-dropdown-menu">
@@ -481,8 +766,6 @@
         </ul>
 
         <!-- Desktop Right Actions -->
-
-
         <div class="nav-actions">
           <a href="contact.html" class="help-center-link">Help Center</a>
           <a href="#" class="sign-in-link">Sign in</a>
@@ -500,162 +783,202 @@
     </div>
   </header>
 
-  <!-- Blog Detail Content -->
-  <section class="py-5 bg-white">
-    <div class="container py-lg-4">
-      <div class="row justify-content-center">
-        <div class="col-lg-8">
-          <!-- Article Header -->
-          <nav aria-label="breadcrumb" class="mb-4">
-            <ol class="breadcrumb small">
-              <li class="breadcrumb-item"><a href="blog.html" class="text-decoration-none text-primary">Blog</a></li>
-              <li class="breadcrumb-item active" aria-current="page">AC Maintenance</li>
-            </ol>
-          </nav>
-          
-          <h1 class="fw-bold mb-4 display-5" style="font-family: 'Karla', sans-serif; color: #111;">10 Tips to Keep Your AC Running Efficiently This Summer</h1>
-          
-          <div class="d-flex align-items-center mb-5">
-            <div class="bg-light-blue rounded-circle me-3 d-flex align-items-center justify-content-center overflow-hidden" style="width: 42px; height: 42px;">
-              <i class="bi bi-person-fill text-primary fs-5"></i>
-            </div>
-            <div class="author-meta">
-              <span class="d-block fw-bold small text-uppercase" style="letter-spacing: 0.5px; color: #333;">By Makainak Expert</span>
-              <span class="text-muted small">May 2, 2026 • 5 min read</span>
-            </div>
-          </div>
-
-          <!-- Feature Image -->
-          <div class="blog-feature-img-wrapper rounded-5 overflow-hidden mb-5 shadow-sm">
-            <img src="assets/images/feature_ac_repair.png" alt="AC Repair" class="img-fluid w-100 object-fit-cover" style="max-height: 500px;">
-          </div>
-
-          <div class="blog-content-body">
-            <p class="lead mb-4">As the temperatures soar, your Air Conditioning system becomes your best friend. However, without proper care, it can also become a source of high electricity bills and unexpected repairs. Here are 10 expert tips to keep your AC running at its peak performance throughout the summer season.</p>
-            
-            <h3 class="fw-bold mt-5 mb-3">1. Clean or Replace Air Filters Regularly</h3>
-            <p>A clogged filter restricts airflow and significantly reduces efficiency. During heavy usage months, check your filters every 30 days and clean or replace them as needed.</p>
-
-            <h3 class="fw-bold mt-5 mb-3">2. Keep the Outdoor Unit Clear</h3>
-            <p>Your AC's outdoor condenser unit needs room to breathe. Ensure there's at least 2 feet of clearance around it, removing any leaves, debris, or overgrown plants.</p>
-
-            <h3 class="fw-bold mt-5 mb-3">3. Schedule Professional Maintenance</h3>
-            <p>An annual check-up by a certified professional can catch small issues before they become major disasters. Makainak offers comprehensive AC general services to ensure your system is summer-ready.</p>
-
-            <div class="blog-quote-box my-5 p-4 p-md-5 rounded-4">
-              <p class="mb-0 fs-5 fw-medium">"Prevention is always better—and cheaper—than repair. A well-maintained AC can last up to 15 years while saving you up to 20% on energy costs."</p>
-            </div>
-
-            <p>By following these simple steps, you can ensure a cool and comfortable home all summer long without breaking the bank. For professional assistance, don't hesitate to book a service with Makainak today!</p>
-          </div>
-
-          <!-- Footer Meta -->
-          <div class="border-top mt-5 pt-4 d-flex flex-column flex-md-row justify-content-between align-items-md-center">
-            <div class="tags-wrapper mb-3 mb-md-0">
-              <span class="small fw-bold text-uppercase me-3" style="color: #999; letter-spacing: 1px; font-size: 11px;">Tags:</span>
-              <a href="#" class="blog-tag">AC Repair</a>
-              <a href="#" class="blog-tag">Home Tips</a>
-            </div>
-            <div class="social-share-wrapper d-flex align-items-center">
-              <span class="small fw-bold text-uppercase me-3" style="color: #999; letter-spacing: 1px; font-size: 11px;">Share:</span>
-              <div class="d-flex gap-2">
-                <a href="#" class="social-share-btn"><i class="bi bi-twitter"></i></a>
-                <a href="#" class="social-share-btn"><i class="bi bi-facebook"></i></a>
-                <a href="#" class="social-share-btn"><i class="bi bi-linkedin"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Latest Blogs Section -->
-  <section class="py-5 bg-light-blue">
-    <div class="container py-lg-5">
-      <div class="mb-5">
-        <h2 class="fw-bold" style="font-family: 'Karla', sans-serif;">Latest Blogs</h2>
-      </div>
-
-      <div class="row g-4">
-        <!-- Blog Card 1 -->
-        <div class="col-lg-4 col-md-6">
-          <div class="blog-card-new h-100 shadow-sm border-0">
-            <div class="blog-card-img rounded-top-4 overflow-hidden" style="height: 200px;">
-              <img src="assets/images/feature_ac_repair.png" alt="AC Maintenance" class="img-fluid w-100 h-100 object-fit-cover">
-            </div>
-            <div class="blog-card-body p-4 bg-white rounded-bottom-4">
-              <span class="blog-category-badge mb-3">Maintenance</span>
-              <h5 class="fw-bold mb-3">10 Tips to Keep Your AC Running Efficiently This Summer</h5>
-              <p class="text-muted small mb-4">Regular maintenance can save you from high electricity bills and unexpected breakdowns during peak summer.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <span class="text-muted small"><i class="bi bi-calendar3 me-1"></i> May 2, 2026</span>
-                <a href="blog-detail.html" class="read-more-link text-primary fw-bold text-decoration-none small">READ MORE <i class="bi bi-arrow-right ms-1"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Blog Card 2 -->
-        <div class="col-lg-4 col-md-6">
-          <div class="blog-card-new h-100 shadow-sm border-0">
-            <div class="blog-card-img rounded-top-4 overflow-hidden" style="height: 200px;">
-              <img src="assets/images/feature_tablet.png" alt="Solar Energy" class="img-fluid w-100 h-100 object-fit-cover">
-            </div>
-            <div class="blog-card-body p-4 bg-white rounded-bottom-4">
-              <span class="blog-category-badge mb-3" style="background: #e6fffa; color: #38b2ac;">Solar Energy</span>
-              <h5 class="fw-bold mb-3">Why Switching to Solar is the Best Investment for Your Home</h5>
-              <p class="text-muted small mb-4">Regular maintenance can save you from high electricity bills and unexpected breakdowns during peak summer.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <span class="text-muted small"><i class="bi bi-calendar3 me-1"></i> May 2, 2026</span>
-                <a href="blog-detail.html" class="read-more-link text-primary fw-bold text-decoration-none small">READ MORE <i class="bi bi-arrow-right ms-1"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Blog Card 3 -->
-        <div class="col-lg-4 col-md-6">
-          <div class="blog-card-new h-100 shadow-sm border-0">
-            <div class="blog-card-img rounded-top-4 overflow-hidden" style="height: 200px;">
-              <img src="assets/images/feature_professional.png" alt="Plumbing" class="img-fluid w-100 h-100 object-fit-cover">
-            </div>
-            <div class="blog-card-body p-4 bg-white rounded-bottom-4">
-              <span class="blog-category-badge mb-3" style="background: #ebf8ff; color: #3182ce;">Plumbing</span>
-              <h5 class="fw-bold mb-3">Common Plumbing Myths That Are Damaging Your Pipes</h5>
-              <p class="text-muted small mb-4">Regular maintenance can save you from high electricity bills and unexpected breakdowns during peak summer.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <span class="text-muted small"><i class="bi bi-calendar3 me-1"></i> May 2, 2026</span>
-                <a href="blog-detail.html" class="read-more-link text-primary fw-bold text-decoration-none small">READ MORE <i class="bi bi-arrow-right ms-1"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- Professional CTA Section -->
-  <section class="py-5">
+  <!-- Privacy Policy Hero Section -->
+  <section class="privacy-hero text-center">
     <div class="container">
-      <div class="cta-section-new rounded-5 overflow-hidden shadow-lg">
-        <div class="row align-items-center g-0">
-          <!-- Left Content -->
-          <div class="col-lg-6 p-4 p-md-5 text-white">
-            <h2 class="display-4 fw-bold mb-4" style="font-family: 'Karla', sans-serif;">Ready to Simplify Your Home Maintenance?</h2>
-            <p class="lead mb-5 opacity-90">Join 10,000+ homeowners who trust Makainak for plumbing, electrical, cleaning, solar & more. Book now and get 10% off your first service!</p>
-            <button class="cta-btn-white sign-up-link">
-              Sign Up & Save 10% <i class="bi bi-arrow-up-right-circle-fill ms-2"></i>
-            </button>
-          </div>
-          <!-- Right Image -->
-          <div class="col-lg-6">
-            <div class="cta-img-pro">
-              <img src="assets/images/feature_professional.png" alt="Makainak Professional" class="img-fluid w-100 h-100 object-fit-cover">
-            </div>
-          </div>
-        </div>
+      <div class="privacy-badge">
+        <i class="bi bi-shield-fill-check"></i> Enterprise-grade Data Protection
+      </div>
+      <h1 class="privacy-title">Privacy Policy</h1>
+      <p class="privacy-subtitle">How we securely collect, use, and protect your personal information at Makainak.</p>
+      <div class="updated-date">
+        <i class="bi bi-calendar3"></i> Last Updated: May 18, 2026
       </div>
     </div>
   </section>
 
+  <!-- Main Content Layout -->
+  <div class="container mb-5">
+    <div class="row g-4">
+      
+      <!-- Sticky Navigation Sidebar (Desktop) -->
+      <div class="col-lg-3">
+        <div class="sidebar-sticky">
+          <div class="privacy-nav-card">
+            <h5 class="privacy-nav-title">Policy Sections</h5>
+            <ul class="privacy-nav-links">
+              <li><a href="#introduction" class="active"><i class="bi bi-info-circle"></i> 1. Introduction</a></li>
+              <li><a href="#information-we-collect"><i class="bi bi-clipboard-data"></i> 2. Info We Collect</a></li>
+              <li><a href="#how-we-use"><i class="bi bi-cpu"></i> 3. How We Use It</a></li>
+              <li><a href="#data-sharing"><i class="bi bi-share"></i> 4. Sharing Policies</a></li>
+              <li><a href="#data-security"><i class="bi bi-shield-check"></i> 5. Data Security</a></li>
+              <li><a href="#user-rights"><i class="bi bi-person-check"></i> 6. Your Rights</a></li>
+              <li><a href="#contact-us"><i class="bi bi-envelope"></i> 7. Contact Support</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Content Cards -->
+      <div class="col-lg-9">
+
+        <!-- 1. Introduction -->
+        <div class="privacy-content-card privacy-section-anchor" id="introduction">
+          <div class="privacy-section-header">
+            <div class="section-icon-box">
+              <i class="bi bi-info-circle-fill"></i>
+            </div>
+            <h2 class="privacy-section-title">1. Introduction</h2>
+          </div>
+          <p class="privacy-text">
+            Welcome to <strong>Makainak</strong> ("we," "our," or "us"). As Pakistan's premier on-demand home maintenance platform connecting you with verified professionals in Faisalabad, Lahore, Islamabad, Rawalpindi, Multan, and beyond, your trust is our ultimate asset.
+          </p>
+          <p class="privacy-text">
+            This Privacy Policy explains how we collect, store, use, and protect your personal information when you access our website, book services (such as plumbing, electrical, solar installation, and AC repair), and use our customer dashboards. By utilizing our secure connection, you consent to the practices described in this document.
+          </p>
+          <div class="trust-highlight-box">
+            <div class="trust-highlight-title">
+              <i class="bi bi-shield-fill-exclamation"></i> Secure 256-bit Connection
+            </div>
+            <p class="trust-highlight-text">
+              We employ strict industry-standard SSL encryption protocols to protect all data transferred during signup, sign-in, booking, and checkout processes.
+            </p>
+          </div>
+        </div>
+
+        <!-- 2. Information We Collect -->
+        <div class="privacy-content-card privacy-section-anchor" id="information-we-collect">
+          <div class="privacy-section-header">
+            <div class="section-icon-box secondary">
+              <i class="bi bi-clipboard-data-fill"></i>
+            </div>
+            <h2 class="privacy-section-title">2. Information We Collect</h2>
+          </div>
+          <p class="privacy-text">
+            To provide robust, efficient, and background-checked home services, we collect several types of details. This includes information you provide directly and details collected automatically:
+          </p>
+          
+          <h5 class="fw-bold mb-3 mt-4" style="color: var(--primary-color);">A. Direct User Input</h5>
+          <ul class="bullet-list-custom">
+            <li><strong>Identity & Account Details:</strong> Your full name, secure password, and profile preferences collected when creating an account.</li>
+            <li><strong>Contact Information:</strong> Active email address and phone number for booking updates, security OTP verifications, and general correspondence.</li>
+            <li><strong>Location & Dispatch Data:</strong> Home or business address, city, and GPS coordinates to match and dispatch the closest verified technician to your site.</li>
+            <li><strong>Booking & Invoice Files:</strong> Issue descriptions, photos/media uploaded to illustrate required repairs, and billing invoices (such as bank transfer slips uploaded for verification during checkout).</li>
+          </ul>
+
+          <h5 class="fw-bold mb-3 mt-4" style="color: var(--primary-color);">B. Technical Usage Data</h5>
+          <ul class="bullet-list-custom">
+            <li><strong>Device Specifications:</strong> IP addresses, browser specifications, operating system versions, and unique device IDs.</li>
+            <li><strong>Session Operations:</strong> Service category selections, click behaviors, navigation timings, cart interactions, and search queries (e.g. searching "What service do you want!").</li>
+          </ul>
+        </div>
+
+        <!-- 3. How We Use Information -->
+        <div class="privacy-content-card privacy-section-anchor" id="how-we-use">
+          <div class="privacy-section-header">
+            <div class="section-icon-box">
+              <i class="bi bi-cpu-fill"></i>
+            </div>
+            <h2 class="privacy-section-title">3. How We Use Information</h2>
+          </div>
+          <p class="privacy-text">
+            Makainak uses your information strictly to support, automate, and secure your end-to-end service journey:
+          </p>
+          <ul class="bullet-list-custom">
+            <li><strong>Service Matching & Booking:</strong> Connecting your service requests (domestic or corporate) with licensed plumbers, electricians, or civil engineers.</li>
+            <li><strong>Real-Time Tracking:</strong> Offering real-time location mapping of dispatched service professionals directly to your customer dashboard.</li>
+            <li><strong>Payment & Billing Validation:</strong> Handling Cash-on-Service options and securely verifying Bank Transfer detail matches against uploaded invoices.</li>
+            <li><strong>Enterprise Security:</strong> Facilitating secure sign-in controls, SSO integrations, device trust tracking, and Multi-Factor Authentication (MFA) enforcement.</li>
+            <li><strong>Performance Optimization:</strong> Analyzing site usability and feature logs to optimize our responsive layout across devices.</li>
+          </ul>
+        </div>
+
+        <!-- 4. Data Sharing & Disclosure -->
+        <div class="privacy-content-card privacy-section-anchor" id="data-sharing">
+          <div class="privacy-section-header">
+            <div class="section-icon-box secondary">
+              <i class="bi bi-share-fill"></i>
+            </div>
+            <h2 class="privacy-section-title">4. Data Sharing & Disclosure</h2>
+          </div>
+          <p class="privacy-text">
+            Your privacy is non-negotiable. Makainak strictly limits data access and will only disclose relevant details under the following contexts:
+          </p>
+          <ul class="bullet-list-custom">
+            <li><strong>With Dispatched Service Providers:</strong> Only sharing critical coordination information (name, phone, address, AC/electrical issue details) with the background-checked professional assigned to execute your booking.</li>
+            <li><strong>Secure Payment Gateways:</strong> Transmitting necessary details securely to designated banks or payment gateways when validating online transfers.</li>
+            <li><strong>Legal & Safety Mandates:</strong> Disclosing information only if strictly required under state laws of Pakistan or to enforce platform safety guarantees.</li>
+          </ul>
+          <div class="trust-highlight-box" style="border-left-color: var(--secondary-color); background-color: rgba(232, 140, 48, 0.01);">
+            <div class="trust-highlight-title" style="color: var(--secondary-color);">
+              <i class="bi bi-heart-fill"></i> Strict "No-Sale" Policy
+            </div>
+            <p class="trust-highlight-text">
+              We never rent, lease, trade, sell, or monetize your personal identity data, location logs, or invoice files with third-party advertising brokers or aggregators.
+            </p>
+          </div>
+        </div>
+
+        <!-- 5. Data Security -->
+        <div class="privacy-content-card privacy-section-anchor" id="data-security">
+          <div class="privacy-section-header">
+            <div class="section-icon-box">
+              <i class="bi bi-shield-fill-check"></i>
+            </div>
+            <h2 class="privacy-section-title">5. Data Security</h2>
+          </div>
+          <p class="privacy-text">
+            Makainak operates enterprise-grade protection frameworks designed to safeguard all collected user assets:
+          </p>
+          <ul class="bullet-list-custom">
+            <li><strong>Encrypted Transport:</strong> Full site-wide SSL coverage ensuring that login details, billing records, and personal profiles are secure from external capture.</li>
+            <li><strong>MFA Infrastructure:</strong> Support for user-enforced Multi-Factor Authentication upon secure login sessions.</li>
+            <li><strong>Access Auditing:</strong> Restricting customer address details and phone numbers behind strict access matrices, accessible only by verified support specialists and active booking personnel.</li>
+          </ul>
+        </div>
+
+        <!-- 6. User Rights & Controls -->
+        <div class="privacy-content-card privacy-section-anchor" id="user-rights">
+          <div class="privacy-section-header">
+            <div class="section-icon-box secondary">
+              <i class="bi bi-person-fill-check"></i>
+            </div>
+            <h2 class="privacy-section-title">6. Your Rights & Controls</h2>
+          </div>
+          <p class="privacy-text">
+            We grant you complete authority over how your personal details are updated, customized, and utilized:
+          </p>
+          <ul class="bullet-list-custom">
+            <li><strong>Profile Customization:</strong> Directly update your billing addresses, password credentials, and personal profiles within your Customer Dashboard.</li>
+            <li><strong>Device Management:</strong> Revoke session access and request device status validation to ensure no unauthorized sign-in attempts occur.</li>
+            <li><strong>Account Deactivation:</strong> Request complete cleanup and deletion of your service logs, location coordinates, and registered email references by contacting our security helpdesk.</li>
+          </ul>
+        </div>
+
+        <!-- 7. Contact Us -->
+        <div class="privacy-content-card privacy-section-anchor" id="contact-us">
+          <div class="privacy-section-header">
+            <div class="section-icon-box">
+              <i class="bi bi-envelope-fill"></i>
+            </div>
+            <h2 class="privacy-section-title">7. Contact Support</h2>
+          </div>
+          <p class="privacy-text">
+            If you have questions regarding this Privacy Policy, your secure connection parameters, or wish to exercise your data protection rights, please reach out to our team:
+          </p>
+          <ul class="bullet-list-custom">
+            <li><strong>Direct Web Form:</strong> Submit requests directly through our <a href="contact.html" style="color: var(--primary-color); font-weight: 600; text-decoration: none;">Help & Contact Center</a>.</li>
+            <li><strong>Operational Support:</strong> Operational security managers are stationed at Faisalabad, Lahore, and Islamabad offices.</li>
+            <li><strong>Email Reference:</strong> security@makainak.com</li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer Section -->
   <footer class="footer-section">
     <div class="container">
       <div class="row">
@@ -714,10 +1037,10 @@
               class="toggle-icon d-md-none">+</span></h5>
           <ul class="list-unstyled footer-list">
             <li><a href="about.html" class="text-decoration-none text-reset">About Us</a></li>
-            <li><a href="privacy-policy.html" class="text-decoration-none text-reset">Privacy Policy</a></li>
+            <li><a href="privacy-policy.html" class="text-decoration-none text-reset fw-bold text-primary">Privacy Policy</a></li>
             <li><a href="careers.html" class="text-decoration-none text-reset">Careers</a></li>
-            <li>Blog</li>
-            <li>Contact</li>
+            <li><a href="blog.html" class="text-decoration-none text-reset">Blog</a></li>
+            <li><a href="contact.html" class="text-decoration-none text-reset">Contact</a></li>
           </ul>
         </div>
 
@@ -748,12 +1071,81 @@
   <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/footer.js"></script>
-  <script src="assets/js/header.js"></script>`n  <script src="assets/js/cart-manager.js"></script>
+  <script src="assets/js/header.js"></script>
+  <script src="assets/js/cart-manager.js"></script>
+
+  <!-- Interactive JS for Modal Handling and Active Nav States -->
+  <script>
+    $(document).ready(function () {
+      // Smooth Scroll and Active link handling in sticky sidebar
+      $('.privacy-nav-links a').on('click', function (e) {
+        if (this.hash !== "") {
+          e.preventDefault();
+          const hash = this.hash;
+
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 600, function () {
+            window.location.hash = hash;
+          });
+
+          $('.privacy-nav-links a').removeClass('active');
+          $(this).addClass('active');
+        }
+      });
+
+      // Update sidebar active link on scroll
+      $(window).on('scroll', function () {
+        const scrollPos = $(document).scrollTop();
+        $('.privacy-section-anchor').each(function () {
+          const currLink = $('.privacy-nav-links a[href="#' + $(this).attr('id') + '"]');
+          const refElement = $(this);
+          if (refElement.position().top <= scrollPos + 120 && refElement.position().top + refElement.height() > scrollPos - 120) {
+            $('.privacy-nav-links a').removeClass('active');
+            currLink.addClass('active');
+          }
+        });
+      });
+
+      // Global login modal switches (copied from index)
+      $('.sign-in-link').on('click', function (e) {
+        e.preventDefault();
+        $('#loginModal').addClass('active');
+        $('body').css('overflow', 'hidden');
+      });
+
+      $('.sign-up-link').on('click', function (e) {
+        e.preventDefault();
+        $('#signupModal').addClass('active');
+        $('body').css('overflow', 'hidden');
+      });
+
+      $('.switch-to-signup').on('click', function (e) {
+        e.preventDefault();
+        $('#loginModal').removeClass('active');
+        $('#signupModal').addClass('active');
+      });
+
+      $('.switch-to-login').on('click', function (e) {
+        e.preventDefault();
+        $('#signupModal').removeClass('active');
+        $('#loginModal').addClass('active');
+      });
+
+      $('.modal-close').on('click', function () {
+        $('.modal-overlay').removeClass('active');
+        $('body').css('overflow', 'auto');
+      });
+
+      $(document).on('click', function (e) {
+        if ($(e.target).hasClass('modal-overlay')) {
+          $('.modal-overlay').removeClass('active');
+          $('body').css('overflow', 'auto');
+        }
+      });
+    });
+  </script>
 
 </body>
 
 </html>
-
-
-
-
